@@ -11,12 +11,7 @@ jobs:
   pc:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
-    strategy:
-      fail-fast: false
-      matrix:
-        compiler: [g++-13, g++-14]
     env:
-      CXX: ${{ matrix.compiler }}
       UGG_LSAN: '0'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -26,15 +21,19 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m pip install -r requirements-dev.txt
-      - name: Install native compiler
+      - name: Install both native compilers on one runner
         run: |
           sudo apt-get update
-          sudo apt-get install --yes "${{ matrix.compiler }}"
+          sudo apt-get install --yes g++-13 g++-14
       - run: ruff check builder.py scripts tools tests
       - run: ruff format --check builder.py scripts tools tests
       - run: python builder.py validate --lang pt-BR
       - run: python -m pytest -q
-      - run: bash scripts/test.sh
+      - name: Native tests and ASan/UBSan with GCC 13 and 14
+        run: |
+          for ugg_compiler in g++-13 g++-14; do
+            CXX="$ugg_compiler" bash scripts/test.sh
+          done
   arm-package:
     needs: pc
     runs-on: ubuntu-24.04

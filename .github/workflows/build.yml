@@ -51,9 +51,21 @@ jobs:
       - run: python scripts/bundle_sources.py
       - run: python builder.py hardware-retest --lang pt-BR
       - run: python scripts/verify_release.py --hardware-retest
+      - name: Label CI candidates without replacing hardware baseline
+        run: |
+          for ugg_package in dist/*.zip; do
+            mv "$ugg_package" "${ugg_package%.zip}-ci-${GITHUB_SHA:0:12}.zip"
+            rm -f -- "${ugg_package}.sha256"
+          done
+          cd dist
+          sha256sum *.zip > SHA256SUMS.txt
+          for ugg_candidate in *.zip; do
+            sha256sum "$ugg_candidate" > "${ugg_candidate}.sha256"
+          done
+          sha256sum --check SHA256SUMS.txt
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
-          name: UniversalGameGuide-PTBR-hardware-retest
+          name: UniversalGameGuide-PTBR-CI-${{ github.sha }}
           path: |
             dist/UniversalGameGuide-PTBR-Hardware-Test-v*.zip
             dist/UniversalGameGuide-Debug-Symbols-v*.zip

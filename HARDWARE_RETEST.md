@@ -4,6 +4,8 @@
 
 **0.2.1-alpha: NEEDS HARDWARE RETEST.** Compilação não demonstra que o crash foi corrigido.
 
+Este reteste continua usando o par já entregue: MINIMAL `ad4ddcb8…`, FULL `beb5127c…` (SHA-256 completos no [relatório oficial](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/TEST_REPORT.md)). A correção GCC na importação GitHub recompila um FULL diferente, `acb8c084…`; os artifacts novos identificam o commit com `-ci-<commit>` no nome. Eles são candidatos separados, sem resultado físico. Preserve o pacote original para a comparação já planejada e use os símbolos do mesmo pacote do binário instalado.
+
 Teste #1 informado pelo usuário em 2026-10-05: Plugin Loader Enabled; default.3gx encontrado SIM; Super Mario 3D Land; exception ARM11 imediatamente ao iniciar; overlay NÃO; hotkey NÃO testada; guias NÃO testados. **FAIL — plugin initialization/load crash.** Modelo exato, Luma, Title ID, região e .dmp ainda não informados. Não inferimos esses campos.
 
 ## 1. Instalar MINIMAL primeiro

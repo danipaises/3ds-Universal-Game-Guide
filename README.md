@@ -16,6 +16,8 @@ Baixe **UniversalGameGuide-PTBR-Hardware-Test-v0.2.1-alpha.zip**, faça backup c
 
 O boot trace grava somente em 3ds/UniversalGameGuide/logs/boot-stage.txt: checkpoints precoces em RAM, persistidos após fsInit, 3 KiB e até 40 writes/execução. O logging normal permanece OFF por padrão. Ambos usam SHARED/5 MiB. SOURCE, símbolos ELF/MAP e instalador vêm separados. [Changelog](CHANGELOG.md), [estado](PROJECT_STATUS.md), [testes](TEST_REPORT.md).
 
+Para o reteste pendente, preserve o par já entregue: MINIMAL `ad4ddcb8…` e FULL `beb5127c…` (SHA-256 completos em [TEST_REPORT.md](TEST_REPORT.md)). A correção GCC em State::get/toggle passou nos testes, mas recompilar o FULL gera outro binário: o primeiro CI produziu `acb8c084…`. MINIMAL manteve o hash original. A memória e o startup não foram alterados. Artifacts do CI recebem `-ci-<commit>` no nome do ZIP e **não substituem o par entregue para reteste**. Sempre use ELF/MAP do mesmo pacote de símbolos do binário testado.
+
 Para contribuir, consulte [CONTRIBUTING](CONTRIBUTING.md), [ADDING_A_GAME](docs/ADDING_A_GAME.md) e [build fixado](docs/BUILDING.md). Código próprio MIT; CTRPF e demais dependências conservam suas licenças em THIRD_PARTY_NOTICES.md/docs/licenses e no runtime. Sem ROMs, firmware, CIAs comerciais ou alterações de saves. Interface/retomada continuam pendentes de reteste.
 
 Comandos internos:

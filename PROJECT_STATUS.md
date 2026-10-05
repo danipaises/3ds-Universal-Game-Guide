@@ -19,10 +19,13 @@ Plugin Loader Enabled; default.3gx encontrado SIM; Super Mario 3D Land; ARM11 ex
 - Três ZIPs de reteste/símbolos/SOURCE gerados e verificados, incluindo header PRIVATE=false/5MiB/DWARF, CRCs/paths e checksums. Conteúdo permanece congelado: 2.363 arquivos editoriais/assets/catálogo iguais ao staging 0.2.0.
 - Importação do SOURCE 0.2.1 conferida: árvore na raiz, sem pasta intermediária. Correção explícita de State::get/toggle aplicada, preservando -Werror, protocolo e configuração de memória.
 - Repositório oficial definido: https://github.com/danipaises/3ds-Universal-Game-Guide. README e formulários de crash/jogo preparados; .gitignore cobre binários, caches, toolchains e build/dist.
+- Commit inicial a25023326132ec5a4b2d1fe1dfbe0d3e955db67c enviado para main, sem force push. Raiz do GitHub consultada e confirmada; 2.466 arquivos de source, nenhum arquivo ignorado versionado.
+- GitHub Actions real [run 37352375785](https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37352375785): PASS em GCC 13.3.0 e 14.2.0/Ubuntu 24.04, pytest/Builder/Ruff/core/ASan/UBSan/boot, ARM e verificação dos três pacotes. Logs e artifacts consultados/baixados; não é inferência de lint local.
+- 2.376 arquivos de guides/assets/data iguais ao SOURCE 0.2.1 auditado. Binários/ZIPs entregues localmente preservados; nenhum reteste físico novo ou GitHub Release/tag publicado.
+- Separação de artifacts candidatos do CI por commit implementada e evidência externa registrada. MINIMAL recompilado mantém ad4ddcb8…; FULL recompilado após correção necessária do core é acb8c084… (16 bytes maior). O FULL beb5127c… já entregue continua sendo a referência do reteste pendente, sem substituição local.
 
 ## IN PROGRESS
 
-- Validação para importação, commit/push em main e execução real do GitHub Actions, incluindo GCC 13/14 no Ubuntu 24.04. A conclusão externa será registrada após consultar os runs.
 - Investigação da causa exata aguarda o reteste/dump; a candidata PRIVATE=false está compilada e entregue, sem declarar solução física.
 
 ## TODO

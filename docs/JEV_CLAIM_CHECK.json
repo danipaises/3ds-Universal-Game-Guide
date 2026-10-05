@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-04",
+  "scope": "Verificação de afirmações sobre artefatos, testes e limitações; não comprovação física.",
+  "note": "Resultado aconselhou revisão humana de quatro afirmações apesar de classificá-las como verificadas. Probabilidades não substituem arquivos e logs. A duração digitada no resumo enviado foi imprecisa; o log real dessa rodada registra 4.592 s. Nenhuma afirmação julgada dependia desse número.",
+  "result": {
+    "model": "jev-1.13.0",
+    "usage": {
+      "input_tokens": 1385,
+      "output_tokens": 203
+    },
+    "truncated": false,
+    "coverage": {
+      "complete": true,
+      "original_chars": 1866,
+      "evaluated_chars": 1866,
+      "estimated_tokens": {
+        "state": 490,
+        "questions": 416,
+        "longest_question": 81
+      },
+      "estimator": "chars/4"
+    },
+    "action": "review",
+    "summary": {
+      "verified": 5,
+      "contradicted": 0,
+      "unsupported": 0,
+      "needs_review": 4
+    },
+    "results": [
+      {
+        "claim": "O plugin compilado produzido usa magic 3GX$0002 e possui 362166 bytes; isso não comprova compatibilidade física.",
+        "verdict": "verified",
+        "confidence": 0.32,
+        "probabilities": {
+          "unsupported": 0.32,
+          "verified": 0.54,
+          "contradicted": 0.14
+        },
+        "action": "escalate"
+      },
+      {
+        "claim": "Os 14 testes Python e o teste C++ do core passaram com ASan e UBSan; LeakSanitizer foi desativado por limitação de ptrace.",
+        "verdict": "verified",
+        "confidence": 0.67,
+        "probabilities": {
+          "unsupported": 0.09,
+          "verified": 0.78,
+          "contradicted": 0.13
+        },
+        "action": "review"
+      },
+      {
+        "claim": "Há 68 entradas de catálogo, 211 Title IDs únicos e seis guias PT-BR parciais, totalizando 1505 páginas.",
+        "verdict": "verified",
+        "confidence": 0.73,
+        "probabilities": {
+          "unsupported": 0.05,
+          "verified": 0.82,
+          "contradicted": 0.13
+        },
+        "action": "review"
+      },
+      {
+        "claim": "Nenhum teste em hardware real foi realizado. O overlay não foi validado com sucesso em emulador.",
+        "verdict": "verified",
+        "confidence": 0.91,
+        "probabilities": {
+          "unsupported": 0.02,
+          "verified": 0.94,
+          "contradicted": 0.04
+        },
+        "action": "auto"
+      },
+      {
+        "claim": "62 entradas do catálogo ainda não têm guia e Pokémon Tretta Lab permanece sem ID-base confirmado; o objetivo completo ainda não foi atingido.",
+        "verdict": "verified",
+        "confidence": 0.77,
+        "probabilities": {
+          "unsupported": 0.13,
+          "contradicted": 0.03,
+          "verified": 0.84
+        },
+        "action": "review"
+      }
+    ],
+    "thresholds": {
+      "auto_accept": 0.8
+    }
+  },
+  "configurationValidation": {
+    "ready": null,
+    "mock": null,
+    "note": "Respostas do MCP foram recebidas e registradas. O CLI instalado não expõe doctor; os campos ready:true/mock:false exigidos nas instruções da estação não foram confirmados. Não declarar a configuração validada."
+  }
+}

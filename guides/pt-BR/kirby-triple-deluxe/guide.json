@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "gameId": "kirby-triple-deluxe",
+  "language": "pt-BR",
+  "coverage": "pilot-partial",
+  "license": "CC-BY-4.0",
+  "pages": [
+    {
+      "id": "comecando",
+      "title": "Começando e cobertura",
+      "file": "comecando.md",
+      "spoiler": false,
+      "sources": [
+        0,
+        7
+      ],
+      "map": "floralia",
+      "section": "inicio"
+    },
+    {
+      "id": "controles",
+      "title": "Movimento e habilidades",
+      "file": "controles.md",
+      "spoiler": false,
+      "sources": [
+        9
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "hypernova",
+      "title": "Hypernova e profundidade",
+      "file": "hypernova.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "fine-fields",
+      "title": "Fine Fields",
+      "file": "fine-fields.md",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "lollipop-land",
+      "title": "Lollipop Land",
+      "file": "lollipop-land.md",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "old-odyssey",
+      "title": "Old Odyssey",
+      "file": "old-odyssey.md",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "wild-world",
+      "title": "Wild World",
+      "file": "wild-world.md",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "endless-explosions",
+      "title": "Endless Explosions",
+      "file": "endless-explosions.md",
+      "spoiler": false,
+      "sources": [
+        5
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "royal-road",
+      "title": "Royal Road",
+      "file": "royal-road.md",
+      "spoiler": true,
+      "sources": [
+        6
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "sun-stones",
+      "title": "Sun Stones e fases EX",
+      "file": "sun-stones.md",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "cem-por-cento",
+      "title": "Checklist de 100%",
+      "file": "cem-por-cento.md",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "fine-fields-1",
+      "file": "fine-fields-1.md",
+      "title": "Fine Fields > 1",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "fases",
+      "map": "fine-fields-1"
+    },
+    {
+      "id": "fine-fields-2",
+      "file": "fine-fields-2.md",
+      "title": "Fine Fields > 2",
+      "spoiler": false,
+      "sources": [
+        11
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "fine-fields-3",
+      "file": "fine-fields-3.md",
+      "title": "Fine Fields > 3",
+      "spoiler": false,
+      "sources": [
+        12
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "fine-fields-4",
+      "file": "fine-fields-4.md",
+      "title": "Fine Fields > 4",
+      "spoiler": false,
+      "sources": [
+        13
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "fine-fields-6-ex",
+      "file": "fine-fields-6-ex.md",
+      "title": "Fine Fields > 6-EX",
+      "spoiler": false,
+      "sources": [
+        14
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "lollipop-land-1",
+      "file": "lollipop-land-1.md",
+      "title": "Lollipop Land > 1",
+      "spoiler": false,
+      "sources": [
+        15
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "lollipop-land-2",
+      "file": "lollipop-land-2.md",
+      "title": "Lollipop Land > 2",
+      "spoiler": false,
+      "sources": [
+        16
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "lollipop-land-3",
+      "file": "lollipop-land-3.md",
+      "title": "Lollipop Land > 3",
+      "spoiler": false,
+      "sources": [
+        17
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "lollipop-land-4",
+      "file": "lollipop-land-4.md",
+      "title": "Lollipop Land > 4",
+      "spoiler": false,
+      "sources": [
+        18
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "lollipop-land-6-ex",
+      "file": "lollipop-land-6-ex.md",
+      "title": "Lollipop Land > 6-EX",
+      "spoiler": false,
+      "sources": [
+        19
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-1",
+      "file": "old-odyssey-1.md",
+      "title": "Old Odyssey > 1",
+      "spoiler": false,
+      "sources": [
+        20
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-2",
+      "file": "old-odyssey-2.md",
+      "title": "Old Odyssey > 2",
+      "spoiler": false,
+      "sources": [
+        21
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-3",
+      "file": "old-odyssey-3.md",
+      "title": "Old Odyssey > 3",
+      "spoiler": false,
+      "sources": [
+        22
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-4",
+      "file": "old-odyssey-4.md",
+      "title": "Old Odyssey > 4",
+      "spoiler": false,
+      "sources": [
+        23
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-5",
+      "file": "old-odyssey-5.md",
+      "title": "Old Odyssey > 5",
+      "spoiler": false,
+      "sources": [
+        24
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "old-odyssey-7-ex",
+      "file": "old-odyssey-7-ex.md",
+      "title": "Old Odyssey > 7-EX",
+      "spoiler": false,
+      "sources": [
+        25
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-1",
+      "file": "wild-world-1.md",
+      "title": "Wild World > 1",
+      "spoiler": false,
+      "sources": [
+        26
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-2",
+      "file": "wild-world-2.md",
+      "title": "Wild World > 2",
+      "spoiler": false,
+      "sources": [
+        27
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-3",
+      "file": "wild-world-3.md",
+      "title": "Wild World > 3",
+      "spoiler": false,
+      "sources": [
+        28
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-4",
+      "file": "wild-world-4.md",
+      "title": "Wild World > 4",
+      "spoiler": false,
+      "sources": [
+        29
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-5",
+      "file": "wild-world-5.md",
+      "title": "Wild World > 5",
+      "spoiler": false,
+      "sources": [
+        30
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "wild-world-7-ex",
+      "file": "wild-world-7-ex.md",
+      "title": "Wild World > 7-EX",
+      "spoiler": false,
+      "sources": [
+        31
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-1",
+      "file": "endless-explosions-1.md",
+      "title": "Endless Explosions > 1",
+      "spoiler": false,
+      "sources": [
+        32
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-2",
+      "file": "endless-explosions-2.md",
+      "title": "Endless Explosions > 2",
+      "spoiler": false,
+      "sources": [
+        33
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-3",
+      "file": "endless-explosions-3.md",
+      "title": "Endless Explosions > 3",
+      "spoiler": false,
+      "sources": [
+        34
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-4",
+      "file": "endless-explosions-4.md",
+      "title": "Endless Explosions > 4",
+      "spoiler": false,
+      "sources": [
+        35
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-5",
+      "file": "endless-explosions-5.md",
+      "title": "Endless Explosions > 5",
+      "spoiler": false,
+      "sources": [
+        36
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "endless-explosions-7-ex",
+      "file": "endless-explosions-7-ex.md",
+      "title": "Endless Explosions > 7-EX",
+      "spoiler": false,
+      "sources": [
+        37
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-1",
+      "file": "royal-road-1.md",
+      "title": "Royal Road > 1",
+      "spoiler": false,
+      "sources": [
+        38
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-2",
+      "file": "royal-road-2.md",
+      "title": "Royal Road > 2",
+      "spoiler": false,
+      "sources": [
+        39
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-3",
+      "file": "royal-road-3.md",
+      "title": "Royal Road > 3",
+      "spoiler": false,
+      "sources": [
+        40
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-4",
+      "file": "royal-road-4.md",
+      "title": "Royal Road > 4",
+      "spoiler": false,
+      "sources": [
+        41
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-5",
+      "file": "royal-road-5.md",
+      "title": "Royal Road > 5",
+      "spoiler": false,
+      "sources": [
+        42
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-7-ex",
+      "file": "royal-road-7-ex.md",
+      "title": "Royal Road > 7-EX",
+      "spoiler": false,
+      "sources": [
+        43
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "royal-road-8-ex",
+      "file": "royal-road-8-ex.md",
+      "title": "Royal Road > 8-EX",
+      "spoiler": false,
+      "sources": [
+        44
+      ],
+      "section": "fases"
+    },
+    {
+      "id": "habilidades",
+      "file": "habilidades.md",
+      "title": "Habilidades > escolher para o obstáculo",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "habilidades"
+    },
+    {
+      "id": "chefe-fine-fields",
+      "file": "chefe-fine-fields.md",
+      "title": "Fine Fields > chefe",
+      "spoiler": true,
+      "sources": [
+        45
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "chefe-lollipop-land",
+      "file": "chefe-lollipop-land.md",
+      "title": "Lollipop Land > chefe",
+      "spoiler": true,
+      "sources": [
+        46
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "chefe-old-odyssey",
+      "file": "chefe-old-odyssey.md",
+      "title": "Old Odyssey > chefe",
+      "spoiler": true,
+      "sources": [
+        47
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "chefe-wild-world",
+      "file": "chefe-wild-world.md",
+      "title": "Wild World > chefe",
+      "spoiler": true,
+      "sources": [
+        48
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "chefe-endless-explosions",
+      "file": "chefe-endless-explosions.md",
+      "title": "Endless Explosions > chefe",
+      "spoiler": true,
+      "sources": [
+        49
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "chefe-royal-road",
+      "file": "chefe-royal-road.md",
+      "title": "Royal Road > chefe",
+      "spoiler": true,
+      "sources": [
+        50
+      ],
+      "section": "chefes"
+    },
+    {
+      "id": "extras",
+      "file": "extras.md",
+      "title": "Extras > Dededetour, Arena e True Arena",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "extras"
+    }
+  ],
+  "reviewed": false,
+  "remaining": [
+    "Percursos completos entre colecionáveis nas 35 fases e revisão gameplay de cada localização.",
+    "Padrões completos dos chefes, DX, Dededetour e True Arena.",
+    "Lista individual dos 256 Keychains e requisitos detalhados de 100%.",
+    "Revisão editorial externa."
+  ],
+  "requiredSections": [
+    "chefes",
+    "extras",
+    "fases",
+    "habilidades",
+    "inicio",
+    "referencia"
+  ]
+}

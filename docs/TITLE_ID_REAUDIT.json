@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-04",
+  "catalogGames": 68,
+  "uniqueTitleIds": 211,
+  "regionalAssociationsChecked": 279,
+  "verification": {
+    "cross-checked": 166,
+    "single-source": 112,
+    "NEEDS_VERIFICATION": 1
+  },
+  "snapshotSha256": {
+    "3dsdb.xml": "b6702a22a48eac283a6b2f28257de89c923fac0fd8f0ca4581fa49c050608a4e",
+    "list_GB.json": "c68c0333518f685b41c81969a4bf0b2718c720c56fc1a5314148364a29356c3b",
+    "list_JP.json": "0a49d876d55672beb86487ab1109758ac67a793b8e7a32cacd28d79414410e31",
+    "list_KR.json": "d5cd17e96926fd0d1003a33ae3cca13c9b1b9cf30624e11554be6992d040e6e4",
+    "list_TW.json": "60b207046b7bc64fb08517c2a41600efaf25bc78c3bc0cc95e805aaf0cadfcfb",
+    "list_US.json": "37383334a8e90f1a81958c9a32f0a2ac981da3bf276f7c8c32c09615d9e94a7a"
+  },
+  "pendingGames": [
+    "pokemon-tretta-lab"
+  ],
+  "hardware": "NOT TESTED ON REAL HARDWARE",
+  "scope": "Direct snapshot/value/category cross-check; not proof of regional completeness or vendor confirmation."
+}

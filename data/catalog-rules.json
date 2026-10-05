@@ -1,0 +1,731 @@
+[
+  {
+    "id": "super-mario-3d-land",
+    "name": "Super Mario 3D Land",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Super Mario 3D Land",
+      "Super Mario 3D Rand",
+      "Super Mario 3D Paradise"
+    ]
+  },
+  {
+    "id": "new-super-mario-bros-2",
+    "name": "New Super Mario Bros. 2",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "New Super Mario Bros 2",
+      "New Super Mario Brothers 2"
+    ]
+  },
+  {
+    "id": "mario-kart-7",
+    "name": "Mario Kart 7",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Kart 7",
+      "Mario Cart 7",
+      "Mario Racing 7"
+    ]
+  },
+  {
+    "id": "mario-party-island-tour",
+    "name": "Mario Party: Island Tour",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Party Island Tour"
+    ]
+  },
+  {
+    "id": "mario-party-star-rush",
+    "name": "Mario Party: Star Rush",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Party Star Rush"
+    ]
+  },
+  {
+    "id": "mario-party-top-100",
+    "name": "Mario Party: The Top 100",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Party The Top 100",
+      "Mario Party 100 Mini Game Collection"
+    ]
+  },
+  {
+    "id": "paper-mario-sticker-star",
+    "name": "Paper Mario: Sticker Star",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Paper Mario Sticker Star",
+      "Paper Mario Super Seal"
+    ]
+  },
+  {
+    "id": "mario-luigi-dream-team",
+    "name": "Mario & Luigi: Dream Team",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Luigi Dream Team",
+      "Mario and Luigi RPG4 Dream Adventure",
+      "Mario and Luigi RPG 4 Dream Adventure"
+    ]
+  },
+  {
+    "id": "mario-luigi-paper-jam",
+    "name": "Mario & Luigi: Paper Jam",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Luigi Paper Jam",
+      "Mario and Luigi RPG Paper Mario",
+      "Mario and Luigi RPG ペーパーマリオ",
+      "Mario and Luigi RPG 페이퍼"
+    ]
+  },
+  {
+    "id": "mario-luigi-superstar-saga",
+    "name": "Mario & Luigi: Superstar Saga + Bowser’s Minions",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Luigi Superstar Saga",
+      "Mario and Luigi RPG1 DX",
+      "Mario and Luigi RPG 1 DX"
+    ]
+  },
+  {
+    "id": "mario-luigi-bowsers-inside-story",
+    "name": "Mario & Luigi: Bowser’s Inside Story + Bowser Jr.’s Journey",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Luigi Bowsers Inside Story",
+      "Mario and Luigi Bowser s Inside Story",
+      "Mario and Luigi RPG3 DX"
+    ]
+  },
+  {
+    "id": "luigis-mansion-dark-moon",
+    "name": "Luigi’s Mansion 2 / Dark Moon",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Luigis Mansion 2",
+      "Luigi s Mansion 2",
+      "Luigis Mansion Dark Moon",
+      "Luigi s Mansion Dark Moon",
+      "Luigi Mansion 2",
+      "Luigi Mansion Dark Gate"
+    ]
+  },
+  {
+    "id": "luigis-mansion",
+    "name": "Luigi’s Mansion",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Luigis Mansion",
+      "Luigi s Mansion",
+      "Luigi Mansion",
+      "Luigi condominium"
+    ]
+  },
+  {
+    "id": "yoshis-new-island",
+    "name": "Yoshi’s New Island",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Yoshi s New Island",
+      "Yoshis New Island",
+      "Yoshi NEW Island"
+    ]
+  },
+  {
+    "id": "poochy-yoshis-woolly-world",
+    "name": "Poochy & Yoshi’s Woolly World",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Poochy and Yoshis Woolly World",
+      "Poochy and Yoshi s Woolly World",
+      "Pochi Yoshi Woolworld",
+      "Poochy to Yoshi Wool World",
+      "Come on Yoshi Ullie World"
+    ]
+  },
+  {
+    "id": "warioware-gold",
+    "name": "WarioWare Gold",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "WarioWare Gold",
+      "Made in Wario Gorgeous"
+    ]
+  },
+  {
+    "id": "mario-sports-superstars",
+    "name": "Mario Sports Superstars",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Sports Superstars"
+    ]
+  },
+  {
+    "id": "mario-golf-world-tour",
+    "name": "Mario Golf: World Tour",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Golf World Tour"
+    ]
+  },
+  {
+    "id": "mario-tennis-open",
+    "name": "Mario Tennis Open",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario Tennis Open"
+    ]
+  },
+  {
+    "id": "mario-sonic-london-2012",
+    "name": "Mario & Sonic at the London 2012 Olympic Games",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Sonic at the London 2012 Olympic Games",
+      "Mario and Sonic at London Olympics",
+      "Mario and Sonic London Olympics"
+    ]
+  },
+  {
+    "id": "mario-sonic-rio-2016",
+    "name": "Mario & Sonic at the Rio 2016 Olympic Games",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Sonic at the Rio 2016 Olympic Games",
+      "Mario and Sonic at Rio Olympics",
+      "Mario and Sonic Rio Olympics"
+    ]
+  },
+  {
+    "id": "super-mario-maker-3ds",
+    "name": "Super Mario Maker for Nintendo 3DS",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Super Mario Maker for Nintendo 3DS"
+    ]
+  },
+  {
+    "id": "dr-mario-miracle-cure",
+    "name": "Dr. Mario: Miracle Cure",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Dr Mario Miracle Cure",
+      "Dr MARIO Gyakuten",
+      "Dr Mario Gakten"
+    ]
+  },
+  {
+    "id": "captain-toad-treasure-tracker",
+    "name": "Captain Toad: Treasure Tracker",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Captain Toad Treasure Tracker",
+      "進め キノピオ隊長"
+    ]
+  },
+  {
+    "id": "mini-mario-amiibo-challenge",
+    "name": "Mini Mario & Friends: amiibo Challenge",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mini Mario and Friends amiibo Challenge"
+    ]
+  },
+  {
+    "id": "mario-dk-minis-on-move",
+    "name": "Mario and Donkey Kong: Minis on the Move",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario and Donkey Kong Minis on the Move",
+      "Mario and Donkey Kong Mini Mini Carnival"
+    ]
+  },
+  {
+    "id": "mario-dk-tipping-stars",
+    "name": "Mario vs. Donkey Kong: Tipping Stars",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Mario vs Donkey Kong Tipping Stars",
+      "Mario vs Donkey Kong Minna de Mini Land",
+      "Mario vs Donkey Kong Mini Land for everyone"
+    ]
+  },
+  {
+    "id": "puzzle-dragons-mario",
+    "name": "Puzzle & Dragons Z + Super Mario Bros. Edition",
+    "franchise": "mario",
+    "category": "game",
+    "aliases": [
+      "Puzzle and Dragons Z Puzzle and Dragons Super Mario Bros Edition",
+      "Puzzle and Dragons Z Super Mario Bros Edition",
+      "Puzzle and Dragons Super Mario Bros Edition"
+    ]
+  },
+  {
+    "id": "super-smash-bros-3ds",
+    "name": "Super Smash Bros. for Nintendo 3DS",
+    "franchise": "mario",
+    "category": "crossover",
+    "aliases": [
+      "Super Smash Bros for Nintendo 3DS",
+      "Super Smash Brothers for Nintendo 3DS",
+      "Daisen Smash Brothers for Nintendo 3DS"
+    ],
+    "note": "Crossover direto com Mario, Pokémon, Zelda e Kirby; memória estendida no Old 3DS, não testado."
+  },
+  {
+    "id": "photos-with-mario",
+    "name": "Photos with Mario",
+    "franchise": "mario",
+    "category": "application",
+    "aliases": [
+      "Photos with Mario"
+    ]
+  },
+  {
+    "id": "mario-party-guest",
+    "name": "Mario Party: Star Rush — Party Guest",
+    "franchise": "mario",
+    "category": "companion",
+    "aliases": [
+      "Mario Party Star Rush Party Guest",
+      "Mario Party Star Rush Party Guest Edition",
+      "Compatible with the person who has Mario Party Star Rush"
+    ]
+  },
+  {
+    "id": "pokemon-x",
+    "name": "Pokémon X",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon X"
+    ]
+  },
+  {
+    "id": "pokemon-y",
+    "name": "Pokémon Y",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Y"
+    ]
+  },
+  {
+    "id": "pokemon-omega-ruby",
+    "name": "Pokémon Omega Ruby",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Omega Ruby",
+      "Pokemon Omegal Be"
+    ]
+  },
+  {
+    "id": "pokemon-alpha-sapphire",
+    "name": "Pokémon Alpha Sapphire",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Alpha Sapphire"
+    ]
+  },
+  {
+    "id": "pokemon-sun",
+    "name": "Pokémon Sun",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Sun",
+      "Elf Pokemon Sun",
+      "Elf Pokemon 太陽"
+    ]
+  },
+  {
+    "id": "pokemon-moon",
+    "name": "Pokémon Moon",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Moon"
+    ]
+  },
+  {
+    "id": "pokemon-ultra-sun",
+    "name": "Pokémon Ultra Sun",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Ultra Sun",
+      "Pokemon Ultra San",
+      "Elf Pokemon Dream Day"
+    ]
+  },
+  {
+    "id": "pokemon-ultra-moon",
+    "name": "Pokémon Ultra Moon",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Ultra Moon",
+      "Elf Pokemon Ultimate Month"
+    ]
+  },
+  {
+    "id": "pokemon-gates-to-infinity",
+    "name": "Pokémon Mystery Dungeon: Gates to Infinity",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Mystery Dungeon Gates to Infinity",
+      "Pokemon Fushigi no Dungeon Magnagate",
+      "Pokemon Mysterious Dungeon Magned Gate"
+    ]
+  },
+  {
+    "id": "pokemon-super-mystery-dungeon",
+    "name": "Pokémon Super Mystery Dungeon",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Super Mystery Dungeon",
+      "Pokemon Chou Fushigi no Dungeon",
+      "Pokemon super mysterious dungeon"
+    ]
+  },
+  {
+    "id": "pokemon-rumble-blast",
+    "name": "Pokémon Rumble Blast / Super Pokémon Rumble",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Rumble Blast",
+      "Super Pokemon Rumble",
+      "Super Pokemon Scramble",
+      "Super Pokemon Catholic Doll"
+    ]
+  },
+  {
+    "id": "pokemon-rumble-world",
+    "name": "Pokémon Rumble World",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Rumble World",
+      "Minna no Pokemon Scramble",
+      "Everyone s Pokemon Scramble"
+    ]
+  },
+  {
+    "id": "pokemon-shuffle",
+    "name": "Pokémon Shuffle",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Shuffle",
+      "ポケとる"
+    ]
+  },
+  {
+    "id": "pokemon-picross",
+    "name": "Pokémon Picross",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Picross",
+      "Pokemon piclus"
+    ]
+  },
+  {
+    "id": "pokemon-battle-trozei",
+    "name": "Pokémon Battle Trozei / Link: Battle!",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Battle Trozei",
+      "Pokemon Link Battle",
+      "Pokemon Battro Tource"
+    ]
+  },
+  {
+    "id": "pokemon-art-academy",
+    "name": "Pokémon Art Academy",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Art Academy"
+    ]
+  },
+  {
+    "id": "detective-pikachu",
+    "name": "Detective Pikachu",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Detective Pikachu"
+    ]
+  },
+  {
+    "id": "pokemon-dream-radar",
+    "name": "Pokémon Dream Radar",
+    "franchise": "pokemon",
+    "category": "game",
+    "aliases": [
+      "Pokemon Dream Radar",
+      "Pokemon AR searcher",
+      "Pokemon AR West",
+      "Pokemon AR 서처",
+      "Pokemon AR 서처",
+      "Pokemon AR 서"
+    ]
+  },
+  {
+    "id": "pokemon-bank",
+    "name": "Pokémon Bank",
+    "franchise": "pokemon",
+    "category": "application",
+    "aliases": [
+      "Pokemon Bank"
+    ]
+  },
+  {
+    "id": "poke-transporter",
+    "name": "Poké Transporter",
+    "franchise": "pokemon",
+    "category": "application",
+    "aliases": [
+      "Poke Transporter",
+      "ポケムーバー"
+    ]
+  },
+  {
+    "id": "pokedex-3d",
+    "name": "Pokédex 3D",
+    "franchise": "pokemon",
+    "category": "application",
+    "aliases": [
+      "Pokedex 3D",
+      "ポケモン立体図鑑"
+    ]
+  },
+  {
+    "id": "pokedex-3d-pro",
+    "name": "Pokédex 3D Pro",
+    "franchise": "pokemon",
+    "category": "application",
+    "aliases": [
+      "Pokedex 3D Pro",
+      "Pokemon National Picture Book PRO"
+    ]
+  },
+  {
+    "id": "pokemon-tretta-lab",
+    "name": "Pokémon Tretta Lab",
+    "franchise": "pokemon",
+    "category": "accessory-application",
+    "aliases": [
+      "Pokemon Tretta Lab",
+      "ポケモントレッタラボ"
+    ]
+  },
+  {
+    "id": "zelda-ocarina-of-time-3d",
+    "name": "The Legend of Zelda: Ocarina of Time 3D",
+    "franchise": "zelda",
+    "category": "game",
+    "aliases": [
+      "The Legend of Zelda Ocarina of Time 3D",
+      "Zelda no Densetsu Toki no Ocarina 3D",
+      "Ocarina 3D at the Legend of Zelda",
+      "Zelda s Legend Ocarina 3D"
+    ]
+  },
+  {
+    "id": "zelda-majoras-mask-3d",
+    "name": "The Legend of Zelda: Majora’s Mask 3D",
+    "franchise": "zelda",
+    "category": "game",
+    "aliases": [
+      "The Legend of Zelda Majoras Mask 3D",
+      "The Legend of Zelda Majora s Mask 3D",
+      "Zelda no Densetsu Majora no Kamen 3D",
+      "Zelda s legendary Mujura",
+      "Zelda s legend Mujura"
+    ]
+  },
+  {
+    "id": "zelda-link-between-worlds",
+    "name": "The Legend of Zelda: A Link Between Worlds",
+    "franchise": "zelda",
+    "category": "game",
+    "aliases": [
+      "The Legend of Zelda A Link Between Worlds",
+      "The Legend of Zelda Kamigami no Triforce 2",
+      "The Legend of Zelda Gods of the Tri Force 2",
+      "Zelda s legendary gods of trifos 2"
+    ]
+  },
+  {
+    "id": "zelda-tri-force-heroes",
+    "name": "The Legend of Zelda: Tri Force Heroes",
+    "franchise": "zelda",
+    "category": "game",
+    "aliases": [
+      "The Legend of Zelda Tri Force Heroes",
+      "Zelda no Densetsu Tri Force 3 Juushi",
+      "Zelda Legend of Triforce 3 Musketeers",
+      "Zelda s Legend Tripos Three Musketeers",
+      "Zelda s Denju Triiforce 3 Musketeers"
+    ]
+  },
+  {
+    "id": "hyrule-warriors-legends",
+    "name": "Hyrule Warriors Legends",
+    "franchise": "zelda",
+    "category": "game",
+    "aliases": [
+      "Hyrule Warriors Legends",
+      "Zelda Musou Hyrule All Stars",
+      "Zelda Musou Hailal All Stars",
+      "The legends of Zelda 젤다무쌍"
+    ]
+  },
+  {
+    "id": "kirby-triple-deluxe",
+    "name": "Kirby: Triple Deluxe",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby Triple Deluxe",
+      "Kirby s Triple Deluxe",
+      "Hoshi no Kirby Triple Deluxe",
+      "Star Kirby Triple Deluxe",
+      "Kirby Triple Deluxe of the Stars"
+    ]
+  },
+  {
+    "id": "kirby-planet-robobot",
+    "name": "Kirby: Planet Robobot",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby Planet Robobot",
+      "Hoshi no Kirby Robobo Planet",
+      "Kirby Robobo Planet of the Stars",
+      "Star Kirby Robo Planet"
+    ]
+  },
+  {
+    "id": "kirby-fighters-deluxe",
+    "name": "Kirby Fighters Deluxe",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby Fighters Deluxe",
+      "Kirby Fighters Z",
+      "Kirby Fighters Z 커비"
+    ]
+  },
+  {
+    "id": "dededes-drum-dash-deluxe",
+    "name": "Dedede’s Drum Dash Deluxe",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Dededes Drum Dash Deluxe",
+      "Dedede s Drum Dash Deluxe",
+      "Den Z in Dedede of Dedede"
+    ]
+  },
+  {
+    "id": "team-kirby-clash-deluxe",
+    "name": "Team Kirby Clash Deluxe",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Team Kirby Clash Deluxe",
+      "Everyone Kirby Hunter s Z",
+      "みんなで カービィハンターズ"
+    ]
+  },
+  {
+    "id": "kirbys-blowout-blast",
+    "name": "Kirby’s Blowout Blast",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby s Blowout Blast",
+      "Kirbys Blowout Blast",
+      "Kirby no Suikomi Daisakusen",
+      "Kirby s Suikomi Daisakusen",
+      "Kirby s sucking masterpiece"
+    ]
+  },
+  {
+    "id": "kirby-battle-royale",
+    "name": "Kirby Battle Royale",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby Battle Royale",
+      "Kirby Battle Deluxe"
+    ]
+  },
+  {
+    "id": "kirbys-extra-epic-yarn",
+    "name": "Kirby’s Extra Epic Yarn",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "Kirby s Extra Epic Yarn",
+      "Kirbys Extra Epic Yarn",
+      "Keito no Kirby Plus",
+      "Kirby Plus of wool",
+      "Wool Kirby Story Plus"
+    ]
+  },
+  {
+    "id": "3d-classics-kirbys-adventure",
+    "name": "3D Classics: Kirby’s Adventure",
+    "franchise": "kirby",
+    "category": "game",
+    "aliases": [
+      "3D Classics Kirby s Adventure",
+      "3D Classics Kirbys Adventure",
+      "3D Classics Star Kirby Dream Fountain Story"
+    ]
+  }
+]

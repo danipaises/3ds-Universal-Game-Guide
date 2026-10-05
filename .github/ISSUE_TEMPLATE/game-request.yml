@@ -1,0 +1,47 @@
+name: Solicitar jogo ou conteúdo
+description: Solicite um guia ou uma variante regional com evidências do Title ID.
+title: '[Jogo] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Conteúdo está pausado enquanto aguardamos o reteste de hardware. Pedidos ficam registrados para a próxima etapa. Não envie ROMs, CIAs comerciais, saves ou chaves.
+  - type: input
+    id: game
+    attributes:
+      label: Jogo
+    validations:
+      required: true
+  - type: input
+    id: franchise
+    attributes:
+      label: Franquia
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Região
+      placeholder: USA, EUR, JPN, KOR, TWN ou desconhecida
+    validations:
+      required: true
+  - type: input
+    id: title-id
+    attributes:
+      label: Title ID, se conhecido
+      description: Inclua a fonte verificável do ID; não envie IDs deduzidos de updates/DLCs.
+  - type: input
+    id: language
+    attributes:
+      label: Idioma do guia
+      value: pt-BR
+      description: O idioma do guia independe da região do jogo. PT-BR é a prioridade atual.
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Tipo de conteúdo ou guia solicitado
+      description: Descreva o que falta, por exemplo walkthrough, colecionáveis, mapa, referência de aplicativo ou reconhecimento de Title ID.
+    validations:
+      required: true

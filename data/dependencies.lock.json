@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "dockerImage": "devkitpro/devkitarm@sha256:116afba8df8453961de2936ffab20dd441edf4d682856c1ec8b0e53d7ed0bbf5",
+  "dependencies": [
+    {
+      "name": "ctrpf",
+      "url": "https://gitlab.com/api/v4/projects/thepixellizeross%2Fctrpluginframework/repository/archive.tar.gz?sha=a502818c7586179d320caf8e897238d3491b5a29",
+      "archive": "pinned-ctrpf.tar.gz",
+      "destination": ".deps/ctrpluginframework-0.8.0",
+      "sha256": "0d1bb6000e623520c6ab24873f4128afe28934530982a6e2226ebba6ed5b42e5"
+    },
+    {
+      "name": "converter",
+      "url": "https://gitlab.com/api/v4/projects/thepixellizeross%2F3gxtool/repository/archive.tar.gz?sha=57e3160ab72d8533a2f0601efdc8a149b4825ea5",
+      "archive": "pinned-converter.tar.gz",
+      "destination": ".deps/3gxtool-current",
+      "sha256": "ebfff29af3bfa2863ecce7968d3f03df8096ef81e6b89b93efd672bf8bd887da"
+    },
+    {
+      "name": "libcwav",
+      "url": "https://codeload.github.com/mariohackandglitch/libcwav/tar.gz/4fc8b11b192bb7f40f7cbdce2ef09e136b7c461c",
+      "archive": "pinned-libcwav.tar.gz",
+      "destination": ".deps/libcwav",
+      "sha256": "7acaafc2c394a932b0e3903959906b69dfe8fc42d4094ba1c3ee431083b62cbf"
+    },
+    {
+      "name": "libncsnd",
+      "url": "https://codeload.github.com/mariohackandglitch/libncsnd/tar.gz/667cf998ef4bbbaffd4190b879939a087ebb9f57",
+      "archive": "pinned-libncsnd.tar.gz",
+      "destination": ".deps/libncsnd",
+      "sha256": "831199c18b28787d10aabce7a295333103155f4b621e79ecfa0fcc37db93d5f3"
+    },
+    {
+      "name": "yaml-cpp",
+      "url": "https://codeload.github.com/jbeder/yaml-cpp/tar.gz/refs/tags/0.8.0",
+      "archive": "pinned-yaml-cpp.tar.gz",
+      "destination": ".deps/yaml-cpp-0.8.0",
+      "sha256": "fbe74bbdcee21d656715688706da3c8becfd946d92cd44705cc6098bb23b3a16"
+    },
+    {
+      "name": "dynalo",
+      "url": "https://codeload.github.com/maddouri/dynalo/tar.gz/411199d712003195966b380bb4f5dcd2d63f4733",
+      "archive": "pinned-dynalo.tar.gz",
+      "destination": ".deps/dynalo",
+      "sha256": "648267567395e4c88e0b12642c705c1f6d0ef0be851b165ffd8d3b7e7ffd6baf"
+    }
+  ]
+}

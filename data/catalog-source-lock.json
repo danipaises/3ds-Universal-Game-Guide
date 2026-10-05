@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "eshopCommit": "5d9141a56275c974a25aaaf6856ec6a1e50e5c07",
+  "retrieved": "2026-10-04",
+  "files": {
+    "3dsdb.xml": {
+      "url": "https://3dsdb.com/xml.php",
+      "sha256": "b6702a22a48eac283a6b2f28257de89c923fac0fd8f0ca4581fa49c050608a4e"
+    },
+    "list_GB.json": {
+      "url": "https://raw.githubusercontent.com/hax0kartik/3dsdb/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_GB.json",
+      "sha256": "c68c0333518f685b41c81969a4bf0b2718c720c56fc1a5314148364a29356c3b"
+    },
+    "list_JP.json": {
+      "url": "https://raw.githubusercontent.com/hax0kartik/3dsdb/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_JP.json",
+      "sha256": "0a49d876d55672beb86487ab1109758ac67a793b8e7a32cacd28d79414410e31"
+    },
+    "list_KR.json": {
+      "url": "https://raw.githubusercontent.com/hax0kartik/3dsdb/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_KR.json",
+      "sha256": "d5cd17e96926fd0d1003a33ae3cca13c9b1b9cf30624e11554be6992d040e6e4"
+    },
+    "list_TW.json": {
+      "url": "https://raw.githubusercontent.com/hax0kartik/3dsdb/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_TW.json",
+      "sha256": "60b207046b7bc64fb08517c2a41600efaf25bc78c3bc0cc95e805aaf0cadfcfb"
+    },
+    "list_US.json": {
+      "url": "https://raw.githubusercontent.com/hax0kartik/3dsdb/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_US.json",
+      "sha256": "37383334a8e90f1a81958c9a32f0a2ac981da3bf276f7c8c32c09615d9e94a7a"
+    }
+  }
+}

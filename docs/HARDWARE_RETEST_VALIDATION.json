@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-05",
+  "version": "0.2.1-alpha",
+  "priorHardwareResult": "TESTED ON REAL HARDWARE — CURRENT RESULT: CRASH ON PLUGIN LOAD (0.2.0-alpha)",
+  "currentStatus": "NEEDS HARDWARE RETEST",
+  "realRetestsPerformed": 0,
+  "python": {
+    "tests": 38,
+    "failures": 0
+  },
+  "nativeCore": {
+    "asan": true,
+    "ubsan": true,
+    "lsan": "ptrace blocked",
+    "packs": 67,
+    "pages": 2151,
+    "maxSingleReadBytes": 175344
+  },
+  "bootTraceHostStub": {
+    "normalWrites": 40,
+    "fsFailedWrites": 0,
+    "ioFailedWrites": 1,
+    "physicalSDTest": false
+  },
+  "arm": {
+    "success": true,
+    "cleanBuilds": 2,
+    "sixArtifactHashesIdentical": true,
+    "privateMemory": false,
+    "memoryMiB": 5,
+    "hashes": {
+      "default-minimal.3gx": "ad4ddcb8dc411b5b06ea1ef3c999caca2b1dbca044877f64bb78564e9cca8234",
+      "default-minimal.elf": "35112cdb53217b21011c75cbcc584f9e2111e12995ca6dbfd9dee4cf5572546f",
+      "default-minimal.map": "0537ea9bd41cbe2fbd929987cc35cf4b9573661237266a62a57223f04ff57ad1",
+      "default-full.3gx": "beb5127cb9976de5a32a1815a053ff860b9926b5b1a5553191ef92dc395b0bbd",
+      "default-full.elf": "c0cb55be5195677c1579a38c851ecf24f18eb45180ccb776d65ebbf8c3169d2c",
+      "default-full.map": "60e246dfbfa18f070625103bf51a990159c59414aa3ea1557ec42e3fbb2b3292"
+    }
+  },
+  "symbolization": {
+    "fixture": "synthetic",
+    "tool": "devkitARM addr2line",
+    "pcResolved": "UGGBootStage /work/plugin/source/boot.cpp:60",
+    "originalCrashDumpAvailable": false
+  },
+  "contentFrozen": {
+    "comparison": "retained build/source-release tree from 0.2.0-alpha",
+    "filesUnchanged": 2363,
+    "guidesExpanded": false,
+    "catalogChanged": false,
+    "assetsChanged": false
+  },
+  "packages": {
+    "status": "passed",
+    "installedVariant": "minimal",
+    "fullInDiagnostics": true,
+    "symbolsSeparate": true,
+    "sourceSeparate": true,
+    "installerFiles": 80,
+    "installerHashes": 79,
+    "guides": 6,
+    "pages": 78,
+    "titleIds": 22,
+    "tiles": 45,
+    "symbolsFiles": 10,
+    "configStateOverwritten": false
+  },
+  "githubWorkflows": {
+    "localLint": "passed",
+    "execution": "NOT RUN"
+  },
+  "originalControlProvenance": {
+    "originalPluginSha256": "a1014ecf2f79c4666511b18291a51201175e7dd5e8d9609e7cd732d9eefafe8e",
+    "privateBitRestoredMatchesOriginal": true,
+    "elf": "build/private-false-control/default.elf",
+    "note": "function-only 0.2.0 control; not shipped or substituted for 0.2.1 symbols"
+  }
+}

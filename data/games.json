@@ -1,0 +1,1925 @@
+{
+  "schemaVersion": 1,
+  "games": [
+    {
+      "id": "super-mario-3d-land",
+      "name": "Super Mario 3D Land",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000053F00"
+        ],
+        "JPN": [
+          "0004000000054100"
+        ],
+        "KOR": [
+          "0004000000089D00"
+        ],
+        "TWN": [
+          "0004000000089E00"
+        ],
+        "USA": [
+          "0004000000054000"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "new-super-mario-bros-2",
+      "name": "New Super Mario Bros. 2",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000007AF00"
+        ],
+        "JPN": [
+          "000400000007AD00"
+        ],
+        "TWN": [
+          "00040000000B8A00"
+        ],
+        "USA": [
+          "000400000007AE00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-kart-7",
+      "name": "Mario Kart 7",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000030700"
+        ],
+        "JPN": [
+          "0004000000030600"
+        ],
+        "KOR": [
+          "0004000000030A00"
+        ],
+        "TWN": [
+          "000400000008B400"
+        ],
+        "USA": [
+          "0004000000030800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-party-island-tour",
+      "name": "Mario Party: Island Tour",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000F8200"
+        ],
+        "JPN": [
+          "00040000000DD400"
+        ],
+        "KOR": [
+          "0004000000119B00"
+        ],
+        "TWN": [
+          "0004000000119300"
+        ],
+        "USA": [
+          "00040000000F8100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-party-star-rush",
+      "name": "Mario Party: Star Rush",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000019BE00"
+        ],
+        "JPN": [
+          "0004000000193900"
+        ],
+        "KOR": [
+          "00040000001AC700"
+        ],
+        "USA": [
+          "000400000019BD00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-party-top-100",
+      "name": "Mario Party: The Top 100",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001C4D00"
+        ],
+        "JPN": [
+          "00040000001C0A00"
+        ],
+        "TWN": [
+          "00040000001C4E00"
+        ],
+        "USA": [
+          "00040000001C4E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "paper-mario-sticker-star",
+      "name": "Paper Mario: Sticker Star",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000A5F00"
+        ],
+        "JPN": [
+          "00040000000A5D00"
+        ],
+        "KOR": [
+          "00040000000C6800"
+        ],
+        "TWN": [
+          "00040000000C8100"
+        ],
+        "USA": [
+          "00040000000A5E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-luigi-dream-team",
+      "name": "Mario & Luigi: Dream Team",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000D9000"
+        ],
+        "JPN": [
+          "0004000000060600"
+        ],
+        "KOR": [
+          "00040000000FCD00"
+        ],
+        "USA": [
+          "00040000000D5A00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-luigi-paper-jam",
+      "name": "Mario & Luigi: Paper Jam",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000132800"
+        ],
+        "JPN": [
+          "0004000000132600"
+        ],
+        "KOR": [
+          "0004000000188900"
+        ],
+        "USA": [
+          "0004000000132700"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-luigi-superstar-saga",
+      "name": "Mario & Luigi: Superstar Saga + Bowser’s Minions",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001B9000"
+        ],
+        "JPN": [
+          "0004000000194B00"
+        ],
+        "KOR": [
+          "00040000001C4F00"
+        ],
+        "TWN": [
+          "00040000001B8F00"
+        ],
+        "USA": [
+          "00040000001B8F00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-luigi-bowsers-inside-story",
+      "name": "Mario & Luigi: Bowser’s Inside Story + Bowser Jr.’s Journey",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001D1500"
+        ],
+        "JPN": [
+          "00040000001CA900"
+        ],
+        "USA": [
+          "00040000001D1400"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "luigis-mansion-dark-moon",
+      "name": "Luigi’s Mansion 2 / Dark Moon",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000076500"
+        ],
+        "JPN": [
+          "0004000000076400"
+        ],
+        "KOR": [
+          "00040000000CFF00"
+        ],
+        "TWN": [
+          "00040000000D0000"
+        ],
+        "USA": [
+          "0004000000055F00"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "luigis-mansion",
+      "name": "Luigi’s Mansion",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001D1A00"
+        ],
+        "JPN": [
+          "00040000001D1800"
+        ],
+        "KOR": [
+          "00040000001D4F00"
+        ],
+        "USA": [
+          "00040000001D1900"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "yoshis-new-island",
+      "name": "Yoshi’s New Island",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000111C00"
+        ],
+        "JPN": [
+          "0004000000083B00"
+        ],
+        "KOR": [
+          "000400000012C500"
+        ],
+        "TWN": [
+          "000400000012CD00"
+        ],
+        "USA": [
+          "0004000000111B00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "poochy-yoshis-woolly-world",
+      "name": "Poochy & Yoshi’s Woolly World",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001A4200"
+        ],
+        "JPN": [
+          "00040000001A3200"
+        ],
+        "KOR": [
+          "00040000001B3300"
+        ],
+        "USA": [
+          "00040000001A4100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "warioware-gold",
+      "name": "WarioWare Gold",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001D1C00"
+        ],
+        "JPN": [
+          "00040000001D1C00"
+        ],
+        "USA": [
+          "00040000001D1C00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-sports-superstars",
+      "name": "Mario Sports Superstars",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000188D00"
+        ],
+        "JPN": [
+          "0004000000188B00"
+        ],
+        "KOR": [
+          "00040000001A6400"
+        ],
+        "TWN": [
+          "0004000000188C00"
+        ],
+        "USA": [
+          "0004000000188C00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-golf-world-tour",
+      "name": "Mario Golf: World Tour",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000DCE00"
+        ],
+        "JPN": [
+          "00040000000A5300"
+        ],
+        "KOR": [
+          "0004000000106300"
+        ],
+        "USA": [
+          "00040000000DCD00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-tennis-open",
+      "name": "Mario Tennis Open",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000007C800"
+        ],
+        "JPN": [
+          "0004000000064D00"
+        ],
+        "KOR": [
+          "00040000000B8800"
+        ],
+        "TWN": [
+          "00040000000B9100"
+        ],
+        "USA": [
+          "000400000007C700"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-sonic-london-2012",
+      "name": "Mario & Sonic at the London 2012 Olympic Games",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000054900"
+        ],
+        "JPN": [
+          "0004000000032500"
+        ],
+        "KOR": [
+          "0004000000053500"
+        ],
+        "USA": [
+          "0004000000054800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-sonic-rio-2016",
+      "name": "Mario & Sonic at the Rio 2016 Olympic Games",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000017E300"
+        ],
+        "JPN": [
+          "000400000014A400"
+        ],
+        "KOR": [
+          "0004000000191D00"
+        ],
+        "TWN": [
+          "0004000000191C00"
+        ],
+        "USA": [
+          "000400000017E200"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "super-mario-maker-3ds",
+      "name": "Super Mario Maker for Nintendo 3DS",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001A0500"
+        ],
+        "JPN": [
+          "00040000001A0300"
+        ],
+        "KOR": [
+          "00040000001BB800"
+        ],
+        "USA": [
+          "00040000001A0400"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "dr-mario-miracle-cure",
+      "name": "Dr. Mario: Miracle Cure",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000013BB00"
+        ],
+        "JPN": [
+          "000400000013BB00"
+        ],
+        "TWN": [
+          "000400000013BB00"
+        ],
+        "USA": [
+          "000400000013BB00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "captain-toad-treasure-tracker",
+      "name": "Captain Toad: Treasure Tracker",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001CB200"
+        ],
+        "JPN": [
+          "00040000001CB000"
+        ],
+        "USA": [
+          "00040000001CB100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mini-mario-amiibo-challenge",
+      "name": "Mini Mario & Friends: amiibo Challenge",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000016C300"
+        ],
+        "JPN": [
+          "000400000016C100"
+        ],
+        "USA": [
+          "000400000016C200"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-dk-minis-on-move",
+      "name": "Mario and Donkey Kong: Minis on the Move",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000D2F00"
+        ],
+        "JPN": [
+          "00040000000D1E00"
+        ],
+        "USA": [
+          "00040000000C9D00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-dk-tipping-stars",
+      "name": "Mario vs. Donkey Kong: Tipping Stars",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000012CA00"
+        ],
+        "JPN": [
+          "000400000012C900"
+        ],
+        "USA": [
+          "000400000012C800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "puzzle-dragons-mario",
+      "name": "Puzzle & Dragons Z + Super Mario Bros. Edition",
+      "franchise": "mario",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000137800"
+        ],
+        "JPN": [
+          "0004000000162300"
+        ],
+        "TWN": [
+          "000400000016D100"
+        ],
+        "USA": [
+          "0004000000137700"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "super-smash-bros-3ds",
+      "name": "Super Smash Bros. for Nintendo 3DS",
+      "franchise": "mario",
+      "category": "crossover",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000EE000"
+        ],
+        "JPN": [
+          "00040000000B8B00"
+        ],
+        "KOR": [
+          "0004000000167C00"
+        ],
+        "TWN": [
+          "0004000000168600"
+        ],
+        "USA": [
+          "00040000000EDF00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive",
+      "note": "Crossover direto com Mario, Pokémon, Zelda e Kirby; memória estendida no Old 3DS, não testado."
+    },
+    {
+      "id": "photos-with-mario",
+      "name": "Photos with Mario",
+      "franchise": "mario",
+      "category": "application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "USA": [
+          "0004000000130500"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "mario-party-guest",
+      "name": "Mario Party: Star Rush — Party Guest",
+      "franchise": "mario",
+      "category": "companion",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001A6000"
+        ],
+        "JPN": [
+          "00040000001A5E00"
+        ],
+        "KOR": [
+          "00040000001AC800"
+        ],
+        "USA": [
+          "00040000001A5F00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-x",
+      "name": "Pokémon X",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000055D00"
+        ],
+        "JPN": [
+          "0004000000055D00"
+        ],
+        "KOR": [
+          "0004000000055D00"
+        ],
+        "TWN": [
+          "0004000000055D00"
+        ],
+        "USA": [
+          "0004000000055D00"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-y",
+      "name": "Pokémon Y",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000055E00"
+        ],
+        "JPN": [
+          "0004000000055E00"
+        ],
+        "KOR": [
+          "0004000000055E00"
+        ],
+        "TWN": [
+          "0004000000055E00"
+        ],
+        "USA": [
+          "0004000000055E00"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-omega-ruby",
+      "name": "Pokémon Omega Ruby",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000011C400"
+        ],
+        "JPN": [
+          "000400000011C400"
+        ],
+        "KOR": [
+          "000400000011C400"
+        ],
+        "TWN": [
+          "000400000011C400"
+        ],
+        "USA": [
+          "000400000011C400"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-alpha-sapphire",
+      "name": "Pokémon Alpha Sapphire",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000011C500"
+        ],
+        "JPN": [
+          "000400000011C500"
+        ],
+        "KOR": [
+          "000400000011C500"
+        ],
+        "TWN": [
+          "000400000011C500"
+        ],
+        "USA": [
+          "000400000011C500"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-sun",
+      "name": "Pokémon Sun",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000164800"
+        ],
+        "JPN": [
+          "0004000000164800"
+        ],
+        "KOR": [
+          "0004000000164800"
+        ],
+        "TWN": [
+          "0004000000164800"
+        ],
+        "USA": [
+          "0004000000164800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-moon",
+      "name": "Pokémon Moon",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000175E00"
+        ],
+        "JPN": [
+          "0004000000175E00"
+        ],
+        "KOR": [
+          "0004000000175E00"
+        ],
+        "TWN": [
+          "0004000000175E00"
+        ],
+        "USA": [
+          "0004000000175E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-ultra-sun",
+      "name": "Pokémon Ultra Sun",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001B5000"
+        ],
+        "JPN": [
+          "00040000001B5000"
+        ],
+        "KOR": [
+          "00040000001B5000"
+        ],
+        "TWN": [
+          "00040000001B5000"
+        ],
+        "USA": [
+          "00040000001B5000"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-ultra-moon",
+      "name": "Pokémon Ultra Moon",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001B5100"
+        ],
+        "JPN": [
+          "00040000001B5100"
+        ],
+        "KOR": [
+          "00040000001B5100"
+        ],
+        "TWN": [
+          "00040000001B5100"
+        ],
+        "USA": [
+          "00040000001B5100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-gates-to-infinity",
+      "name": "Pokémon Mystery Dungeon: Gates to Infinity",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000BA900"
+        ],
+        "JPN": [
+          "0004000000095000"
+        ],
+        "USA": [
+          "00040000000BA800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-super-mystery-dungeon",
+      "name": "Pokémon Super Mystery Dungeon",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000174400"
+        ],
+        "JPN": [
+          "0004000000149B00"
+        ],
+        "USA": [
+          "0004000000174600"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-rumble-blast",
+      "name": "Pokémon Rumble Blast / Super Pokémon Rumble",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000066D00"
+        ],
+        "JPN": [
+          "000400000004D700"
+        ],
+        "KOR": [
+          "000400000009AA00"
+        ],
+        "USA": [
+          "0004000000066C00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-rumble-world",
+      "name": "Pokémon Rumble World",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000164600",
+          "0004000000185A00"
+        ],
+        "JPN": [
+          "0004000000164600",
+          "0004000000185A00"
+        ],
+        "USA": [
+          "0004000000164600",
+          "0004000000185A00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-shuffle",
+      "name": "Pokémon Shuffle",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000141000"
+        ],
+        "JPN": [
+          "0004000000141000"
+        ],
+        "USA": [
+          "0004000000141000"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-picross",
+      "name": "Pokémon Picross",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000017C100"
+        ],
+        "JPN": [
+          "000400000017C100"
+        ],
+        "USA": [
+          "000400000017C100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-battle-trozei",
+      "name": "Pokémon Battle Trozei / Link: Battle!",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000126000"
+        ],
+        "JPN": [
+          "000400000011C600"
+        ],
+        "USA": [
+          "000400000011C600"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-art-academy",
+      "name": "Pokémon Art Academy",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000D0900"
+        ],
+        "JPN": [
+          "00040000000CF900"
+        ],
+        "KOR": [
+          "0004000000150B00"
+        ],
+        "TWN": [
+          "0004000000151F00"
+        ],
+        "USA": [
+          "00040000000D0A00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "detective-pikachu",
+      "name": "Detective Pikachu",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001C1E00"
+        ],
+        "JPN": [
+          "000400000018CA00",
+          "00040000001C1E00"
+        ],
+        "TWN": [
+          "00040000001C1E00"
+        ],
+        "USA": [
+          "00040000001C1E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-dream-radar",
+      "name": "Pokémon Dream Radar",
+      "franchise": "pokemon",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000AE100"
+        ],
+        "JPN": [
+          "0004000000073200"
+        ],
+        "KOR": [
+          "00040000000AE100"
+        ],
+        "USA": [
+          "00040000000AE100"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-bank",
+      "name": "Pokémon Bank",
+      "franchise": "pokemon",
+      "category": "application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000C9B00"
+        ],
+        "JPN": [
+          "00040000000C9B00"
+        ],
+        "KOR": [
+          "00040000000C9B00"
+        ],
+        "TWN": [
+          "00040000000C9B00"
+        ],
+        "USA": [
+          "00040000000C9B00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "poke-transporter",
+      "name": "Poké Transporter",
+      "franchise": "pokemon",
+      "category": "application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000C9C00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokedex-3d",
+      "name": "Pokédex 3D",
+      "franchise": "pokemon",
+      "category": "application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "USA": [
+          "0004000000032600"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokedex-3d-pro",
+      "name": "Pokédex 3D Pro",
+      "franchise": "pokemon",
+      "category": "application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000051E00"
+        ],
+        "JPN": [
+          "0004000000051E00"
+        ],
+        "USA": [
+          "0004000000051E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "pokemon-tretta-lab",
+      "name": "Pokémon Tretta Lab",
+      "franchise": "pokemon",
+      "category": "accessory-application",
+      "platform": "Nintendo 3DS",
+      "titleIds": {},
+      "guideStatus": "missing",
+      "guides": {
+        "pt-BR": "missing",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "zelda-ocarina-of-time-3d",
+      "name": "The Legend of Zelda: Ocarina of Time 3D",
+      "franchise": "zelda",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "CHN": [
+          "000400000008F900"
+        ],
+        "EUR": [
+          "0004000000033600"
+        ],
+        "JPN": [
+          "0004000000033400"
+        ],
+        "KOR": [
+          "000400000008F800"
+        ],
+        "TWN": [
+          "000400000008F900"
+        ],
+        "USA": [
+          "0004000000033500"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive",
+      "regionNotes": {
+        "CHN": "Rótulo da fonte comunitária; lançamento chinês/iQue não confirmado. O mesmo ID consta como TWN."
+      }
+    },
+    {
+      "id": "zelda-majoras-mask-3d",
+      "name": "The Legend of Zelda: Majora’s Mask 3D",
+      "franchise": "zelda",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000125600"
+        ],
+        "JPN": [
+          "00040000000D6E00"
+        ],
+        "KOR": [
+          "0004000000185D00"
+        ],
+        "TWN": [
+          "0004000000185C00"
+        ],
+        "USA": [
+          "0004000000125500"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "zelda-link-between-worlds",
+      "name": "The Legend of Zelda: A Link Between Worlds",
+      "franchise": "zelda",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000000EC400"
+        ],
+        "JPN": [
+          "00040000000EC200"
+        ],
+        "KOR": [
+          "0004000000115800"
+        ],
+        "TWN": [
+          "0004000000115700"
+        ],
+        "USA": [
+          "00040000000EC300"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "zelda-tri-force-heroes",
+      "name": "The Legend of Zelda: Tri Force Heroes",
+      "franchise": "zelda",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000177000"
+        ],
+        "JPN": [
+          "0004000000176E00"
+        ],
+        "KOR": [
+          "0004000000182B00"
+        ],
+        "TWN": [
+          "0004000000182C00"
+        ],
+        "USA": [
+          "0004000000176F00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "hyrule-warriors-legends",
+      "name": "Hyrule Warriors Legends",
+      "franchise": "zelda",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000017EB00"
+        ],
+        "JPN": [
+          "000400000017D500"
+        ],
+        "KOR": [
+          "0004000000189E00"
+        ],
+        "USA": [
+          "000400000017EA00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirby-triple-deluxe",
+      "name": "Kirby: Triple Deluxe",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "000400000010C000"
+        ],
+        "JPN": [
+          "000400000010BE00"
+        ],
+        "KOR": [
+          "0004000000120F00"
+        ],
+        "TWN": [
+          "0004000000123200"
+        ],
+        "USA": [
+          "000400000010BF00"
+        ]
+      },
+      "guideStatus": "pilot-partial",
+      "guides": {
+        "pt-BR": "pilot-partial",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirby-planet-robobot",
+      "name": "Kirby: Planet Robobot",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000183600"
+        ],
+        "JPN": [
+          "0004000000183600"
+        ],
+        "KOR": [
+          "000400000017C600"
+        ],
+        "TWN": [
+          "0004000000183600"
+        ],
+        "USA": [
+          "0004000000183600"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirby-fighters-deluxe",
+      "name": "Kirby Fighters Deluxe",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000147F00"
+        ],
+        "JPN": [
+          "000400000012EF00"
+        ],
+        "KOR": [
+          "0004000000148000"
+        ],
+        "TWN": [
+          "0004000000148100"
+        ],
+        "USA": [
+          "0004000000147E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "dededes-drum-dash-deluxe",
+      "name": "Dedede’s Drum Dash Deluxe",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000147B00"
+        ],
+        "JPN": [
+          "000400000012F000"
+        ],
+        "TWN": [
+          "0004000000147D00"
+        ],
+        "USA": [
+          "0004000000147A00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "team-kirby-clash-deluxe",
+      "name": "Team Kirby Clash Deluxe",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001AB900"
+        ],
+        "JPN": [
+          "00040000001A0000"
+        ],
+        "USA": [
+          "00040000001AB800"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirbys-blowout-blast",
+      "name": "Kirby’s Blowout Blast",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000196F00"
+        ],
+        "JPN": [
+          "0004000000196F00"
+        ],
+        "KOR": [
+          "0004000000197000"
+        ],
+        "TWN": [
+          "0004000000196F00"
+        ],
+        "USA": [
+          "0004000000196F00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirby-battle-royale",
+      "name": "Kirby Battle Royale",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001C2100"
+        ],
+        "JPN": [
+          "00040000001A8B00"
+        ],
+        "KOR": [
+          "00040000001C2200"
+        ],
+        "TWN": [
+          "00040000001C2000"
+        ],
+        "USA": [
+          "00040000001C2000"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "kirbys-extra-epic-yarn",
+      "name": "Kirby’s Extra Epic Yarn",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "00040000001D1F00"
+        ],
+        "JPN": [
+          "00040000001D1200"
+        ],
+        "KOR": [
+          "00040000001D7500"
+        ],
+        "USA": [
+          "00040000001D1E00"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    },
+    {
+      "id": "3d-classics-kirbys-adventure",
+      "name": "3D Classics: Kirby’s Adventure",
+      "franchise": "kirby",
+      "category": "game",
+      "platform": "Nintendo 3DS",
+      "titleIds": {
+        "EUR": [
+          "0004000000055000"
+        ],
+        "JPN": [
+          "000400000004E800"
+        ],
+        "USA": [
+          "0004000000054600"
+        ]
+      },
+      "guideStatus": "starter",
+      "guides": {
+        "pt-BR": "starter",
+        "en-US": "missing"
+      },
+      "hardwareStatus": "not-tested",
+      "regionalCoverage": "observed-variants-not-proven-exhaustive"
+    }
+  ]
+}

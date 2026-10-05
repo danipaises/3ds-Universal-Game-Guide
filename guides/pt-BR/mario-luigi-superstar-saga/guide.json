@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "gameId": "mario-luigi-superstar-saga",
+  "language": "pt-BR",
+  "coverage": "starter",
+  "license": "CC-BY-4.0",
+  "reviewed": false,
+  "requiredSections": [
+    "inicio",
+    "estrategia",
+    "referencia",
+    "cobertura"
+  ],
+  "remaining": [
+    "Walkthrough das etapas/casos ou referência completa de todas as funções, conforme a categoria.",
+    "Tabelas específicas de itens, desbloqueios e metas de conclusão.",
+    "Revisão editorial externa e conferência durante gameplay."
+  ],
+  "pages": [
+    {
+      "id": "comecando",
+      "title": "Beanbean Kingdom",
+      "file": "comecando.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "inicio"
+    },
+    {
+      "id": "estrategia",
+      "title": "Estratégia e prática",
+      "file": "estrategia.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "estrategia"
+    },
+    {
+      "id": "referencia",
+      "title": "Bowser’s Minions",
+      "file": "referencia.md",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "cobertura",
+      "title": "Cobertura deste guia",
+      "file": "cobertura.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "cobertura"
+    }
+  ]
+}

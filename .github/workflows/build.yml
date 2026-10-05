@@ -1,0 +1,64 @@
+name: Validate, build and package PT-BR
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  pc:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [g++-13, g++-14]
+    env:
+      CXX: ${{ matrix.compiler }}
+      UGG_LSAN: '0'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Install native compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes "${{ matrix.compiler }}"
+      - run: ruff check builder.py scripts tools tests
+      - run: ruff format --check builder.py scripts tools tests
+      - run: python builder.py validate --lang pt-BR
+      - run: python -m pytest -q
+      - run: bash scripts/test.sh
+  arm-package:
+    needs: pc
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: bash scripts/build-plugin.sh --clean
+      - run: python scripts/bundle_sources.py
+      - run: python builder.py hardware-retest --lang pt-BR
+      - run: python scripts/verify_release.py --hardware-retest
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: UniversalGameGuide-PTBR-hardware-retest
+          path: |
+            dist/UniversalGameGuide-PTBR-Hardware-Test-v*.zip
+            dist/UniversalGameGuide-Debug-Symbols-v*.zip
+            dist/3DS-Universal-Game-Guide-SOURCE-v*.zip
+            dist/SHA256SUMS.txt
+            dist/*.zip.sha256
+            build/release-verification.json
+          if-no-files-found: error

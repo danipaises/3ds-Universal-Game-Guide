@@ -1,0 +1,23 @@
+name: Release PT-BR artifacts
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-tag:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Check tag against VERSION
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == tag && "$GITHUB_REF_NAME" != "v$(cat VERSION)" ]]; then
+            echo 'Release tag must match VERSION' >&2
+            exit 1
+          fi
+  release-artifacts:
+    needs: validate-tag
+    uses: ./.github/workflows/build.yml

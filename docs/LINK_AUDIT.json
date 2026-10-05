@@ -1,0 +1,428 @@
+[
+  {
+    "url": "https://3dsdb.com/xml.php",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://azahar-emu.org/pages/faq/",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Friendship#Evolutions_based_on_friendship",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Mega_Evolution",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_breeding",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_X_and_Y/",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_X_and_Y/Part_15",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_X_and_Y/Part_16",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_X_and_Y/Part_2",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://bulbapedia.bulbagarden.net/wiki/Walkthrough:Pok%C3%A9mon_X_and_Y/Part_3",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://devkitpro.org/wiki/Getting_Started",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/blob/v13.4/sysmodules/rosalina/include/plugin/3gx.h",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/blob/v13.4/sysmodules/rosalina/source/plugin/file_loader.c",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/blob/v13.4/sysmodules/rosalina/source/plugin/memoryblock.c",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/blob/v13.4/sysmodules/rosalina/source/plugin/plgloader.c",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/issues/2254",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/releases/tag/v13.4",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/LumaTeam/Luma3DS/wiki/Rosalina",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/PokeAPI/pokeapi/tree/bc92d3b6029ef1abe9e7ad424c400b338f3c11fe/data/v2/csv",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/azahar-emu/azahar/blob/2126.1.2/src/core/hle/service/plgldr/plgldr.cpp",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/azahar-emu/azahar/issues/1125",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/azahar-emu/azahar/releases/tag/2126.1.2",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/devkitPro/libctru",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/hax0kartik/3dsdb/blob/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_GB.json",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/hax0kartik/3dsdb/blob/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_JP.json",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/hax0kartik/3dsdb/blob/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_KR.json",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/hax0kartik/3dsdb/blob/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_TW.json",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://github.com/hax0kartik/3dsdb/blob/5d9141a56275c974a25aaaf6856ec6a1e50e5c07/jsons/list_US.json",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/3gxtool",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/blob/0.8.0/Library/include/CTRPluginFramework/Graphics/Screen.hpp",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/blob/0.8.0/Library/include/CTRPluginFramework/System/Controller.hpp",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/blob/0.8.0/Library/include/CTRPluginFramework/System/File.hpp",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/blob/0.8.0/Library/include/CTRPluginFramework/System/Process.hpp",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/releases/0.8.0",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/tree/0.8.0",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://strategywiki.org/wiki/Kirby%3A_Triple_Deluxe/Controls",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://wikirby.com/wiki/100%25_completion#Kirby:_Triple_Deluxe",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Endless_Explosions",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Fine_Fields",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Kirby:_Triple_Deluxe",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Lollipop_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Old_Odyssey",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Royal_Road",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Sun_Stone",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://wikirby.com/wiki/Wild_World",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Boo#Luigi.27s_Mansion:_Dark_Moon",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Boom_Boom#Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Completion#Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Gloomy_Manor",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Haunted_Towers",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Luigi%27s_Mansion:_Dark_Moon",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Old_Clockworks",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Pom_Pom#Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Secret_Mine",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Special_1-Castle",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Star_Medal",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/Treacherous_Mansion",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-1_(Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-1_(Super_Mario_3D_Land)",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-2_(Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-2_(Super_Mario_3D_Land)",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-3_(Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-3_(Super_Mario_3D_Land)",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-4_(Super_Mario_3D_Land",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.mariowiki.com/World_1-4_(Super_Mario_3D_Land)",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.nintendo.com/en-gb/News/2011/A-legend-returns-in-magical-3D-this-June-252755.html",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_3ds_2/super_mario_3d_land/ElectronicManual_Nintendo3DS_SUPERMARIO3DLAND_EN.pdf",
+    "status": 200,
+    "verdict": "reachable",
+    "error": ""
+  },
+  {
+    "url": "https://www.zeldadungeon.net/ocarina-of-time-walkthrough/",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.zeldadungeon.net/ocarina-of-time-walkthrough/forest-temple/",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.zeldadungeon.net/ocarina-of-time-walkthrough/inside-the-great-deku-tree/",
+    "status": 403,
+    "verdict": "blocked",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

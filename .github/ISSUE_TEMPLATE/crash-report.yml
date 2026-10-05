@@ -1,0 +1,91 @@
+name: Relatar crash no Nintendo 3DS
+description: Informe o ambiente, a variante do plugin e os registros do crash.
+title: '[Crash] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A versão atual é ALPHA e aguarda reteste físico. Não envie ROMs, CIAs comerciais, saves, firmware, chaves ou credenciais. Antes de anexar logs ou fotos, confira se contêm dados pessoais.
+  - type: dropdown
+    id: console-model
+    attributes:
+      label: Modelo do 3DS
+      options:
+        - Old Nintendo 3DS
+        - Old Nintendo 3DS XL
+        - Nintendo 2DS
+        - New Nintendo 3DS
+        - New Nintendo 3DS XL
+        - New Nintendo 2DS XL
+        - Não sei
+    validations:
+      required: true
+  - type: input
+    id: luma-version
+    attributes:
+      label: Versão do Luma3DS
+      description: Copie a versão exibida pelo Luma/Rosalina; indique se é uma build modificada.
+    validations:
+      required: true
+  - type: input
+    id: guide-version
+    attributes:
+      label: Versão do Universal Game Guide
+      placeholder: 0.2.1-alpha; informe também o commit se baixou de Actions
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Jogo
+    validations:
+      required: true
+  - type: input
+    id: title-id
+    attributes:
+      label: Title ID
+      description: Informe os 16 dígitos hexadecimais se disponíveis; não deduza o ID a partir de um update/DLC.
+  - type: input
+    id: region
+    attributes:
+      label: Região do jogo
+      placeholder: USA, EUR, JPN, KOR, TWN ou desconhecida
+  - type: dropdown
+    id: variant
+    attributes:
+      label: Variante instalada
+      options:
+        - MINIMAL
+        - FULL
+        - Não sei
+    validations:
+      required: true
+  - type: textarea
+    id: action
+    attributes:
+      label: Ação antes do crash
+      description: Descreva os passos, se o jogo iniciou e se chegou a abrir o overlay/hotkey.
+    validations:
+      required: true
+  - type: textarea
+    id: boot-stage
+    attributes:
+      label: boot-stage.txt
+      description: Cole ou anexe SD:/3ds/UniversalGameGuide/logs/boot-stage.txt. Se ausente, diga isso; a ausência não identifica sozinha a etapa da falha.
+  - type: input
+    id: dump-path
+    attributes:
+      label: Caminho/nome do .dmp
+      description: Informe o nome do dump ARM11 em SD:/luma/dumps/arm11/ e preserve o arquivo para análise.
+  - type: textarea
+    id: photo
+    attributes:
+      label: Foto da tela
+      description: Anexe uma foto legível dos detalhes da exception, incluindo PC/LR se exibidos.
+  - type: textarea
+    id: other-plugins
+    attributes:
+      label: Outros plugins instalados
+      description: Liste os plugins em luma/plugins, se usa patches/modificações e se reproduziu sem outros plugins.
+    validations:
+      required: true

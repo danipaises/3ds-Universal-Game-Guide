@@ -1,0 +1,19 @@
+{
+  "archives": [
+    {
+      "archive": "3DS-Universal-Game-Guide-SOURCE.zip",
+      "sha256": "eba21105a803648c443196e26a0716edd270723b6ed7058fc61eadd913a8a4b5",
+      "files": 1605,
+      "uncompressedBytes": 9281715
+    },
+    {
+      "archive": "3DS-Universal-Game-Guide-PTBR.zip",
+      "sha256": "ef88671d08845220e03541b885f9923fcc759942614fef25096c70fe1d7b233b",
+      "files": 1665,
+      "uncompressedBytes": 31028774
+    }
+  ],
+  "sourceMatches": 1604,
+  "sourceDifferences": [],
+  "hardware": "NOT TESTED ON REAL HARDWARE"
+}

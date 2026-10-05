@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "path": "assets/maps/super-mario-3d-land-world-1-1.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/super-mario-3d-land/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "3752b18321804bfd270ab0dca448e160ff09cb91dd37c462794cba5da7295231"
+    },
+    {
+      "path": "assets/maps/luigis-mansion-dark-moon-mansions.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/luigis-mansion-dark-moon/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "d1eefa2179e127851b972cd32df826575fb0c707b344e50e3c6d807346f9a3d7"
+    },
+    {
+      "path": "assets/maps/kirby-triple-deluxe-floralia.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/kirby-triple-deluxe/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "46da35ba78a8417c6eeff63b30546f3818c834124001f5cafd04779fd15d92ed"
+    },
+    {
+      "path": "assets/maps/zelda-ocarina-of-time-3d-first-objectives.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/zelda-ocarina-of-time-3d/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "d71c88dd9fc887bffec39e6528d80c3f76fd8006e4acaaf26ba0f252cd5f4f8f"
+    },
+    {
+      "path": "assets/maps/pokemon-x-kalos-route.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/pokemon-x/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "42a4a37b542496797b4b5343edfab3e9b3e6363c5baa88000a5252dd48150730"
+    },
+    {
+      "path": "assets/maps/super-mario-3d-land-world-1-castle.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/super-mario-3d-land/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "5546088357fed3ec114310bc8da949d29ca8edb5c7d1320089ae4e1b7d6be9c8"
+    },
+    {
+      "path": "assets/maps/kirby-triple-deluxe-fine-fields-1.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/kirby-triple-deluxe/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "0c843e31a6aae3b639eb1bab1a2865c3ce7be3b66cfa7c318c7a544f1d331141"
+    },
+    {
+      "path": "assets/maps/zelda-ocarina-of-time-3d-water-temple.png",
+      "author": "Contribuidores do 3DS Universal Game Guide",
+      "source": "Desenho original gerado por scripts/make_maps.py; fatos referenciados no guia correspondente",
+      "license": "CC-BY-4.0",
+      "url": "guides/pt-BR/zelda-ocarina-of-time-3d/SOURCES.md",
+      "accessed": "2026-10-04",
+      "sha256": "fc2be117118c87e061f8539b398ceb3bca81329da787819b48c4c157c485a85e"
+    }
+  ]
+}

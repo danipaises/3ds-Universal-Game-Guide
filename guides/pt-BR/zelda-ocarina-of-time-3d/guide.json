@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "gameId": "zelda-ocarina-of-time-3d",
+  "language": "pt-BR",
+  "coverage": "pilot-partial",
+  "license": "CC-BY-4.0",
+  "pages": [
+    {
+      "id": "comecando",
+      "title": "Começando e cobertura",
+      "file": "comecando.md",
+      "spoiler": false,
+      "sources": [
+        0,
+        3
+      ],
+      "map": "first-objectives",
+      "section": "inicio"
+    },
+    {
+      "id": "controles",
+      "title": "Usar o inventário do 3DS",
+      "file": "controles.md",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "kokiri",
+      "title": "Kokiri Forest: espada e escudo",
+      "file": "kokiri.md",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "deku-tree",
+      "title": "Deku Tree: roteiro inicial",
+      "file": "deku-tree.md",
+      "spoiler": true,
+      "sources": [
+        1
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "gohma",
+      "title": "Queen Gohma",
+      "file": "gohma.md",
+      "spoiler": true,
+      "sources": [
+        1
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "primeiros-objetivos",
+      "title": "Da floresta ao Temple of Time",
+      "file": "primeiros-objetivos.md",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "hookshot",
+      "title": "Hookshot: obter e usar",
+      "file": "hookshot.md",
+      "spoiler": true,
+      "sources": [
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "forest-temple",
+      "title": "Forest Temple: pontos de orientação",
+      "file": "forest-temple.md",
+      "spoiler": true,
+      "sources": [
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "adulto",
+      "title": "Templos da aventura adulta",
+      "file": "adulto.md",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "colecionaveis",
+      "title": "Colecionáveis e acompanhamento",
+      "file": "colecionaveis.md",
+      "spoiler": true,
+      "sources": [
+        1,
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "dodongo-entrada",
+      "file": "dodongo-entrada.md",
+      "title": "Dodongo’s Cavern > entrada",
+      "spoiler": true,
+      "sources": [
+        4
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "dodongo-bomb-bag",
+      "file": "dodongo-bomb-bag.md",
+      "title": "Dodongo’s Cavern > bomb bag",
+      "spoiler": true,
+      "sources": [
+        4
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "dodongo-chefe",
+      "file": "dodongo-chefe.md",
+      "title": "Dodongo’s Cavern > chefe",
+      "spoiler": true,
+      "sources": [
+        4
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "jabu-ruto",
+      "file": "jabu-ruto.md",
+      "title": "Jabu-Jabu > ruto",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "jabu-boomerang",
+      "file": "jabu-boomerang.md",
+      "title": "Jabu-Jabu > boomerang",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "jabu-barinade",
+      "file": "jabu-barinade.md",
+      "title": "Jabu-Jabu > barinade",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "fire-gorons",
+      "file": "fire-gorons.md",
+      "title": "Fire Temple > gorons",
+      "spoiler": true,
+      "sources": [
+        6
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "fire-hammer",
+      "file": "fire-hammer.md",
+      "title": "Fire Temple > hammer",
+      "spoiler": true,
+      "sources": [
+        6
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "fire-volvagia",
+      "file": "fire-volvagia.md",
+      "title": "Fire Temple > volvagia",
+      "spoiler": true,
+      "sources": [
+        6
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "water-nivel-baixo",
+      "file": "water-nivel-baixo.md",
+      "title": "Water Temple > nivel baixo",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "dungeons",
+      "map": "water-temple"
+    },
+    {
+      "id": "water-torre-central",
+      "file": "water-torre-central.md",
+      "title": "Water Temple > torre central",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "water-longshot",
+      "file": "water-longshot.md",
+      "title": "Water Temple > longshot",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "water-morpha",
+      "file": "water-morpha.md",
+      "title": "Water Temple > morpha",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "shadow-lente",
+      "file": "shadow-lente.md",
+      "title": "Shadow Temple > lente",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "shadow-barco",
+      "file": "shadow-barco.md",
+      "title": "Shadow Temple > barco",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "shadow-bongo",
+      "file": "shadow-bongo.md",
+      "title": "Shadow Temple > bongo",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "spirit-crianca",
+      "file": "spirit-crianca.md",
+      "title": "Spirit Temple > crianca",
+      "spoiler": true,
+      "sources": [
+        9
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "spirit-adulto",
+      "file": "spirit-adulto.md",
+      "title": "Spirit Temple > adulto",
+      "spoiler": true,
+      "sources": [
+        9
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "spirit-twinrova",
+      "file": "spirit-twinrova.md",
+      "title": "Spirit Temple > twinrova",
+      "spoiler": true,
+      "sources": [
+        9
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "ganon-barreiras",
+      "file": "ganon-barreiras.md",
+      "title": "Ganon’s Castle > barreiras",
+      "spoiler": true,
+      "sources": [
+        10
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "ganon-ganondorf",
+      "file": "ganon-ganondorf.md",
+      "title": "Ganon’s Castle > ganondorf",
+      "spoiler": true,
+      "sources": [
+        10
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "ganon-ganon",
+      "file": "ganon-ganon.md",
+      "title": "Ganon’s Castle > ganon",
+      "spoiler": true,
+      "sources": [
+        10
+      ],
+      "section": "dungeons"
+    },
+    {
+      "id": "musicas",
+      "file": "musicas.md",
+      "title": "Referência > músicas e utilidade",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "itens"
+    },
+    {
+      "id": "sidequests",
+      "file": "sidequests.md",
+      "title": "Side quests > prioridades por idade",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "sidequests"
+    },
+    {
+      "id": "regioes",
+      "file": "regioes.md",
+      "title": "Hyrule > orientação para revisitas",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "regioes"
+    },
+    {
+      "id": "cem-por-cento",
+      "file": "cem-por-cento.md",
+      "title": "Conclusão > checklist de coleção",
+      "spoiler": true,
+      "sources": [
+        0,
+        3
+      ],
+      "section": "conclusao"
+    }
+  ],
+  "reviewed": false,
+  "remaining": [
+    "Todas as salas, pequenas chaves e baús das dungeons, com revisão da versão 3DS.",
+    "36 Heart Pieces e 100 Gold Skulltulas individualmente localizados.",
+    "Todas as Great Fairies, upgrades, garrafas, troca de Biggoron e máscaras.",
+    "Master Quest e revisão editorial externa."
+  ],
+  "requiredSections": [
+    "conclusao",
+    "dungeons",
+    "inicio",
+    "itens",
+    "referencia",
+    "regioes",
+    "sidequests"
+  ]
+}

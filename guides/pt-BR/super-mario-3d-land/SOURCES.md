@@ -1,0 +1,65 @@
+# Fontes e autoria
+
+Texto original em português: contribuidores do Universal Game Guide, CC-BY-4.0.
+Referências usadas para fatos; não distribuímos imagens ou walkthroughs dessas páginas.
+Tabelas da PokéAPI, quando presentes, conservam BSD-3-Clause.
+
+- [Manual eletrônico Nintendo](https://www.nintendo.com/eu/media/downloads/games_8/emanuals/nintendo_3ds_2/super_mario_3d_land/ElectronicManual_Nintendo3DS_SUPERMARIO3DLAND_EN.pdf) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [World 1-1](https://www.mariowiki.com/World_1-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [World 1-2](https://www.mariowiki.com/World_1-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [World 1-3](https://www.mariowiki.com/World_1-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [World 1-4](https://www.mariowiki.com/World_1-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Special 1-Castle](https://www.mariowiki.com/Special_1-Castle) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Completion](https://www.mariowiki.com/Completion#Super_Mario_3D_Land) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Boom Boom](https://www.mariowiki.com/Boom_Boom#Super_Mario_3D_Land) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Pom Pom](https://www.mariowiki.com/Pom_Pom#Super_Mario_3D_Land) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Star Medal](https://www.mariowiki.com/Star_Medal) — consulta 2026-10-04. Consulta de fatos; redação própria. Arte e texto da fonte não redistribuídos.
+- [Super Mario 3D Land: mundos e mecânicas](https://www.mariowiki.com/Super_Mario_3D_Land) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 1-Castle](https://www.mariowiki.com/World_1-Castle_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 2-1](https://www.mariowiki.com/World_2-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 2-2](https://www.mariowiki.com/World_2-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 2-3](https://www.mariowiki.com/World_2-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 2-4](https://www.mariowiki.com/World_2-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 2-Airship](https://www.mariowiki.com/World_2-Airship_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-1](https://www.mariowiki.com/World_3-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-2](https://www.mariowiki.com/World_3-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-3](https://www.mariowiki.com/World_3-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-4](https://www.mariowiki.com/World_3-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-5](https://www.mariowiki.com/World_3-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 3-Airship](https://www.mariowiki.com/World_3-Airship_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-1 — medalhas](https://www.mariowiki.com/World_4-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-2 — medalhas](https://www.mariowiki.com/World_4-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-3 — medalhas](https://www.mariowiki.com/World_4-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-4 — medalhas](https://www.mariowiki.com/World_4-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-5 — medalhas](https://www.mariowiki.com/World_4-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 4-Airship — medalhas](https://www.mariowiki.com/World_4-Airship_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-1 — medalhas](https://www.mariowiki.com/World_5-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-2 — medalhas](https://www.mariowiki.com/World_5-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-3 — medalhas](https://www.mariowiki.com/World_5-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-4 — medalhas](https://www.mariowiki.com/World_5-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-5 — medalhas](https://www.mariowiki.com/World_5-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 5-Castle — medalhas](https://www.mariowiki.com/World_5-Castle_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-1 — medalhas](https://www.mariowiki.com/World_6-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-2 — medalhas](https://www.mariowiki.com/World_6-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-3 — medalhas](https://www.mariowiki.com/World_6-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-4 — medalhas](https://www.mariowiki.com/World_6-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-5 — medalhas](https://www.mariowiki.com/World_6-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 6-Airship — medalhas](https://www.mariowiki.com/World_6-Airship_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-1 — medalhas](https://www.mariowiki.com/World_7-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-2 — medalhas](https://www.mariowiki.com/World_7-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-3 — medalhas](https://www.mariowiki.com/World_7-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-4 — medalhas](https://www.mariowiki.com/World_7-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-5 — medalhas](https://www.mariowiki.com/World_7-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 7-Airship — medalhas](https://www.mariowiki.com/World_7-Airship_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-1 — medalhas](https://www.mariowiki.com/World_8-1_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-2 — medalhas](https://www.mariowiki.com/World_8-2_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-3 — medalhas](https://www.mariowiki.com/World_8-3_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-4 — medalhas](https://www.mariowiki.com/World_8-4_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-5 — medalhas](https://www.mariowiki.com/World_8-5_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-6 — medalhas](https://www.mariowiki.com/World_8-6_(Super_Mario_3D_Land)) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-Bowser: Part 1](https://www.mariowiki.com/World_8-Bowser%3A_Part_1) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [World 8-Bowser: Part 2](https://www.mariowiki.com/World_8-Bowser%3A_Part_2) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [Special 1-1](https://www.mariowiki.com/Special_1-1) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [Special 1-2](https://www.mariowiki.com/Special_1-2) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [Special 1-3](https://www.mariowiki.com/Special_1-3) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.
+- [Special 1-4](https://www.mariowiki.com/Special_1-4) — consulta 2026-10-04. Fatos consultados; texto e esquemas próprios. Não redistribuímos prosa nem arte da fonte.

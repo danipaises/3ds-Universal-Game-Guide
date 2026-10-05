@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "gameId": "super-mario-3d-land",
+      "id": "world-1-1",
+      "asset": "assets/maps/super-mario-3d-land-world-1-1.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "luigis-mansion-dark-moon",
+      "id": "mansions",
+      "asset": "assets/maps/luigis-mansion-dark-moon-mansions.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "kirby-triple-deluxe",
+      "id": "floralia",
+      "asset": "assets/maps/kirby-triple-deluxe-floralia.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "zelda-ocarina-of-time-3d",
+      "id": "first-objectives",
+      "asset": "assets/maps/zelda-ocarina-of-time-3d-first-objectives.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "pokemon-x",
+      "id": "kalos-route",
+      "asset": "assets/maps/pokemon-x-kalos-route.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "super-mario-3d-land",
+      "id": "world-1-castle",
+      "asset": "assets/maps/super-mario-3d-land-world-1-castle.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "kirby-triple-deluxe",
+      "id": "fine-fields-1",
+      "asset": "assets/maps/kirby-triple-deluxe-fine-fields-1.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "zelda-ocarina-of-time-3d",
+      "id": "water-temple",
+      "asset": "assets/maps/zelda-ocarina-of-time-3d-water-temple.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    },
+    {
+      "gameId": "pokemon-y",
+      "id": "kalos-route",
+      "asset": "assets/maps/pokemon-x-kalos-route.png",
+      "width": 640,
+      "height": 384,
+      "levels": 2
+    }
+  ]
+}

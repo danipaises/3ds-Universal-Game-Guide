@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-04",
+  "version": "0.2.0-alpha",
+  "hardware": "NOT TESTED ON REAL HARDWARE",
+  "python": {
+    "tests": 31,
+    "failures": 0,
+    "log": "/tmp/ugg-stage2-final-tests-7.log"
+  },
+  "native": {
+    "packs": 67,
+    "pages": 2151,
+    "titleIds": 211,
+    "maxSingleReadBytes": 175344,
+    "addressSanitizer": true,
+    "undefinedBehaviorSanitizer": true,
+    "leakSanitizer": "BLOCKED by ptrace; UGG_LSAN=0"
+  },
+  "content": {
+    "games": 68,
+    "guidesComplete": 0,
+    "guidesPartial": 67,
+    "guidesMissing": [
+      "pokemon-tretta-lab"
+    ],
+    "pages": 2151
+  },
+  "assets": {
+    "originalPngs": 8,
+    "perGameMaps": 9,
+    "copyrightThirdPartyArtIncluded": false
+  },
+  "titleIds": {
+    "unique": 211,
+    "regionalAssociations": 279,
+    "crossChecked": 166,
+    "singleSource": 112,
+    "needsVerification": 1
+  },
+  "links": {
+    "external": 251,
+    "reachable": 186,
+    "blocked": 65,
+    "local": 18,
+    "broken": 0,
+    "note": "HTTP 403 is pending access, not proof of content."
+  },
+  "arm": {
+    "status": "success",
+    "toolchain": "devkitARM r68-1 / GCC 16.1.0; libctru 2.7.0",
+    "pluginBytes": 374305,
+    "pluginSha256": "a1014ecf2f79c4666511b18291a51201175e7dd5e8d9609e7cd732d9eefafe8e",
+    "cleanBuildsWithSameHash": 2
+  },
+  "packages": {
+    "runtimeFiles": 203,
+    "runtimePacks": 67,
+    "runtimePages": 2151,
+    "runtimeTitleIds": 211,
+    "hardwareFiles": 75,
+    "hardwarePacks": 6,
+    "hardwarePages": 78,
+    "hardwareTitleIds": 22,
+    "runtimeZipBytes": 1605636,
+    "hardwareZipBytes": 500888,
+    "runtimeSourceCodeIncluded": false,
+    "sdStateOverwritten": false,
+    "verification": "passed; release regenerated after final reports"
+  },
+  "workflows": {
+    "actionlint": "1.7.12",
+    "localLint": "passed",
+    "githubExecution": "NOT RUN"
+  },
+  "sourceRoundtrip": {
+    "tests": 31,
+    "corePacks": 67,
+    "corePages": 2151,
+    "freshArmBuild": "success",
+    "samePluginSha256": true,
+    "note": "Source/data code tested from extracted ZIP; final documentation reports regenerated after the run."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "currentVersion": "0.2.1-alpha",
+  "currentStatus": "NEEDS HARDWARE RETEST",
+  "tests": [
+    {
+      "number": 1,
+      "version": "0.2.0-alpha",
+      "reportedOn": "2026-10-05",
+      "evidence": "Direct user report; original crash dump not supplied",
+      "model": "Nintendo 3DS; exact model not supplied",
+      "lumaVersion": null,
+      "pluginLoaderEnabled": true,
+      "defaultPluginFound": true,
+      "game": "Super Mario 3D Land",
+      "titleId": null,
+      "result": "ARM11 exception immediately on game launch",
+      "overlayOpened": false,
+      "hotkeyTested": false,
+      "guidesTested": false,
+      "status": "FAIL — plugin initialization/load crash"
+    }
+  ]
+}

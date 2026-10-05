@@ -1,0 +1,4 @@
+# Runtime do plugin não precisa de Python nem de dependências do PC.
+Pillow==12.1.1
+ruff==0.14.14
+pytest==9.0.2

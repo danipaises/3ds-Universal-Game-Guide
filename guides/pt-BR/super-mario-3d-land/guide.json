@@ -1,0 +1,828 @@
+{
+  "schemaVersion": 1,
+  "gameId": "super-mario-3d-land",
+  "language": "pt-BR",
+  "coverage": "pilot-partial",
+  "license": "CC-BY-4.0",
+  "pages": [
+    {
+      "id": "comecando",
+      "title": "Começando e cobertura",
+      "file": "comecando.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "inicio"
+    },
+    {
+      "id": "controles",
+      "title": "Controles",
+      "file": "controles.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "world-1-1",
+      "title": "1-1: percurso e três Star Medals",
+      "file": "world-1-1.md",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "map": "world-1-1",
+      "section": "referencia"
+    },
+    {
+      "id": "world-1-2",
+      "title": "1-2: percurso e três Star Medals",
+      "file": "world-1-2.md",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "colecionaveis",
+      "title": "Star Medals: organizar a coleta",
+      "file": "colecionaveis.md",
+      "spoiler": false,
+      "sources": [
+        0,
+        9
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "boom-boom",
+      "title": "Chefe: Boom Boom",
+      "file": "boom-boom.md",
+      "spoiler": true,
+      "sources": [
+        7
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "pom-pom",
+      "title": "Chefe: Pom Pom",
+      "file": "pom-pom.md",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "luigi",
+      "title": "Desbloquear Luigi",
+      "file": "luigi.md",
+      "spoiler": true,
+      "sources": [
+        5,
+        6
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "cinco-estrelas",
+      "title": "Cinco estrelas e fase final",
+      "file": "cinco-estrelas.md",
+      "spoiler": true,
+      "sources": [
+        6
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "faq",
+      "title": "FAQ e checklist",
+      "file": "faq.md",
+      "spoiler": false,
+      "sources": [
+        0,
+        6
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "world-1-3",
+      "file": "world-1-3.md",
+      "title": "World 1 > 1-3: plataformas nas nuvens",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-1-4",
+      "file": "world-1-4.md",
+      "title": "World 1 > 1-4: Switchboards",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "power-ups",
+      "file": "power-ups.md",
+      "title": "Mecânicas > power-ups e reserva",
+      "spoiler": false,
+      "sources": [
+        0,
+        10
+      ],
+      "section": "mecanicas"
+    },
+    {
+      "id": "warp-boxes",
+      "file": "warp-boxes.md",
+      "title": "Segredos > atalhos e Mystery Boxes",
+      "spoiler": true,
+      "sources": [
+        10
+      ],
+      "section": "segredos"
+    },
+    {
+      "id": "world-1-roteiro",
+      "file": "world-1-roteiro.md",
+      "title": "World 1 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-2-roteiro",
+      "file": "world-2-roteiro.md",
+      "title": "World 2 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-3-roteiro",
+      "file": "world-3-roteiro.md",
+      "title": "World 3 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-4-roteiro",
+      "file": "world-4-roteiro.md",
+      "title": "World 4 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-5-roteiro",
+      "file": "world-5-roteiro.md",
+      "title": "World 5 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-6-roteiro",
+      "file": "world-6-roteiro.md",
+      "title": "World 6 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-7-roteiro",
+      "file": "world-7-roteiro.md",
+      "title": "World 7 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "world-8-roteiro",
+      "file": "world-8-roteiro.md",
+      "title": "World 8 > roteiro e checklist",
+      "spoiler": false,
+      "sources": [
+        10
+      ],
+      "section": "mundos"
+    },
+    {
+      "id": "special-1-roteiro",
+      "file": "special-1-roteiro.md",
+      "title": "Special 1 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        5
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-2-roteiro",
+      "file": "special-2-roteiro.md",
+      "title": "Special 2 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-3-roteiro",
+      "file": "special-3-roteiro.md",
+      "title": "Special 3 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-4-roteiro",
+      "file": "special-4-roteiro.md",
+      "title": "Special 4 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-5-roteiro",
+      "file": "special-5-roteiro.md",
+      "title": "Special 5 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-6-roteiro",
+      "file": "special-6-roteiro.md",
+      "title": "Special 6 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-7-roteiro",
+      "file": "special-7-roteiro.md",
+      "title": "Special 7 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "special-8-roteiro",
+      "file": "special-8-roteiro.md",
+      "title": "Special 8 > roteiro",
+      "spoiler": true,
+      "sources": [
+        10,
+        6
+      ],
+      "section": "special"
+    },
+    {
+      "id": "world-1-castle",
+      "file": "world-1-castle.md",
+      "title": "World 1 > 1-Castle",
+      "spoiler": false,
+      "sources": [
+        11
+      ],
+      "section": "walkthrough",
+      "map": "world-1-castle"
+    },
+    {
+      "id": "world-2-1",
+      "file": "world-2-1.md",
+      "title": "World 2 > 2-1",
+      "spoiler": false,
+      "sources": [
+        12
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-2-2",
+      "file": "world-2-2.md",
+      "title": "World 2 > 2-2",
+      "spoiler": false,
+      "sources": [
+        13
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-2-3",
+      "file": "world-2-3.md",
+      "title": "World 2 > 2-3",
+      "spoiler": false,
+      "sources": [
+        14
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-2-4",
+      "file": "world-2-4.md",
+      "title": "World 2 > 2-4",
+      "spoiler": false,
+      "sources": [
+        15
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-2-airship",
+      "file": "world-2-airship.md",
+      "title": "World 2 > 2-Airship",
+      "spoiler": false,
+      "sources": [
+        16
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-1",
+      "file": "world-3-1.md",
+      "title": "World 3 > 3-1",
+      "spoiler": false,
+      "sources": [
+        17
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-2",
+      "file": "world-3-2.md",
+      "title": "World 3 > 3-2",
+      "spoiler": false,
+      "sources": [
+        18
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-3",
+      "file": "world-3-3.md",
+      "title": "World 3 > 3-3",
+      "spoiler": false,
+      "sources": [
+        19
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-4",
+      "file": "world-3-4.md",
+      "title": "World 3 > 3-4",
+      "spoiler": false,
+      "sources": [
+        20
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-5",
+      "file": "world-3-5.md",
+      "title": "World 3 > 3-5",
+      "spoiler": false,
+      "sources": [
+        21
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-3-airship",
+      "file": "world-3-airship.md",
+      "title": "World 3 > 3-Airship",
+      "spoiler": false,
+      "sources": [
+        22
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-1",
+      "file": "world-4-1.md",
+      "title": "World 4 > 4-1",
+      "spoiler": true,
+      "sources": [
+        23
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-2",
+      "file": "world-4-2.md",
+      "title": "World 4 > 4-2",
+      "spoiler": true,
+      "sources": [
+        24
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-3",
+      "file": "world-4-3.md",
+      "title": "World 4 > 4-3",
+      "spoiler": true,
+      "sources": [
+        25
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-4",
+      "file": "world-4-4.md",
+      "title": "World 4 > 4-4",
+      "spoiler": true,
+      "sources": [
+        26
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-5",
+      "file": "world-4-5.md",
+      "title": "World 4 > 4-5",
+      "spoiler": true,
+      "sources": [
+        27
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-4-airship",
+      "file": "world-4-airship.md",
+      "title": "World 4 > 4-Airship",
+      "spoiler": true,
+      "sources": [
+        28
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-1",
+      "file": "world-5-1.md",
+      "title": "World 5 > 5-1",
+      "spoiler": true,
+      "sources": [
+        29
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-2",
+      "file": "world-5-2.md",
+      "title": "World 5 > 5-2",
+      "spoiler": true,
+      "sources": [
+        30
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-3",
+      "file": "world-5-3.md",
+      "title": "World 5 > 5-3",
+      "spoiler": true,
+      "sources": [
+        31
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-4",
+      "file": "world-5-4.md",
+      "title": "World 5 > 5-4",
+      "spoiler": true,
+      "sources": [
+        32
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-5",
+      "file": "world-5-5.md",
+      "title": "World 5 > 5-5",
+      "spoiler": true,
+      "sources": [
+        33
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-5-castle",
+      "file": "world-5-castle.md",
+      "title": "World 5 > 5-Castle",
+      "spoiler": true,
+      "sources": [
+        34
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-1",
+      "file": "world-6-1.md",
+      "title": "World 6 > 6-1",
+      "spoiler": true,
+      "sources": [
+        35
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-2",
+      "file": "world-6-2.md",
+      "title": "World 6 > 6-2",
+      "spoiler": true,
+      "sources": [
+        36
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-3",
+      "file": "world-6-3.md",
+      "title": "World 6 > 6-3",
+      "spoiler": true,
+      "sources": [
+        37
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-4",
+      "file": "world-6-4.md",
+      "title": "World 6 > 6-4",
+      "spoiler": true,
+      "sources": [
+        38
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-5",
+      "file": "world-6-5.md",
+      "title": "World 6 > 6-5",
+      "spoiler": true,
+      "sources": [
+        39
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-6-airship",
+      "file": "world-6-airship.md",
+      "title": "World 6 > 6-Airship",
+      "spoiler": true,
+      "sources": [
+        40
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-1",
+      "file": "world-7-1.md",
+      "title": "World 7 > 7-1",
+      "spoiler": true,
+      "sources": [
+        41
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-2",
+      "file": "world-7-2.md",
+      "title": "World 7 > 7-2",
+      "spoiler": true,
+      "sources": [
+        42
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-3",
+      "file": "world-7-3.md",
+      "title": "World 7 > 7-3",
+      "spoiler": true,
+      "sources": [
+        43
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-4",
+      "file": "world-7-4.md",
+      "title": "World 7 > 7-4",
+      "spoiler": true,
+      "sources": [
+        44
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-5",
+      "file": "world-7-5.md",
+      "title": "World 7 > 7-5",
+      "spoiler": true,
+      "sources": [
+        45
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-7-airship",
+      "file": "world-7-airship.md",
+      "title": "World 7 > 7-Airship",
+      "spoiler": true,
+      "sources": [
+        46
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-1",
+      "file": "world-8-1.md",
+      "title": "World 8 > 8-1",
+      "spoiler": true,
+      "sources": [
+        47
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-2",
+      "file": "world-8-2.md",
+      "title": "World 8 > 8-2",
+      "spoiler": true,
+      "sources": [
+        48
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-3",
+      "file": "world-8-3.md",
+      "title": "World 8 > 8-3",
+      "spoiler": true,
+      "sources": [
+        49
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-4",
+      "file": "world-8-4.md",
+      "title": "World 8 > 8-4",
+      "spoiler": true,
+      "sources": [
+        50
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-5",
+      "file": "world-8-5.md",
+      "title": "World 8 > 8-5",
+      "spoiler": true,
+      "sources": [
+        51
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-6",
+      "file": "world-8-6.md",
+      "title": "World 8 > 8-6",
+      "spoiler": true,
+      "sources": [
+        52
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-bowser-1",
+      "file": "world-8-bowser-1.md",
+      "title": "World 8 > Bowser 1",
+      "spoiler": true,
+      "sources": [
+        53
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "world-8-bowser-2",
+      "file": "world-8-bowser-2.md",
+      "title": "World 8 > Bowser 2",
+      "spoiler": true,
+      "sources": [
+        54
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "special-1-1",
+      "file": "special-1-1.md",
+      "title": "Special 1 > 1-1",
+      "spoiler": true,
+      "sources": [
+        55
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "special-1-2",
+      "file": "special-1-2.md",
+      "title": "Special 1 > 1-2",
+      "spoiler": true,
+      "sources": [
+        56
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "special-1-3",
+      "file": "special-1-3.md",
+      "title": "Special 1 > 1-3",
+      "spoiler": true,
+      "sources": [
+        57
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "special-1-4",
+      "file": "special-1-4.md",
+      "title": "Special 1 > 1-4",
+      "spoiler": true,
+      "sources": [
+        58
+      ],
+      "section": "walkthrough"
+    },
+    {
+      "id": "special-1-castle",
+      "file": "special-1-castle.md",
+      "title": "Special 1 > 1-Castle",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "walkthrough"
+    }
+  ],
+  "reviewed": false,
+  "remaining": [
+    "Localizações individuais das Star Medals de Special 2–8 e todas as Mystery Boxes.",
+    "Walkthrough detalhado dos obstáculos entre medalhas em todas as fases; revisão de Bowser, Warp Boxes e condições de 100%.",
+    "Revisão editorial externa e conferência das 159 localizações durante gameplay."
+  ],
+  "requiredSections": [
+    "inicio",
+    "mecanicas",
+    "mundos",
+    "referencia",
+    "segredos",
+    "special",
+    "walkthrough"
+  ]
+}

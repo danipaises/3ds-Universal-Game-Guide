@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "gameId": "luigis-mansion-dark-moon",
+  "language": "pt-BR",
+  "coverage": "pilot-partial",
+  "license": "CC-BY-4.0",
+  "pages": [
+    {
+      "id": "comecando",
+      "title": "Começando e cobertura",
+      "file": "comecando.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "map": "mansions",
+      "section": "inicio"
+    },
+    {
+      "id": "controles",
+      "title": "Lanterna, Poltergust e Dark-Light",
+      "file": "controles.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "gloomy-manor",
+      "title": "Gloomy Manor: reconhecimento",
+      "file": "gloomy-manor.md",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "haunted-towers",
+      "title": "Haunted Towers: exploração vertical",
+      "file": "haunted-towers.md",
+      "spoiler": true,
+      "sources": [
+        2
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "old-clockworks",
+      "title": "Old Clockworks: engrenagens e tempo",
+      "file": "old-clockworks.md",
+      "spoiler": true,
+      "sources": [
+        3
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "secret-mine",
+      "title": "Secret Mine: gelo e profundidade",
+      "file": "secret-mine.md",
+      "spoiler": true,
+      "sources": [
+        4
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "treacherous-mansion",
+      "title": "Treacherous Mansion: reta final",
+      "file": "treacherous-mansion.md",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "boos",
+      "title": "Boos > contagem e revisitas",
+      "file": "boos.md",
+      "spoiler": false,
+      "sources": [
+        8,
+        6
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "colecao",
+      "title": "Coleção e metas de conclusão",
+      "file": "colecao.md",
+      "spoiler": true,
+      "sources": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "dicas",
+      "title": "Quando uma sala parece bloqueada",
+      "file": "dicas.md",
+      "spoiler": false,
+      "sources": [
+        0
+      ],
+      "section": "referencia"
+    },
+    {
+      "id": "missao-a-1",
+      "file": "missao-a-1.md",
+      "title": "A-1 > Poltergust 5000",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-2",
+      "file": "missao-a-2.md",
+      "title": "A-2 > Gear Up",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-3",
+      "file": "missao-a-3.md",
+      "title": "A-3 > Quiet Please!",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-4",
+      "file": "missao-a-4.md",
+      "title": "A-4 > Visual Tricks",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-5",
+      "file": "missao-a-5.md",
+      "title": "A-5 > Sticky Situation",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-boss",
+      "file": "missao-a-boss.md",
+      "title": "A-BOSS > Confront the Source",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-a-bonus",
+      "file": "missao-a-bonus.md",
+      "title": "A-BONUS > Gradual Infiltration",
+      "spoiler": false,
+      "sources": [
+        1
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-1",
+      "file": "missao-b-1.md",
+      "title": "B-1 > A Job for a Plumber",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-2",
+      "file": "missao-b-2.md",
+      "title": "B-2 > The Pinwheel Gate",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-3",
+      "file": "missao-b-3.md",
+      "title": "B-3 > Graveyard Shift",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-4",
+      "file": "missao-b-4.md",
+      "title": "B-4 > Pool Party",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-5",
+      "file": "missao-b-5.md",
+      "title": "B-5 > Doggone Key",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-boss",
+      "file": "missao-b-boss.md",
+      "title": "B-BOSS > Tree Topping",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-b-bonus",
+      "file": "missao-b-bonus.md",
+      "title": "B-BONUS > Hostile Intrusion",
+      "spoiler": false,
+      "sources": [
+        2
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-1",
+      "file": "missao-c-1.md",
+      "title": "C-1 > A Timely Entrance",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-2",
+      "file": "missao-c-2.md",
+      "title": "C-2 > Underground Expedition",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-3",
+      "file": "missao-c-3.md",
+      "title": "C-3 > Roundhouse Brawl",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-4",
+      "file": "missao-c-4.md",
+      "title": "C-4 > Play Catch",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-5",
+      "file": "missao-c-5.md",
+      "title": "C-5 > Piece at Last",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-boss",
+      "file": "missao-c-boss.md",
+      "title": "C-BOSS > Showtime",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-c-bonus",
+      "file": "missao-c-bonus.md",
+      "title": "C-BONUS > Outlandish Interruption",
+      "spoiler": false,
+      "sources": [
+        3
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-d-1",
+      "file": "missao-d-1.md",
+      "title": "D-1 > Cold Case",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-d-2",
+      "file": "missao-d-2.md",
+      "title": "D-2 > Hit Rock Bottom",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-d-3",
+      "file": "missao-d-3.md",
+      "title": "D-3 > Across the Chasm",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-d-boss",
+      "file": "missao-d-boss.md",
+      "title": "D-BOSS > Chilly Ride",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-d-bonus",
+      "file": "missao-d-bonus.md",
+      "title": "D-BONUS > Severe Infestation",
+      "spoiler": false,
+      "sources": [
+        4
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-1",
+      "file": "missao-e-1.md",
+      "title": "E-1 > Front-Door Key",
+      "spoiler": false,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-2",
+      "file": "missao-e-2.md",
+      "title": "E-2 > Double Trouble",
+      "spoiler": false,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-3",
+      "file": "missao-e-3.md",
+      "title": "E-3 > A Train to Catch",
+      "spoiler": false,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-4",
+      "file": "missao-e-4.md",
+      "title": "E-4 > Ambush Maneuver",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-5",
+      "file": "missao-e-5.md",
+      "title": "E-5 > Paranormal Chaos",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-boss",
+      "file": "missao-e-boss.md",
+      "title": "E-BOSS > Stop the Knightmare",
+      "spoiler": true,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "missao-e-bonus",
+      "file": "missao-e-bonus.md",
+      "title": "E-BONUS > Terrifying Invasion",
+      "spoiler": false,
+      "sources": [
+        5
+      ],
+      "section": "missoes"
+    },
+    {
+      "id": "fantasmas",
+      "file": "fantasmas.md",
+      "title": "Combate > leitura de fantasmas",
+      "spoiler": false,
+      "sources": [
+        0,
+        6
+      ],
+      "section": "combate"
+    },
+    {
+      "id": "scarescraper",
+      "file": "scarescraper.md",
+      "title": "Extras > ScareScraper",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "extras"
+    },
+    {
+      "id": "gems-gloomy",
+      "file": "gems-gloomy.md",
+      "title": "Gloomy Manor > 13 amethysts",
+      "spoiler": false,
+      "sources": [
+        7
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "boos-a",
+      "file": "boos-a.md",
+      "title": "A > Boos por missão",
+      "spoiler": false,
+      "sources": [
+        8
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "boos-b",
+      "file": "boos-b.md",
+      "title": "B > Boos por missão",
+      "spoiler": false,
+      "sources": [
+        8
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "boos-c",
+      "file": "boos-c.md",
+      "title": "C > Boos por missão",
+      "spoiler": false,
+      "sources": [
+        8
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "boos-d",
+      "file": "boos-d.md",
+      "title": "D > Boos por missão",
+      "spoiler": false,
+      "sources": [
+        8
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "boos-e",
+      "file": "boos-e.md",
+      "title": "E > Boos por missão",
+      "spoiler": true,
+      "sources": [
+        8
+      ],
+      "section": "colecionaveis"
+    },
+    {
+      "id": "nightmare",
+      "file": "nightmare.md",
+      "title": "Final > A Nightmare to Remember",
+      "spoiler": true,
+      "sources": [
+        0
+      ],
+      "section": "chefes"
+    }
+  ],
+  "reviewed": false,
+  "remaining": [
+    "Localizações das 52 gemas de Haunted Towers, Old Clockworks, Secret Mine e Treacherous Mansion; revisão das 13 amethysts e dos Boos já escritos.",
+    "Soluções sala a sala e ações precisas dos chefes.",
+    "Tabelas de upgrades, limiares de três estrelas e coleção de fantasmas ScareScraper.",
+    "Revisão externa de todas as missões."
+  ],
+  "requiredSections": [
+    "chefes",
+    "colecionaveis",
+    "combate",
+    "extras",
+    "inicio",
+    "missoes",
+    "referencia"
+  ]
+}

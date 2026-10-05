@@ -343,3 +343,18 @@
 +        }
      }
  }
+--- a/Library/source/csvc.s
++++ b/Library/source/csvc.s
+@@ -62,8 +62,10 @@
+     push {r4, r5, r6}
+     ldr r4, [sp, #12]
+     ldr r5, [sp, #16]
+-    mov r6, r0 @ Move the dst handle to r6 to make room for magic value
+-    mov r0, #0xFFFFFFF2 @ Set r0 to magic value, which allows for backwards compatibility
++    @ UGG: flags=0 uses the legacy ABI supported by old AND current Luma.
++    cmp r5, #0
++    movne r6, r0 @ Nonzero flags require the newer magic/R6 ABI
++    movne r0, #0xFFFFFFF2
+     svc 0xA0
+     pop {r4, r5, r6}
+     bx lr

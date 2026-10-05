@@ -50,7 +50,9 @@ void flush() {
 } // namespace
 
 extern "C" const char *UGGBootVariant() {
-#ifdef UGG_MINIMAL
+#ifdef UGG_MINIMAL_BOOT
+    return "minimal-boot";
+#elif defined(UGG_MINIMAL)
     return "minimal";
 #else
     return "full";
@@ -63,7 +65,7 @@ extern "C" void UGGBootStage(unsigned stage, const char *label) {
     if (!recording) {
         // Only the experimental hardware-test builds enable this marker file.
         recording = true;
-        append("UGG 0.2.1-alpha / ");
+        append("UGG 0.2.2-alpha / ");
         append(UGGBootVariant());
         append(" / PRIVATE=false / MemorySize=5MiB\nNEEDS HARDWARE RETEST\n");
     }
@@ -93,6 +95,15 @@ extern "C" void UGGBootTitle(u64 title) {
 extern "C" void UGGBootHeap(int bytes) {
     append("newlib-free-bytes-hex=");
     hex(static_cast<u32>(bytes), 8);
+    append("\n");
+    flush();
+}
+extern "C" void UGGBootValue(const char *label, u64 value) {
+    if (!recording)
+        return;
+    append(label);
+    append("=0x");
+    hex(value, 16);
     append("\n");
     flush();
 }

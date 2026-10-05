@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2-alpha — 2026-10-05 — NEEDS HARDWARE RETEST
+
+- Teste físico #2 documentado: 0.2.1 MINIMAL, Old/Luma 13.1.1, FAIL em CTRPF::__system_allocateHeaps. Dump real simbolizado com ELF exato.
+- Corrige svcMapProcessMemoryEx do SDK: flags zero usa ABI legada aceita em Luma 13.1.1 e atual; flags não zero conserva magic/R6. Memória/layout permanecem PRIVATE=false/5MiB.
+- MINIMAL-BOOT sem inicialização gráfica, com allocator/CRT do SDK e logging limitado; teste antes de MINIMAL/FULL.
+- Três ELF/MAP/binários vinculados por BUILD.json, verificação da ABI nas instruções ARM reais e check de único allocator. Pacotes/source/símbolos separados; dumps privados ignorados.
+- Nenhuma expansão de guia/ID/asset, nenhuma release estável. 0.2.2 Não testado em hardware real. Os status “aguarda reteste” da 0.2.1 abaixo são históricos; o teste #2 agora é FAIL.
+
 ## 0.2.1-alpha — 2026-10-05 — NEEDS HARDWARE RETEST
 
 - Registra hardware test #1: 0.2.0-alpha encontrou default.3gx, mas Super Mario 3D Land crashou com exception ARM11 ao iniciar. Overlay/hotkey/guias não foram testados. Modelo/Luma/Title ID/dump não fornecidos.

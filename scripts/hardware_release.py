@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package the existing six-guide test with two matched binaries and symbols."""
+"""Package the existing six-guide test with three matched binaries and symbols."""
 
 import hashlib
 import importlib.util
@@ -24,7 +24,7 @@ def build_retest(root=ROOT, lang="pt-BR"):
     version = b.version(root)
     b.coverage(root, lang)
     identity = {"version": version, "status": "NEEDS HARDWARE RETEST", "variants": {}}
-    for variant in ["minimal", "full"]:
+    for variant in ["minimal-boot", "minimal", "full"]:
         base = root / "plugin" / f"default-{variant}"
         plugin = d.plugin_info(base.with_suffix(".3gx"))
         elf = d.elf_info(base.with_suffix(".elf"))
@@ -43,11 +43,11 @@ def build_retest(root=ROOT, lang="pt-BR"):
             },
         }
     archive_name = f"UniversalGameGuide-PTBR-Hardware-Test-v{version}.zip"
-    result = b.package(root, lang, root / "plugin/default-minimal.3gx", True, archive_name)
+    result = b.package(root, lang, root / "plugin/default-minimal-boot.3gx", True, archive_name)
     stage = root / "build/hardware-test"
     diagnostic = stage / "diagnostics"
     diagnostic.mkdir()
-    for variant in ["minimal", "full"]:
+    for variant in ["minimal-boot", "minimal", "full"]:
         shutil.copy2(root / f"plugin/default-{variant}.3gx", diagnostic / f"default-{variant}.3gx")
     encoded = json.dumps(identity, indent=2) + "\n"
     (diagnostic / "BUILD.json").write_text(encoded)
@@ -55,8 +55,8 @@ def build_retest(root=ROOT, lang="pt-BR"):
         shutil.copy2(root / name, stage / name)
     out = stage / "3ds/UniversalGameGuide"
     manifest = b.read_json(out / "manifest.json")
-    manifest["installedVariant"] = "minimal"
-    manifest["switchableVariants"] = ["minimal", "full"]
+    manifest["installedVariant"] = "minimal-boot"
+    manifest["switchableVariants"] = ["minimal-boot", "minimal", "full"]
     manifest["currentBinaryHardwareTested"] = False
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     checks = {
@@ -71,7 +71,7 @@ def build_retest(root=ROOT, lang="pt-BR"):
     if symbols.exists():
         shutil.rmtree(symbols)
     symbols.mkdir()
-    for variant in ["minimal", "full"]:
+    for variant in ["minimal-boot", "minimal", "full"]:
         for ext in [".elf", ".map", ".3gx"]:
             shutil.copy2(
                 root / f"plugin/default-{variant}{ext}", symbols / f"default-{variant}{ext}"

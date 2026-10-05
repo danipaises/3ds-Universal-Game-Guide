@@ -40,3 +40,6 @@ research/*report.json
 research/
 .ruff_cache/
 .pytest_cache/
+
+plugin/build-minimal-boot/
+*.dmp

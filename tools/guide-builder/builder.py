@@ -507,8 +507,11 @@ def compile_maps(root: Path, out: Path, selected=None):
 
 def hardware_status(root: Path):
     if (root / "data/hardware-tests.json").is_file():
+        latest = read_json(root / "data/hardware-tests.json")["tests"][-1]
         return (
-            "TESTED ON REAL HARDWARE — CURRENT RESULT: CRASH ON PLUGIN LOAD (0.2.0-alpha); "
+            "TESTED ON REAL HARDWARE — LAST RESULT: FAIL ("
+            + latest["version"]
+            + "); "
             + version(root)
             + ": NEEDS HARDWARE RETEST"
         )
@@ -727,9 +730,9 @@ def source_package(root: Path):
         for p in sorted((root / folder).rglob("*")):
             if (
                 p.is_file()
-                and not {"build", "build-minimal"}.intersection(p.parts)
+                and not {"build", "build-minimal", "build-minimal-boot"}.intersection(p.parts)
                 and "__pycache__" not in p.parts
-                and p.suffix not in {".elf", ".3gx", ".pyc", ".map", ".o", ".d", ".a"}
+                and p.suffix not in {".elf", ".3gx", ".pyc", ".map", ".o", ".d", ".a", ".dmp"}
                 and not p.name.endswith(".sections.txt")
             ):
                 require(

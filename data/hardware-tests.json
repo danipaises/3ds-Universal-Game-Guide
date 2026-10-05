@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "currentVersion": "0.2.1-alpha",
+  "currentVersion": "0.2.2-alpha",
   "currentStatus": "NEEDS HARDWARE RETEST",
   "tests": [
     {
@@ -19,6 +19,31 @@
       "hotkeyTested": false,
       "guidesTested": false,
       "status": "FAIL — plugin initialization/load crash"
+    },
+    {
+      "number": 2,
+      "version": "0.2.1-alpha",
+      "variant": "MINIMAL",
+      "reportedOn": "2026-10-05",
+      "evidence": "Direct user report and real Luma crash dump; checked against exact matching ELF",
+      "model": "Old family; exact subtype not supplied",
+      "lumaVersion": "13.1.1",
+      "game": "Super Mario 3D Land",
+      "titleId": "0004000000053F00",
+      "result": "ARM11 Data Abort / Write",
+      "status": "FAIL",
+      "overlayOpened": false,
+      "hotkeyTested": false,
+      "guidesTested": false,
+      "exactCrashLocation": "CTRPluginFramework::__system_allocateHeaps / allocateHeaps.cpp:16,51 (Fail)",
+      "pc": "07005B5C",
+      "lr": "07005B50",
+      "r0": "D8E007F7",
+      "dumpName": "crash_dump_00000008.dmp",
+      "dumpSha256": "9c604ae8f9e9d835b78311c0520fec7163207de8d26c81fa077f6b4b0f623adb",
+      "pluginSha256": "ad4ddcb8dc411b5b06ea1ef3c999caca2b1dbca044877f64bb78564e9cca8234",
+      "elfSha256": "35112cdb53217b21011c75cbcc584f9e2111e12995ca6dbfd9dee4cf5572546f",
+      "diagnosis": "Zero-flags mapping uses new magic/R6 SVC ABI; Luma 13.1.1 resolves magic as a destination process handle and returns RD_INVALID_HANDLE. CTRPF Fail deliberately writes 0xDEADC0DE."
     }
   ]
 }

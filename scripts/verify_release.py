@@ -102,7 +102,7 @@ def verify_runtime(archive, hardware=False):
             assert packs == (6 if hardware else 67)
             assert title_count == (22 if hardware else 211)
             assert not any(
-                "/source/" in n or n.endswith((".py", ".cpp", ".hpp", ".elf", ".pyc"))
+                "/source/" in n or n.endswith((".py", ".cpp", ".hpp", ".elf", ".map", ".pyc"))
                 for n in names
             )
             assert ("profile=hardware-test" in z.read(prefix + "VERSION").decode()) == hardware
@@ -136,7 +136,20 @@ def verify_source(archive):
         assert not any(".." in Path(n).parts or n.startswith("/") or "\\" in n for n in names)
         assert not any(
             n.endswith(
-                (".3gx", ".elf", ".map", ".o", ".d", ".a", ".pyc", ".env", ".sav", ".cia", ".3ds")
+                (
+                    ".3gx",
+                    ".elf",
+                    ".map",
+                    ".o",
+                    ".d",
+                    ".a",
+                    ".pyc",
+                    ".env",
+                    ".sav",
+                    ".cia",
+                    ".3ds",
+                    ".dmp",
+                )
             )
             for n in names
         )
@@ -164,10 +177,12 @@ def verify_retest():
         identity = json.loads(sd.read("diagnostics/BUILD.json"))
         assert debug.read("BUILD.json") == sd.read("diagnostics/BUILD.json")
         assert identity["version"] == version and identity["status"] == "NEEDS HARDWARE RETEST"
-        assert sd.read("luma/plugins/default.3gx") == sd.read("diagnostics/default-minimal.3gx")
+        assert sd.read("luma/plugins/default.3gx") == sd.read(
+            "diagnostics/default-minimal-boot.3gx"
+        )
         assert "LICENSES.txt" in debug.namelist()
         with tempfile.TemporaryDirectory() as temp:
-            for variant in ["minimal", "full"]:
+            for variant in ["minimal-boot", "minimal", "full"]:
                 for ext, kind in [(".3gx", "plugin"), (".elf", "elf"), (".map", "map")]:
                     name = f"default-{variant}{ext}"
                     raw = debug.read(name)
@@ -186,7 +201,7 @@ def verify_retest():
                         info = d.plugin_info(p)
                         assert not info["privateMemory"] and info["memoryMiB"] == 5
         manifest = json.loads(sd.read("3ds/UniversalGameGuide/manifest.json"))
-        assert manifest["installedVariant"] == "minimal"
+        assert manifest["installedVariant"] == "minimal-boot"
         assert manifest["hardwareStatus"] == "NEEDS HARDWARE RETEST"
     return {
         "hardware": hardware,
@@ -195,7 +210,7 @@ def verify_retest():
             "sha256": hashlib.sha256(symbols.read_bytes()).hexdigest(),
         },
         "source": verify_source(ROOT / f"dist/3DS-Universal-Game-Guide-SOURCE-v{version}.zip"),
-        "previousHardwareResult": "TESTED ON REAL HARDWARE — CURRENT RESULT: CRASH ON PLUGIN LOAD (0.2.0-alpha)",
+        "previousHardwareResult": "TESTED ON REAL HARDWARE — CURRENT RESULT: FAIL in CTRPF::__system_allocateHeaps (0.2.1-alpha)",
         "currentStatus": "NEEDS HARDWARE RETEST",
     }
 

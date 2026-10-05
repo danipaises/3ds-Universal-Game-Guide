@@ -1,105 +1,58 @@
-# Reteste de inicialização — 0.2.1-alpha
+# Reteste controlado — 0.2.2-alpha
 
-**TESTED ON REAL HARDWARE — CURRENT RESULT: CRASH ON PLUGIN LOAD (0.2.0-alpha).**
+**0.2.1-alpha: TESTED ON REAL HARDWARE — FAIL.** Old, Luma **13.1.1**, MINIMAL, Super Mario 3D Land, Title ID **0004000000053F00**. Dump #8: PC 07005B5C, LR 07005B50, CTRPF::__system_allocateHeaps; retorno D8E007F7 (handle inválido). O diagnóstico está na [auditoria](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/docs/HEAP_INITIALIZATION_AUDIT_0.2.2.md).
 
-**0.2.1-alpha: NEEDS HARDWARE RETEST.** Compilação não demonstra que o crash foi corrigido.
+**0.2.2-alpha: NEEDS HARDWARE RETEST. Não testado em hardware real.** A chamada foi corrigida e a memória continua PRIVATE=false / 5 MiB. Não considere o crash resolvido por compilar.
 
-Este reteste continua usando o par já entregue: MINIMAL `ad4ddcb8…`, FULL `beb5127c…` (SHA-256 completos no [relatório oficial](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/TEST_REPORT.md)). A correção GCC na importação GitHub recompila um FULL diferente, `acb8c084…`; os artifacts novos identificam o commit com `-ci-<commit>` no nome. Eles são candidatos separados, sem resultado físico. Preserve o pacote original para a comparação já planejada e use os símbolos do mesmo pacote do binário instalado.
+## 1. Backup e instalação
 
-Teste #1 informado pelo usuário em 2026-10-05: Plugin Loader Enabled; default.3gx encontrado SIM; Super Mario 3D Land; exception ARM11 imediatamente ao iniciar; overlay NÃO; hotkey NÃO testada; guias NÃO testados. **FAIL — plugin initialization/load crash.** Modelo exato, Luma, Title ID, região e .dmp ainda não informados. Não inferimos esses campos.
+1. Desligue o console. Faça backup do SD, especialmente `luma/plugins` e `3ds/UniversalGameGuide`, no computador. Preserve também os pacotes 0.2.1 e seus símbolos, necessários para comparar o teste #2.
+2. Extraia **UniversalGameGuide-PTBR-Hardware-Test-v0.2.2-alpha.zip** na raiz do SD. Ele instala **MINIMAL-BOOT** em `luma/plugins/default.3gx`. Nenhum ELF/MAP vai para o cartão; configuração e progresso existentes não são sobrescritos.
+3. Confirme que não há outro .3gx selecionado na pasta específica `luma/plugins/0004000000053F00/`. Essa pasta tem prioridade sobre default.3gx. Mova plugins concorrentes para o backup durante o teste; não exclua o backup.
+4. Arquive/remova o marcador antigo `3ds/UniversalGameGuide/logs/boot-stage.txt` para não confundir tentativas. Se já existe dump antigo, preserve-o e anote seu nome.
+5. Recoloque o SD. Abra Rosalina (atalho padrão **L + D-Pad baixo + SELECT**) e marque **Plugin Loader: Enabled**. Mantenha inicialmente o mesmo Luma 13.1.1, console e jogo do teste #2 para isolar a mudança no plugin. Não é necessário atualizar firmware/Luma para este experimento.
+6. Abra **Super Mario 3D Land**, inicialmente sem pressionar qualquer hotkey.
 
-## 1. Instalar MINIMAL primeiro
+## 2. MINIMAL-BOOT primeiro
 
-1. Desligue o 3DS e faça backup de `luma/plugins/default.3gx` e `3ds/UniversalGameGuide/` no computador.
-2. Extraia **UniversalGameGuide-PTBR-Hardware-Test-v0.2.1-alpha.zip** na raiz do SD. `luma/plugins/default.3gx` já é o **MINIMAL**. Configuração/progresso não vêm no instalador e não são apagados.
-3. Na pasta `diagnostics/`, ficam `default-minimal.3gx`, `default-full.3gx` e BUILD.json. São builds diferentes, ambos PRIVATE=false / 5 MiB. Não os execute simultaneamente.
-4. Se houver um plugin específico em `luma/plugins/<Title ID>/`, faça backup e desabilite-o temporariamente renomeando seu `.3gx` para `.3gx.disabled`: ele tem prioridade sobre default. Preserve plugins de outros títulos.
-5. Antes de cada tentativa, copie o `logs/boot-stage.txt` anterior para o computador e remova apenas esse marcador do SD, com o console desligado. Isso evita confundir uma execução antiga com um crash antes do primeiro flush.
-6. Mantenha seu Luma e as opções usados no teste #1; confirme Plugin Loader habilitado. Não é necessário atualizar firmware para este experimento. Abra **Super Mario 3D Land**, sem segurar R.
-7. Espere pelo início normal do jogo e pela indicação `UGG MINIMAL 0.2.1 carregado`. Em seguida use **START + SELECT + A**, solte os botões e confirme a tela com Title ID e heap. Pressione **B** e confirme imagem, som e input do jogo.
-8. Encerre e desligue normalmente. Copie o marcador para `boot-stage-minimal.txt` no computador e anote o resultado. Se o MINIMAL falhar, pare e envie o .dmp/marcador; não avance para guias.
+Esta variante mantém o CRT, initLib/stack_adjust.s e alocador do CTRPF. Usa uma thread e logging SD; não inicializa OSD, GSP, fontes, som, HID, menu, core ou guias. Mantém o layout de heap do SDK para testar a mesma operação de mapeamento. Aplicativos do sistema passam pelo bypass sem heap/SD/UI.
 
-O MINIMAL não lê config, VERSION, titles.bin, guia, mapa, busca, favoritos ou progresso. Usa o mesmo startup CTRPF e protocolo do loader do FULL; portanto não é um plugin sem framework. O único acesso próprio ao SD é o marcador de diagnóstico. A hotkey dele é fixa e ignora configurações antigas; evite configurar Rosalina com a mesma combinação.
+**Resultado esperado, ainda não comprovado:** o jogo inicia normalmente e permanece com imagem, som e input. **Nenhuma notificação ou overlay deve aparecer. START + SELECT + A não faz nada nesta variante.** Encerre/desligue normalmente e examine o arquivo de boot no computador.
 
-## 2. Trocar para FULL após MINIMAL iniciar
+O marcador deve identificar `UGG 0.2.2-alpha / minimal-boot`, incluir `STAGE 0x03 CTRPF heap allocation and linked constructors returned` e `STAGE 0x10 MINIMAL-BOOT ready`, sem erros nos resultados de FS/loader. Deve listar Title ID, heapVA/heapSize recebidos do loader, heap newlib e versão codificada do Luma. O tamanho do newlib não é RAM livre total do console. O arquivo só existe se o FS/SD funcionar; ausência de marcador não identifica sozinha a causa.
 
-Com o console desligado, **copie** `diagnostics/default-full.3gx` para `luma/plugins/` e renomeie a cópia para `default.3gx`, substituindo a anterior. Não basta renomear o MINIMAL como FULL. Mantenha os originais em diagnostics. Limpe o marcador como no passo 5.
+Se houver crash, pare aqui. Preserve o dump novo e o SHA-256 do .3gx instalado. Não avance ao MINIMAL/FULL. Se o jogo inicia mas não há marcador, informe essa diferença antes de avançar.
 
-Teste separadamente e registre onde ocorreu a primeira falha:
+## 3. MINIMAL com interface
 
-| Tentativa | Ação | Evidência |
-|---|---|---|
-| A | Apenas iniciar FULL e jogar alguns segundos, sem hotkey | stage 0x11: main entrou no loop após ler config |
-| B | Abrir menu com a hotkey configurada; B retorna | 0x12: overlay solicitado; 0x13/0x14: catálogo |
-| C | Abrir índice/primeira página de Mario | 0x15/0x16: guia solicitado/carregado |
-| D | X no menu/índice; pesquisar Mario | 0x17/0x18: busca iniciou/retornou |
-| E | Abrir mapa de World 1-1 | 0x19/0x1A: mapa solicitado/primeiro tile |
+Com o console **desligado**, copie `diagnostics/default-minimal.3gx` sobre `luma/plugins/default.3gx`. Arquive/remova o boot-stage anterior. Essa é a segunda variante, não o MINIMAL-BOOT.
 
-No FULL, a configuração anterior de hotkey continua válida. O padrão é START + SELECT + A. Este pacote conserva os mesmos seis pilotos reduzidos/78 páginas da etapa anterior. Nenhum guia foi expandido. O progresso do perfil de teste continua em `state/test-pt-BR-<game>.bin`.
+Abra o mesmo jogo. O resultado esperado é a notificação `UGG MINIMAL 0.2.2 carregado`. Use **START + SELECT + A**, solte os botões e confira Title ID/heap/log na tela. Pressione **B**, confira imagem, som e input do jogo. O MINIMAL não lê guias, configuração, catálogo, mapas ou busca. Arquive o marcador como `boot-stage-minimal.txt` no computador e registre sucesso/falha de cada ação.
 
-O índice/guia é carregado na primeira abertura do overlay. Os checkpoints informam limites de etapas; não permitem provar sozinho qual instrução falhou. Se FULL falhar e MINIMAL passar, registre a primeira ação divergente. Se ambos falharem antes de main, investigue loader/startup CTRPF pelos símbolos e dump; não culpe o conteúdo sem evidência.
+## 4. FULL depois
 
-## Marcadores precoces e limites
+Somente após confirmar MINIMAL, desligue e copie `diagnostics/default-full.3gx` para `luma/plugins/default.3gx`. Arquive/remova o marcador. Teste na ordem: jogo sem hotkey → hotkey → catálogo → texto PT-BR → B → busca → spoiler → mapa/touch → favorito/progresso. O pacote contém seis guias reduzidos: Mario 3D Land, Pokémon X/Y, Ocarina of Time 3D, Kirby Triple Deluxe e Luigi's Mansion 2/Dark Moon. Não são guias completos nem jogos fisicamente certificados.
 
-Arquivo: `SD:/3ds/UniversalGameGuide/logs/boot-stage.txt`.
+No FULL/MINIMAL, R durante a janela de inicialização pode pular a UI, mas ocorre **após** alocação do heap; não evita uma falha anterior. A recuperação confiável é desabilitar o Plugin Loader ou remover/mover default.3gx com o console desligado.
 
-| Stage hexadecimal | Ponto alcançado |
-|---|---|
-| 01 | Entrypoint, somente buffer BSS, antes do heap/serviços |
-| 02 / 03 | Thread inicial; antes / depois de initLib e construtores |
-| 04 / 05 | srvInit / fsInit começam; resultados das chamadas no buffer |
-| 06 | Primeiro acesso ao marcador SD após fsInit; descarrega checkpoints anteriores |
-| 07 / 08 | Serviços retornaram / Kernel-System-Process inicializados, Title ID |
-| 09 / 0A | Screens / OSD inicializados |
-| 0B / 0C | FS e heap CTRPF / HID e preferências; game release |
-| 0D | GSP inicializado; espera antes da thread principal |
-| 0E / 0F | Inicialização de fonte/screenshots da thread main começou/terminou |
-| 10 / 11 | main MINIMAL/FULL entrou / loop de hotkey |
-| MINIMAL 12 / 13 / 14 | overlay solicitado / frame submetido / voltou ao jogo |
+Depois do primeiro resultado documentado, teste HOME/retorno, sono/retorno e encerramento. Não assuma que passar no boot garante esses fluxos. Registre variante e ação. Em caso de crash, pare e não misture resultados de variantes.
 
-Antes de fsInit não há escrita segura no SD: 01–05 existem somente em RAM até 06. Ausência do arquivo pode significar falha do loader/CRT, heap, construtores, serviços ou acesso ao SD; **não identifica sozinha a etapa**. Resultados de serviços são hexadecimais, não afirmações de sucesso. O arquivo traz versão e variante; não traz dados do save.
+## Recuperação e evidências
 
-Boot trace é deliberadamente ligado nesses dois binários de diagnóstico, independente de Debug Logging. Limite: buffer de 3.072 bytes, no máximo 40 gravações por execução; checkpoints não se repetem por frame. Falha de escrita interrompe as próximas gravações. O marcador pode ficar incompleto em crash/perda de energia. `latest.log` continua opcional e OFF por padrão no FULL. O protocolo de pausa/HOME/sono/saída não foi reescrito.
+Desligue conforme instruções da tela do Luma. No computador, mova `luma/plugins/default.3gx` para o backup; se necessário desative o Plugin Loader no Rosalina. Confira também qualquer plugin específico por Title ID. Não restaure automaticamente o plugin 0.2.1 que já crashou. Guias, config/progresso próprios e saves do jogo não precisam ser apagados.
 
-## Crash dump do Luma
+Envie: modelo exato, versão Luma, variante, jogo/Title ID/região quando conhecidos, ação anterior à falha, foto com PC/LR, SHA-256 de `luma/plugins/default.3gx`, `diagnostics/BUILD.json` e boot-stage daquela tentativa (se existir). O dump ARM11 costuma ficar em **SD:/luma/dumps/arm11/**; copie o arquivo mais novo daquela execução e preserve o nome. Se a tela apontar CTRNAND, informe o caminho e a foto; este teste não pede alteração na NAND. Não envie ROMs, CIAs comerciais, saves, firmware, chaves ou credenciais.
 
-Na tela **An exception occurred**, fotografe a tela inteira e pressione **A para salvar o crash dump**, conforme a opção exibida. Anote o caminho mostrado. Normalmente será:
-
-`SD:/luma/dumps/arm11/crash_dump_XXXXXXXX.dmp`
-
-Copie **o arquivo .dmp mais recente daquela tentativa**, não um .dmp de outra execução. O número é incremental; não há um nome fixo. Se a tela mostrar CTRNAND em vez de SD, registre o caminho e a foto; não altere NAND como parte deste reteste. O guia antigo da wiki cita um parser que não existe no tree v13.4 consultado; esta entrega fornece parser próprio limitado ao formato documentado na fonte oficial.
-
-Envie junto: variante MINIMAL/FULL, hash do .3gx instalado, BUILD.json, foto, boot-stage correspondente (se existir), modelo exato, versão do Luma, Title ID/região/updates quando conhecidos e ação que precedeu o crash. Para o primeiro crash 0.2.0, podemos analisar o dump estruturalmente; **os símbolos 0.2.1 não correspondem ao binário 0.2.0**.
-
-## ELF/MAP da mesma compilação — computador, não instalação
-
-Baixe **UniversalGameGuide-Debug-Symbols-v0.2.1-alpha.zip** e extraia no computador. Ele contém default-minimal.elf/.map/.3gx, default-full.elf/.map/.3gx, BUILD.json, licenças e diagnostics.py. O SOURCE vem em ZIP separado. Não coloque ELF/MAP em luma/plugins. Os SHA-256 em BUILD.json associam exatamente ELF, MAP e binário de cada variante; não use símbolos de outra build, mesmo com a mesma versão no nome.
-
-Com Python e o addr2line do devkitARM, dentro da pasta extraída:
+Para análise no PC, extraia **UniversalGameGuide-Debug-Symbols-v0.2.2-alpha.zip**. Ele contém as três combinações .3gx/.elf/.map, BUILD.json, licenças e diagnostics.py. Use exatamente o trio correspondente ao plugin instalado. Exemplo, com devkitARM no PATH:
 
 ```sh
-python diagnostics.py crash_dump_XXXXXXXX.dmp --variant full --elf default-full.elf --plugin default-full.3gx --manifest BUILD.json --addr2line /opt/devkitpro/devkitARM/bin/arm-none-eabi-addr2line
+python diagnostics.py crash_dump_00000009.dmp --variant minimal-boot --elf default-minimal-boot.elf --plugin default-minimal-boot.3gx --manifest BUILD.json
 ```
 
-Para MINIMAL, troque os três argumentos correspondentes. O script verifica os hashes, extrai PC/LR/SP e simboliza somente endereços dentro das seções executáveis do ELF. PC já foi ajustado pelo Luma; não subtraia outro offset nem 0x07000000. O bit Thumb é limpo para consulta. Palavras da stack que parecem endereços são **candidatos**, não backtrace confirmado. Otimização e frame pointers omitidos no SDK limitam unwinding. PC/LR fora do plugin exigem contexto do loader/jogo/kernel e não têm símbolo correspondente neste ELF; `??` não prova erro do plugin.
+O nome acima é apenas exemplo; informe o nome real. A ferramenta recusa pares ELF/plugin de hashes diferentes. PC do Luma já está ajustado; não subtraia quatro novamente. Candidatos da stack não constituem backtrace confirmado. Dumps brutos ficam privados/ignorados pelo Git por conterem memória do processo.
 
-Consulta manual de um endereço do plugin:
+## Limites
 
-```sh
-arm-none-eabi-addr2line -f -C -i -e default-full.elf 0x07000100
-```
+Boot trace experimental: BSS 3 KiB, até 40 writes por execução, nenhum acesso SD antes de fsInit; erro SD encerra novas gravações. Debug Logging normal do FULL continua OFF. O marcador não é handler de exception nem captura um crash anterior ao FS. Fonte e estrutura do loader foram revisadas antes do probe; nenhuma chamada de pausa do jogo é feita pelo MINIMAL-BOOT.
 
-O endereço acima é apenas um exemplo de entrada; use o PC/LR reais da tela/dump. MAP localiza funções/objetos/seções; ELF com DWARF fornece linhas. DMP do Luma possui cabeçalho próprio e não é um core dump ELF do GDB.
-
-## Recuperação
-
-Se ocorrer crash, salve o dump e desligue. Com o console desligado, renomeie `luma/plugins/default.3gx` para `default.3gx.disabled` ou desabilite Plugin Loader no Rosalina. Restaure o backup anterior quando necessário; o .3gx antigo volta a reproduzir o problema já observado. O bypass R da build anterior permanece experimental e não evita alocação/mapeamento inicial do Luma; não dependa dele para este crash.
-
-## Fontes técnicas consultadas em 2026-10-05
-
-- [Luma issue #2225](https://github.com/LumaTeam/Luma3DS/issues/2225): relato de PRIVATE=true crashando outros títulos, inclusive minimal; hipótese pertinente, não prova da causa em Mario.
-- [Luma PR #2086](https://github.com/LumaTeam/Luma3DS/pull/2086): PRIVATE para compartilhar heap com serviços socket/HTTP. UGG não inicializa soc/httpc.
-- [Loader memoryblock.c v13.4](https://github.com/LumaTeam/Luma3DS/blob/v13.4/sysmodules/rosalina/source/plugin/memoryblock.c): escolha de flags e tamanho do bloco, diferenças Old/New/MODE3.
-- [Exception header v13.4](https://github.com/LumaTeam/Luma3DS/blob/v13.4/k11_extension/include/fatalExceptionHandlers.h), [handler](https://github.com/LumaTeam/Luma3DS/blob/v13.4/k11_extension/source/fatalExceptionHandlersMain.c), [salvamento](https://github.com/LumaTeam/Luma3DS/blob/v13.4/arm9/source/exceptions.c): formato, ajuste de PC, botão A e caminho do dump.
-- [GNU addr2line](https://sourceware.org/binutils/docs/binutils/addr2line.html): consulta de função/linha/inlining a partir do ELF.
-- CTRPF 0.8.0/a502818c e 3gxtool 57e3160 fixados em data/dependencies.lock.json; patch próprio em docs/CTRPF_FILESYSTEM.patch.
+Referências primárias: [CTRPF pin](https://gitlab.com/thepixellizeross/ctrpluginframework/-/tree/a502818c7586179d320caf8e897238d3491b5a29), [Luma 13.1.1](https://github.com/LumaTeam/Luma3DS/tree/v13.1.1), [auditoria da ABI](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/docs/HEAP_INITIALIZATION_AUDIT_0.2.2.md), [histórico 0.2.1](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/docs/history/HARDWARE_RETEST-0.2.1.md).

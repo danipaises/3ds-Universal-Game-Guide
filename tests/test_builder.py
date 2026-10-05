@@ -252,16 +252,9 @@ class BuilderTests(unittest.TestCase):
 
     def test_package_runtime_only_and_preserves_user_state(self):
         root = self.project()
-        for name in [
-            "VERSION",
-            "LICENSE",
-            "THIRD_PARTY_NOTICES.md",
-            "HARDWARE_TEST.md",
-            "HARDWARE_RETEST.md",
-            "INSTALL_PTBR.md",
-        ]:
+        for name in ["VERSION", "LICENSE"] + [p.name for p in ROOT.glob("*.md")]:
             shutil.copy2(ROOT / name, root / name)
-        shutil.copytree(ROOT / "docs/licenses", root / "docs/licenses")
+        shutil.copytree(ROOT / "docs", root / "docs")
         plugin = root / "fixture.3gx"
         plugin.write_bytes(b"3GX$0002" + b"\0" * 152)
         result = b.package(root, "pt-BR", plugin, hardware=True)
@@ -323,6 +316,23 @@ class BuilderTests(unittest.TestCase):
         outside.write_text("not part of source")
         (root / "README.md").symlink_to(outside)
         self.assertRaises(b.Invalid, b.source_package, root)
+
+    def test_source_excludes_raw_dumps_and_probe_build_objects(self):
+        root = self.project()
+        for name in ["VERSION", "LICENSE", ".gitignore", ".gitattributes", ".clang-format"]:
+            shutil.copy2(ROOT / name, root / name)
+        (root / "plugin/build-minimal-boot").mkdir(parents=True)
+        (root / "plugin/crash.dmp").write_bytes(b"private fixture")
+        (root / "plugin/build-minimal-boot/cache.txt").write_text("cache fixture")
+        (root / "plugin/valid.cpp").write_text("// source fixture")
+        (root / "build").mkdir()
+        with zipfile.ZipFile(root / "build/third-party-source.zip", "w"):
+            pass
+        archive, _ = b.source_package(root)
+        with zipfile.ZipFile(archive) as source:
+            self.assertIn("plugin/valid.cpp", source.namelist())
+            self.assertNotIn("plugin/crash.dmp", source.namelist())
+            self.assertFalse(any("build-minimal-boot" in n for n in source.namelist()))
 
 
 if __name__ == "__main__":

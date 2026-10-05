@@ -7,5 +7,6 @@ extern "C" void UGGBootResult(const char *label, Result result);
 extern "C" void UGGBootTitle(u64 title);
 extern "C" void UGGBootFsReady(Result result);
 extern "C" void UGGBootHeap(int bytes);
+extern "C" void UGGBootValue(const char *label, u64 value);
 extern "C" const char *UGGBootVariant();
 extern "C" Result UGGBootLastWrite();

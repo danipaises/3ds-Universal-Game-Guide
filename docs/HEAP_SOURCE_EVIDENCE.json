@@ -1,0 +1,45 @@
+{
+  "accessed": "2026-10-05",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/LumaTeam/Luma3DS/v13.1.1/k11_extension/source/svc/wrappers.s",
+      "sha256": "341a06f74aae01f915d819b72af8428a03deb3a6521518c18de60a4862a91cdf",
+      "bytes": 3303
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LumaTeam/Luma3DS/v13.1.1/k11_extension/source/svc/MapProcessMemoryEx.c",
+      "sha256": "c97a670dac73fb719a76e3d1626788832cbff7cacc20119f4cfee6c4911c29b1",
+      "bytes": 3182
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LumaTeam/Luma3DS/v13.4/k11_extension/source/svc/wrappers.s",
+      "sha256": "1cbe9f443d2467d1947100497692fc03aa7a30e92f7b0bd39f28de83ec4a0416",
+      "bytes": 3666
+    },
+    {
+      "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/raw/6671936663faaa900f7cfdeedf42bc8581560f4f/Library/source/ctrulibExtension/system/allocateHeaps.cpp",
+      "sha256": "74cd44fd5b6b6258b5db59b1ddfa9ae684e6c47ca99cf0892b59b14588b4ceb7",
+      "bytes": 1591
+    },
+    {
+      "url": "https://gitlab.com/thepixellizeross/ctrpluginframework/-/raw/6671936663faaa900f7cfdeedf42bc8581560f4f/Library/source/csvc.s",
+      "sha256": "f720788b0235b3c0f532443246af07b39f4c6c20ee57672734561da56b1c5eb3",
+      "bytes": 2649
+    },
+    {
+      "url": "https://raw.githubusercontent.com/devkitPro/libctru/v2.7.0/libctru/source/system/allocateHeaps.c",
+      "sha256": "42070f4c926935b49cb62d2015525af81fc031c4a28778d6a6e8f43d49a78a17",
+      "bytes": 2904
+    },
+    {
+      "url": "https://gitlab.com/RedShyGuy/ctr-plugin-framework-for-vapecord/-/raw/f334d52844912c13c02790095d8c9d41ff34a129/Library/source/csvc.s",
+      "sha256": "f720788b0235b3c0f532443246af07b39f4c6c20ee57672734561da56b1c5eb3",
+      "bytes": 2649
+    },
+    {
+      "url": "https://gitlab.com/RedShyGuy/ctr-plugin-framework-for-vapecord/-/raw/f334d52844912c13c02790095d8c9d41ff34a129/Library/source/ctrulibExtension/system/allocateHeaps.cpp",
+      "sha256": "74cd44fd5b6b6258b5db59b1ddfa9ae684e6c47ca99cf0892b59b14588b4ceb7",
+      "bytes": 1591
+    }
+  ]
+}

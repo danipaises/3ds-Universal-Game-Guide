@@ -50,6 +50,7 @@ int main(int argc, char **argv) {
     assert(opens == 0 && writes == 0);
     failWrite = scenario == "io-fail";
     UGGBootFsReady(scenario == "fs-fail" ? -1 : 0);
+    UGGBootValue("loader-heap-bytes", 0x500000);
     for (unsigned i = 1; i < 64; ++i) {
         UGGBootStage(i, "checkpoint");
         UGGBootStage(i, "duplicate");
@@ -61,6 +62,7 @@ int main(int argc, char **argv) {
     if (scenario == "normal") {
         assert(writes == 40 && last.find("entry") != std::string::npos);
         assert(last.find("duplicate") == std::string::npos);
+        assert(last.find("loader-heap-bytes=0x0000000000500000") != std::string::npos);
         assert(std::string(UGGBootVariant()) == "full");
     } else if (scenario == "fs-fail") {
         assert(opens == 0);

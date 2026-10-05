@@ -1,5 +1,7 @@
 # Auditoria do crash/startup — 2026-10-05
 
+> Documento histórico, anterior ao dump #2. A 0.2.1 falhou em hardware. A causa comprovada e a candidata 0.2.2 estão em [HEAP_INITIALIZATION_AUDIT_0.2.2.md](HEAP_INITIALIZATION_AUDIT_0.2.2.md).
+
 0.2.0-alpha: **TESTED ON REAL HARDWARE — CURRENT RESULT: CRASH ON PLUGIN LOAD**. 0.2.1-alpha: **NEEDS HARDWARE RETEST**. Fonte física: relato do usuário em Super Mario 3D Land, sem dump fornecido. A etapa exata antes de overlay é desconhecida; não declaramos causa comprovada.
 
 ## Mudança controlada

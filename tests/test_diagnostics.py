@@ -36,6 +36,8 @@ class DiagnosticsTests(unittest.TestCase):
         self.assertEqual(parsed["pc"], 0x07000110)
         self.assertEqual(parsed["lr"], 0x07000121)
         self.assertEqual(parsed["titleId"], "0004000000054000")
+        self.assertEqual(parsed["registers"]["pc"], parsed["pc"])
+        self.assertEqual(parsed["registers"]["r0"], 0)
         # Luma copies to the page boundary; a corrupt/unaligned SP can leave
         # valid trailing bytes that are not complete stack words.
         unaligned = bytearray(dump())

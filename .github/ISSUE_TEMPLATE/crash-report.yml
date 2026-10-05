@@ -31,7 +31,7 @@ body:
     id: guide-version
     attributes:
       label: Versão do Universal Game Guide
-      placeholder: 0.2.1-alpha; informe também o commit se baixou de Actions
+      placeholder: 0.2.2-alpha; informe também o commit se baixou de Actions
     validations:
       required: true
   - type: input
@@ -55,6 +55,7 @@ body:
     attributes:
       label: Variante instalada
       options:
+        - MINIMAL-BOOT
         - MINIMAL
         - FULL
         - Não sei

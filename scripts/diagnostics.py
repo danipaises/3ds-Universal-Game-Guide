@@ -110,6 +110,9 @@ def parse_dump(raw):
         "processor": processor,
         "core": core,
         "exceptionType": kind,
+        "registers": dict(
+            zip([f"r{i}" for i in range(13)] + ["sp", "lr", "pc", "cpsr"], registers)
+        ),
         "pc": registers[15],
         "lr": registers[14],
         "sp": registers[13],
@@ -151,7 +154,7 @@ def main():
     parser.add_argument("--elf", type=Path, required=True)
     parser.add_argument("--plugin", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--variant", choices=["minimal", "full"], required=True)
+    parser.add_argument("--variant", choices=["minimal-boot", "minimal", "full"], required=True)
     parser.add_argument("--addr2line", default="arm-none-eabi-addr2line")
     args = parser.parse_args()
     try:

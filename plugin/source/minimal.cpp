@@ -16,7 +16,7 @@ int main() {
     const u64 title = Process::GetTitleID();
     UGGBootTitle(title);
     UGGBootHeap(getMemFree());
-    OSD::Notify("UGG MINIMAL 0.2.1 carregado");
+    OSD::Notify("UGG MINIMAL 0.2.2 carregado");
     UGGBootStage(17, "load indication requested; entering hotkey loop");
     constexpr u32 combo = Key::Start | Key::Select | Key::A;
     while (!SystemImpl::Status()) {
@@ -39,7 +39,7 @@ int main() {
                 auto &bottom = OSD::GetBottomScreen();
                 top.DrawRect(0, 0, 400, 240, Color::Black);
                 bottom.DrawRect(0, 0, 320, 240, Color::Black);
-                top.DrawSysfont("UGG MINIMAL 0.2.1-alpha", 12, 20, Color::White);
+                top.DrawSysfont("UGG MINIMAL 0.2.2-alpha", 12, 20, Color::White);
                 top.DrawSysfont(Utils::Format("Title ID: %016llX", title), 12, 52, Color::White);
                 top.DrawSysfont(Utils::Format("Heap newlib: %d bytes", getMemFree()), 12, 84,
                                 Color::White);

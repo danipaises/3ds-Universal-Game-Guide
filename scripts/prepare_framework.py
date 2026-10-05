@@ -30,6 +30,8 @@ with tarfile.open(ROOT / "research" / dep["archive"]) as tf:
         if m.name.endswith("/Library/source/CTRPluginFramework/System/Controller.cpp")
     )
     original_controller = tf.extractfile(member).read().decode()
+    member = next(m for m in tf.getmembers() if m.name.endswith("/Library/source/csvc.s"))
+    original_csvc = tf.extractfile(member).read().decode()
 s = original
 start = s.index("        // Set current working directory")
 end = s.index("\n    static void     InitHeap", start)
@@ -260,6 +262,26 @@ patch += "".join(
         controller.splitlines(True),
         fromfile="a/Library/source/CTRPluginFramework/System/Controller.cpp",
         tofile="b/Library/source/CTRPluginFramework/System/Controller.cpp",
+    )
+)
+# Luma 13.1.1 predates the magic/R6 ABI. Current Luma retains the original
+# five-argument ABI for zero flags. Nonzero flags still need the new ABI.
+old_wrapper = """    mov r6, r0 @ Move the dst handle to r6 to make room for magic value
+    mov r0, #0xFFFFFFF2 @ Set r0 to magic value, which allows for backwards compatibility"""
+new_wrapper = """    @ UGG: flags=0 uses the legacy ABI supported by old AND current Luma.
+    cmp r5, #0
+    movne r6, r0 @ Nonzero flags require the newer magic/R6 ABI
+    movne r0, #0xFFFFFFF2"""
+if original_csvc.count(old_wrapper) != 1:
+    raise RuntimeError("Pinned MapProcessMemoryEx ABI anchor changed")
+csvc = original_csvc.replace(old_wrapper, new_wrapper)
+(FW / "Library/source/csvc.s").write_text(csvc)
+patch += "".join(
+    difflib.unified_diff(
+        original_csvc.splitlines(True),
+        csvc.splitlines(True),
+        fromfile="a/Library/source/csvc.s",
+        tofile="b/Library/source/csvc.s",
     )
 )
 (ROOT / "docs/CTRPF_FILESYSTEM.patch").write_text(patch)

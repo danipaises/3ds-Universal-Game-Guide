@@ -2,12 +2,12 @@ Author: Universal Game Guide contributors
 Version:
   Major: 0
   Minor: 2
-  Revision: 1
+  Revision: 2
 Title: 3DS Universal Game Guide
 Summary: Guias offline PT-BR
 Description: |
   Guia universal experimental. START + SELECT + A.
-  Reteste de inicializacao. 0.2.0 crashou no carregamento em hardware.
+  Reteste de inicializacao. 0.2.1 falhou em __system_allocateHeaps. ABI zero-flags corrigida.
   NEEDS HARDWARE RETEST. Boot trace limitado habilitado nesta build.
 Compatibility: Any
 MemorySize: 5MiB

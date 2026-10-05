@@ -6,7 +6,7 @@
 namespace ugg {
 constexpr uint32_t MaxPages = 1024, MaxText = 8192, PageRecordSize = 208, TitleRecordSize = 168;
 constexpr uint64_t MaxGuideSize = 4 * 1024 * 1024;
-constexpr const char *Version = "0.2.1-alpha";
+constexpr const char *Version = "0.2.2-alpha";
 struct Storage {
     virtual ~Storage() = default;
     virtual uint64_t size(const std::string &path) = 0;

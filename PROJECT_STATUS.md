@@ -12,10 +12,11 @@
 - Hardware Test ZIP instala MINIMAL-BOOT, inclui MINIMAL/FULL em diagnostics; símbolos e SOURCE separados. Verificação local: 81 arquivos runtime, 80 hashes, 6 packs/78 páginas/22 IDs/45 tiles; 13 arquivos no ZIP de símbolos. Checksum/CRC/paths/identidade conferidos, sem config/progresso sobrescritos.
 - Guias/Title IDs/assets congelados. Catálogo 68/211 IDs/279 associações, 67 guias parciais, zero completos, Tretta sem guia. Somente data/hardware-tests.json mudou nos dados.
 - README/instruções/issue template atualizados: MINIMAL-BOOT não possui overlay ou hotkey. Nenhuma tag/release estável.
+- Correção publicada em main no commit fc81f1848c242deae97e49b23113ff9a4fd63310; GitHub Actions real [37362312465](https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37362312465) PASS em GCC 13/14 e ARM/pacotes. Logs/artifacts consultados; os três 3GX/ELF/MAP do CI são idênticos aos locais. Auditoria antes de commit: 2.476 candidatos, nenhum segredo/arquivo proibido encontrado.
 
 ## IN PROGRESS
 
-- Revisão de arquivos/segredos antes de commit; publicar correção de source em main e consultar CI real. Ainda sem resultado CI novo nesta revisão local.
+- Reteste físico da candidata pelo usuário, na sequência documentada; conteúdo permanece pausado.
 
 ## TODO
 

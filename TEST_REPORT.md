@@ -16,7 +16,7 @@
 | Wrapper/allocator | **PASS**, verify_arm.py verifica os ELF reais: 1 allocator forte por variante, 12 casos ABI (0/1 flags × old/current × 3 variantes), registros preservados. Baseline 0.2.1 dá D8E007F7 no modelo old. É modelo de SVC, não emulador 3DS/kernel/hardware. |
 | Pacotes | **PASS** verify_release.py: 81 arquivos/80 hashes no SD ZIP, 6 packs/78 páginas/22 IDs/4.963 registros de busca/45 tiles; 13 arquivos no ZIP de símbolos; SOURCE separado sem ELF/MAP/3GX/objetos/raw dumps. Checksums/CRC/paths e manifest conferidos. |
 | Conteúdo | Git diff de guides/assets/data só aponta hardware-tests.json; nenhum guia/ID/asset expandido. COVERAGE/CONTENT_GAPS somente refletem versão/status novos. |
-| GitHub Actions 0.2.2 | **Ainda não consultado nesta revisão local.** O PASS da 0.2.1 não é evidência do commit novo. |
+| GitHub Actions 0.2.2 | **PASS**, [run 37362312465](https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37362312465), commit fc81f1848c242deae97e49b23113ff9a4fd63310. GCC 13/14, Python/Builder/Ruff/core/boot ASan/UBSan, ARM/modelos ABI/pacotes/upload com success, consultados após conclusão. |
 
 Log native: build/022-native-tests.log. Build limpo: build/022-arm-build-final.log. Instruções/modelos: build/arm-verification.json. Pacotes: build/release-verification.json. Toolchain e upstream continuam fixados em data/dependencies.lock.json; comparações primárias e limites em [auditoria](docs/HEAP_INITIALIZATION_AUDIT_0.2.2.md).
 
@@ -33,3 +33,11 @@ A baseline original 0.2.1 continua em build/021-baseline; ZIPs antigos dist não
 Tentativas iniciais desta revisão encontraram: argumento nullptr em SVC u32, dependência indireta UI causando entrypoint duplicado no probe, fixture de pacote sem os documentos recém-linkados e tamanho zero de símbolos assembly sem .size. Todos foram corrigidos e os checks acima reexecutados; essas tentativas falhas não contam como sucesso. Não se removeu -Werror nem a validação de links para fazê-los passar.
 
 Sem teste de overlay em emulador e sem acesso físico local. A causa do erro #2 foi demonstrada na ABI e a chamada candidata foi corrigida, mas **não marcar crash como resolvido** antes do reteste [MINIMAL-BOOT → MINIMAL → FULL](HARDWARE_RETEST.md). [Histórico 0.2.1](docs/history/TEST_REPORT-0.2.1.md).
+
+## Evidência do GitHub e reprodução
+
+Logs reais e artifacts foram consultados/baixados. GCC 14: 44 passed/4 subtests, 23,84 s; GCC 13: 44 passed/4 subtests, 17,65 s. Native core/boot passa em ambos com -Werror/ASan/UBSan; o warning de State::get/toggle permanece corrigido. ARM job 111940504823 concluiu as três builds, verificação de instruções e pacotes.
+
+As três combinações **3GX + ELF + MAP do CI são idênticas às locais por SHA-256**. Checksums externos dos artifacts também conferidos. Isso comprova reprodução nesses dois ambientes desta build, não funcionamento físico. [Registro da execução e comparação](docs/GITHUB_CI_0.2.2.json). Metadata do pacote no contêiner confirma libctru **2.7.0-1** e GCC ARM **16.1.0**; o header version.h não existe nessa instalação.
+
+Antes do commit foram examinados 2.476 candidatos ao Git, sem arquivos gerados/raw dumps/chaves privadas ou padrões conhecidos de tokens. Apenas data/hardware-tests.json mudou entre guias/assets/dados. O push para main não usou force e não criou tag/release. Atualização posterior de documentação registra este run; seus commits não mudam binários e não substituem a evidência física ainda pendente.

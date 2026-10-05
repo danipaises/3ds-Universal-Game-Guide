@@ -1,0 +1,217 @@
+{
+  "runId": 37362312465,
+  "url": "https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37362312465",
+  "commit": "fc81f1848c242deae97e49b23113ff9a4fd63310",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 111939606064,
+      "name": "pc (g++-14)",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install native compiler",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run ruff check builder.py scripts tools tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run ruff format --check builder.py scripts tools tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python builder.py validate --lang pt-BR",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run bash scripts/test.sh",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 111939606378,
+      "name": "pc (g++-13)",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Install native compiler",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run ruff check builder.py scripts tools tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run ruff format --check builder.py scripts tools tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python builder.py validate --lang pt-BR",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pytest -q",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run bash scripts/test.sh",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 111940504823,
+      "name": "arm-package",
+      "status": "completed",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run bash scripts/build-plugin.sh --clean",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/verify_arm.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/bundle_sources.py",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python builder.py hardware-retest --lang pt-BR",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python scripts/verify_release.py --hardware-retest",
+          "conclusion": "success"
+        },
+        {
+          "name": "Label CI candidates without replacing hardware baseline",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifactComparison": {
+    "minimal-boot": {
+      "ciSha256": "7167f564c2ed90c08d09ee8b35654e3ddabf34801e2192590b3f5d82afe1405a",
+      "localSha256": "7167f564c2ed90c08d09ee8b35654e3ddabf34801e2192590b3f5d82afe1405a",
+      "same3gx": true,
+      "sameElf": true,
+      "sameMap": true
+    },
+    "minimal": {
+      "ciSha256": "ec3ab2ad151710d08cbef4ae579e36c4dc7be560deb8a532a6170c2c156fc238",
+      "localSha256": "ec3ab2ad151710d08cbef4ae579e36c4dc7be560deb8a532a6170c2c156fc238",
+      "same3gx": true,
+      "sameElf": true,
+      "sameMap": true
+    },
+    "full": {
+      "ciSha256": "ea96f45a5f870f1e9ba0b3916a177b88be6794ed82e9ba387bc28fb358b0d702",
+      "localSha256": "ea96f45a5f870f1e9ba0b3916a177b88be6794ed82e9ba387bc28fb358b0d702",
+      "same3gx": true,
+      "sameElf": true,
+      "sameMap": true
+    }
+  },
+  "hardwareStatus": "NEEDS HARDWARE RETEST"
+}

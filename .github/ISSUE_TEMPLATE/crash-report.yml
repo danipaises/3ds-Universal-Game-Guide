@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        A versão atual é ALPHA e aguarda reteste físico. Não envie ROMs, CIAs comerciais, saves, firmware, chaves ou credenciais. Antes de anexar logs ou fotos, confira se contêm dados pessoais.
+        A versão atual é ALPHA: 0.2.2 FULL PARTIAL PASS; Search e Settings crasham. Não envie ROMs, CIAs comerciais, saves, firmware, chaves ou credenciais. Antes de anexar logs ou fotos, confira se contêm dados pessoais.
   - type: dropdown
     id: console-model
     attributes:
@@ -61,6 +61,16 @@ body:
         - Não sei
     validations:
       required: true
+  - type: input
+    id: installed-sha256
+    attributes:
+      label: SHA-256 do plugin instalado
+      description: Confira luma/plugins/default.3gx no SD; não use apenas o hash de outro download.
+  - type: textarea
+    id: build-identity
+    attributes:
+      label: BUILD.json e origem do download
+      description: Informe pacote/commit ou anexe diagnostics/BUILD.json; não misture símbolos de builds diferentes.
   - type: textarea
     id: action
     attributes:

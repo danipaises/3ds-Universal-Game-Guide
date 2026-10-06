@@ -23,7 +23,9 @@ def build_retest(root=ROOT, lang="pt-BR"):
     b.require(lang == "pt-BR", "Reteste atual usa apenas PT-BR")
     version = b.version(root)
     b.coverage(root, lang)
-    identity = {"version": version, "status": "NEEDS HARDWARE RETEST", "variants": {}}
+    release = module(root / "scripts/release_assets.py", "release_assets")
+    identity = release.build_provenance(root)
+    identity["variants"] = {}
     for variant in ["minimal-boot", "minimal", "full"]:
         base = root / "plugin" / f"default-{variant}"
         plugin = d.plugin_info(base.with_suffix(".3gx"))
@@ -35,6 +37,9 @@ def build_retest(root=ROOT, lang="pt-BR"):
         map_path = base.with_suffix(".map")
         b.require(map_path.stat().st_size > 1024, "MAP missing or empty")
         identity["variants"][variant] = {
+            "variant": variant,
+            "commit": identity["commit"],
+            "version": version,
             "plugin": plugin,
             "elf": elf,
             "map": {
@@ -82,7 +87,9 @@ def build_retest(root=ROOT, lang="pt-BR"):
     shutil.copy2(out / "LICENSES.txt", symbols / "LICENSES.txt")
     symbols_zip = root / "dist" / f"UniversalGameGuide-Debug-Symbols-v{version}.zip"
     symbols_sha = b.write_zip(symbols, symbols_zip)
-    source, source_sha = b.source_package(root)
+    source, _ = b.source_package(root)
+    (root / "build/source-release/BUILD.json").write_text(encoded)
+    source_sha = b.write_zip(root / "build/source-release", source)
     sums = [
         (result["sha256"], archive.name),
         (symbols_sha, symbols_zip.name),

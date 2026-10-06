@@ -1,6 +1,6 @@
 # Cobertura 0.2.2-alpha
 
-TESTED ON REAL HARDWARE — LAST RESULT: FAIL (0.2.1-alpha); 0.2.2-alpha: NEEDS HARDWARE RETEST. Percentuais medem presença de guia, não completude do walkthrough. Revisado é revisão editorial declarada, nunca teste físico.
+0.2.2-alpha: REAL HARDWARE TESTED — FULL PARTIAL PASS. Percentuais medem presença de guia, não completude do walkthrough. Revisado é revisão editorial declarada, nunca teste físico.
 
 Mario: ██████████ 100% com guia (31/31)
 Pokemon: ██████████ 96% com guia (22/23)

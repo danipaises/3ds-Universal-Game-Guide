@@ -43,7 +43,7 @@ g++ -std=c++17 -include cstdint -static-libstdc++ -static-libgcc \
   -o .deps/3gxtool-current/3gxtool
 image="$(python3 -c 'import json; print(json.load(open("data/dependencies.lock.json"))["dockerImage"])')"
 docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/work" -w /work "$image" \
-  bash -c 'set -e; export PATH="$DEVKITARM/bin:$PATH"; make -C .deps/ctrpluginframework-0.8.0/Library lib/libctrpf.a -j2 G=-g ENABLE_LINK_TIME_OPTIMIZATIONS=0 CTRPF_VERSION_MAJOR=0 CTRPF_VERSION_MINOR=8 CTRPF_VERSION_BUILD=0 COMMIT=a502818c CTRPF_REVISION=0.8.0 COMPILE_DATE=2026-10-04T00:00:00UTC; make -C plugin default.elf default-minimal.elf default-minimal-boot.elf -j2; arm-none-eabi-readelf -S plugin/default.elf > plugin/default.sections.txt; arm-none-eabi-readelf -S plugin/default-minimal.elf > plugin/default-minimal.sections.txt; arm-none-eabi-readelf -S plugin/default-minimal-boot.elf > plugin/default-minimal-boot.sections.txt; arm-none-eabi-size plugin/default.elf plugin/default-minimal.elf plugin/default-minimal-boot.elf'
+  bash -c 'set -e; export PATH="$DEVKITARM/bin:$PATH"; make -C .deps/ctrpluginframework-0.8.0/Library lib/libctrpf.a -j2 G=-g ENABLE_LINK_TIME_OPTIMIZATIONS=0 CTRPF_VERSION_MAJOR=0 CTRPF_VERSION_MINOR=8 CTRPF_VERSION_BUILD=0 COMMIT=a502818c CTRPF_REVISION=0.8.0 COMPILE_DATE=2026-10-04T00:00:00UTC; make -C plugin default.elf default-minimal.elf default-minimal-boot.elf -j2; arm-none-eabi-readelf -S plugin/default.elf > plugin/default.sections.txt; arm-none-eabi-readelf -S plugin/default-minimal.elf > plugin/default-minimal.sections.txt; arm-none-eabi-readelf -S plugin/default-minimal-boot.elf > plugin/default-minimal-boot.sections.txt; arm-none-eabi-size plugin/default.elf plugin/default-minimal.elf plugin/default-minimal-boot.elf; arm-none-eabi-g++ --version > build/arm-compiler-version.txt; dkp-pacman -Q devkitARM libctru > build/arm-package-versions.txt'
 .deps/3gxtool-current/3gxtool -s plugin/default.elf plugin/plugin.plgInfo plugin/default.3gx
 python3 - <<'PY'
 from pathlib import Path
@@ -58,3 +58,14 @@ cp plugin/default.3gx plugin/default-full.3gx
 cp plugin/default.elf plugin/default-full.elf
 cp plugin/default.map plugin/default-full.map
 python3 -c 'from pathlib import Path; p=Path("plugin/default.3gx"); assert p.read_bytes()[:8]==b"3GX$0002"; print("3GX v2 produced:",p.stat().st_size,"bytes")'
+
+python3 - <<'PYTOOLCHAIN'
+import json
+from pathlib import Path
+lock = json.loads(Path('data/dependencies.lock.json').read_text())
+Path('build/toolchain.json').write_text(json.dumps({
+    'dockerImage': lock['dockerImage'],
+    'compiler': Path('build/arm-compiler-version.txt').read_text().splitlines()[0],
+    'packages': Path('build/arm-package-versions.txt').read_text().splitlines(),
+}, indent=2) + '\n')
+PYTOOLCHAIN

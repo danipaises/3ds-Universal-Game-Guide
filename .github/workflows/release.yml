@@ -1,10 +1,13 @@
-name: Release PT-BR artifacts
+name: Publish GitHub Release
 on:
   push:
     tags: ['v*']
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   validate-tag:
     runs-on: ubuntu-24.04
@@ -12,12 +15,49 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - name: Check tag against VERSION
+      - name: Check tag and checkout against VERSION
         run: |
-          if [[ "$GITHUB_REF_TYPE" == tag && "$GITHUB_REF_NAME" != "v$(cat VERSION)" ]]; then
-            echo 'Release tag must match VERSION' >&2
-            exit 1
+          ugg_tag="v$(cat VERSION)"
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then
+            ugg_tag="$GITHUB_REF_NAME"
           fi
+          python scripts/release_assets.py --tag "$ugg_tag" --commit "$GITHUB_SHA"
   release-artifacts:
     needs: validate-tag
     uses: ./.github/workflows/build.yml
+  publish:
+    if: github.ref_type == 'tag'
+    needs: release-artifacts
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@484a0b528fb4d7bd804637ccb632e47a0e638317
+        with:
+          name: UniversalGameGuide-PTBR-CI-${{ github.sha }}
+          path: incoming
+      - name: Verify same-commit assets and prepare canonical downloads
+        run: |
+          python scripts/release_assets.py --tag "$GITHUB_REF_NAME" --commit "$GITHUB_SHA" --input incoming/dist --output prepared
+          (cd prepared && sha256sum --check SHA256SUMS.txt)
+      - name: Publish without replacing an existing release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            echo 'Release already exists; assets will not be replaced.' >&2
+            exit 1
+          fi
+          ugg_flags=()
+          if [[ "$(cat VERSION)" == *-* ]]; then
+            ugg_flags+=(--prerelease)
+          fi
+          gh release create "$GITHUB_REF_NAME" --verify-tag --title "3DS Universal Game Guide $GITHUB_REF_NAME" --notes-file prepared/NOTES.md --draft --latest=false "${ugg_flags[@]}" prepared/*.zip prepared/BUILD.json prepared/SHA256SUMS.txt
+          gh release download "$GITHUB_REF_NAME" --dir published
+          (cd published && sha256sum --check SHA256SUMS.txt)
+          gh release edit "$GITHUB_REF_NAME" --draft=false --latest=false
+          gh release view "$GITHUB_REF_NAME" --json url,tagName,isPrerelease,isDraft,assets

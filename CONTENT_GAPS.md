@@ -1,6 +1,6 @@
 # Lacunas de conteúdo — 0.2.2-alpha
 
-Gerado pelo Guide Builder. Nenhum guia parcial é contado como completo. TESTED ON REAL HARDWARE — LAST RESULT: FAIL (0.2.1-alpha); 0.2.2-alpha: NEEDS HARDWARE RETEST. Os itens abaixo são conteúdo ainda faltante ou não revisado.
+Gerado pelo Guide Builder. Nenhum guia parcial é contado como completo. 0.2.2-alpha: REAL HARDWARE TESTED — FULL PARTIAL PASS. Os itens abaixo são conteúdo ainda faltante ou não revisado.
 
 ## Super Mario 3D Land
 

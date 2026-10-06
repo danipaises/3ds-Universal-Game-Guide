@@ -141,9 +141,11 @@ def candidates(dump, ranges):
     return result
 
 
-def verify_identity(manifest, variant, elf, plugin):
+def verify_identity(manifest, variant, elf, plugin, map_path, installed_sha256):
     expected = manifest["variants"][variant]
-    for kind, path in [("elf", elf), ("plugin", plugin)]:
+    if installed_sha256.lower() != expected["plugin"]["sha256"]:
+        raise ValueError("Installed SD plugin hash differs from BUILD.json")
+    for kind, path in [("elf", elf), ("plugin", plugin), ("map", map_path)]:
         if hashlib.sha256(limited(path, 64 * 1024 * 1024)).hexdigest() != expected[kind]["sha256"]:
             raise ValueError("Build identity mismatch: " + kind)
 
@@ -153,13 +155,19 @@ def main():
     parser.add_argument("dump", type=Path)
     parser.add_argument("--elf", type=Path, required=True)
     parser.add_argument("--plugin", type=Path, required=True)
+    parser.add_argument("--map", type=Path, required=True)
+    parser.add_argument(
+        "--installed-sha256", required=True, help="SHA-256 confirmed on the installed SD plugin"
+    )
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--variant", choices=["minimal-boot", "minimal", "full"], required=True)
     parser.add_argument("--addr2line", default="arm-none-eabi-addr2line")
     args = parser.parse_args()
     try:
         manifest = json.loads(limited(args.manifest, 128 * 1024))
-        verify_identity(manifest, args.variant, args.elf, args.plugin)
+        verify_identity(
+            manifest, args.variant, args.elf, args.plugin, args.map, args.installed_sha256
+        )
         dump = parse_dump(limited(args.dump, 1024 * 1024))
         elf = elf_info(args.elf)
         locations = candidates(dump, elf["executableRanges"])

@@ -506,15 +506,10 @@ def compile_maps(root: Path, out: Path, selected=None):
 
 
 def hardware_status(root: Path):
-    if (root / "data/hardware-tests.json").is_file():
-        latest = read_json(root / "data/hardware-tests.json")["tests"][-1]
-        return (
-            "TESTED ON REAL HARDWARE — LAST RESULT: FAIL ("
-            + latest["version"]
-            + "); "
-            + version(root)
-            + ": NEEDS HARDWARE RETEST"
-        )
+    report = root / "data/hardware-tests.json"
+    if report.is_file():
+        data = read_json(report)
+        return data["currentVersion"] + ": " + data["currentStatus"]
     return "NEEDS HARDWARE RETEST"
 
 
@@ -584,7 +579,7 @@ def compile_data(root: Path = ROOT, lang="pt-BR", stage: Path | None = None, har
         "profile": "hardware-test" if hardware else "release",
         "hardwareTested": False,
         "hardwareStatus": "NEEDS HARDWARE RETEST",
-        "previousHardwareResult": "0.2.0-alpha: CRASH ON PLUGIN LOAD",
+        "previousHardwareResult": hardware_status(root),
         "guideCoverage": "partial",
         "statistics": stats,
         "files": {

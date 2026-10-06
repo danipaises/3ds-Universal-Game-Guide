@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "currentVersion": "0.2.2-alpha",
-  "currentStatus": "NEEDS HARDWARE RETEST",
+  "currentStatus": "REAL HARDWARE TESTED — FULL PARTIAL PASS",
   "tests": [
     {
       "number": 1,
@@ -44,6 +44,72 @@
       "pluginSha256": "ad4ddcb8dc411b5b06ea1ef3c999caca2b1dbca044877f64bb78564e9cca8234",
       "elfSha256": "35112cdb53217b21011c75cbcc584f9e2111e12995ca6dbfd9dee4cf5572546f",
       "diagnosis": "Zero-flags mapping uses new magic/R6 SVC ABI; Luma 13.1.1 resolves magic as a destination process handle and returns RD_INVALID_HANDLE. CTRPF Fail deliberately writes 0xDEADC0DE."
+    },
+    {
+      "number": 3,
+      "version": "0.2.2-alpha",
+      "reportedOn": "2026-10-05",
+      "evidence": "Direct user report of real hardware tests; Search and Settings dumps not supplied yet",
+      "model": "Old Nintendo 3DS",
+      "lumaVersion": "13.1.1",
+      "game": "Super Mario 3D Land",
+      "titleId": "0004000000053F00",
+      "status": "PARTIAL PASS",
+      "variants": {
+        "minimal-boot": "PASS",
+        "minimal": "PASS",
+        "full": "PARTIAL PASS"
+      },
+      "features": {
+        "pluginLoader": "PASS",
+        "boot": "PASS",
+        "hotkey": "PASS",
+        "gameDetection": "PASS",
+        "mainUI": "PASS",
+        "guide": "PASS",
+        "guideNavigation": "PASS",
+        "returnToGame": "PASS",
+        "offlineSearch": "FAIL — ARM11 CRASH",
+        "settings": "FAIL — ARM11 CRASH",
+        "maps": "NOT TESTED",
+        "settingsSave": "NOT TESTED",
+        "repeatedOpening": "NOT TESTED",
+        "homeSleepSwap": "NOT TESTED"
+      },
+      "observedMinimalScreen": {
+        "titleId": "0004000000053F00",
+        "newlibHeapBytes": 8172600,
+        "bootLogResult": "00000000",
+        "bottomLabel": "NEEDS HARDWARE RETEST"
+      },
+      "installedBinaryIdentityConfirmed": false,
+      "identityNote": "Release archive identity verified against prior delivery and CI at e3b78dc; SHA-256 of the plugin installed on the SD has not yet been supplied. Do not symbolize a new dump until confirmed. Heap value is an observation, not free RAM or an inferred loader allocation.",
+      "crashes": [
+        {
+          "id": "A",
+          "feature": "Offline Search",
+          "status": "FAIL — ARM11 CRASH",
+          "dumpName": null,
+          "exceptionType": null,
+          "accessType": null,
+          "pc": null,
+          "lr": null,
+          "sp": null,
+          "diagnosis": "PENDING DUMP AND EXACT FULL BUILD IDENTITY"
+        },
+        {
+          "id": "B",
+          "feature": "Settings",
+          "status": "FAIL — ARM11 CRASH",
+          "dumpName": null,
+          "exceptionType": null,
+          "accessType": null,
+          "pc": null,
+          "lr": null,
+          "sp": null,
+          "diagnosis": "PENDING DUMP AND EXACT FULL BUILD IDENTITY"
+        }
+      ]
     }
   ]
 }

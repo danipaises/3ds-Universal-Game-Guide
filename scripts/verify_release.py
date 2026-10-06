@@ -176,6 +176,14 @@ def verify_retest():
     with zipfile.ZipFile(installer) as sd, zipfile.ZipFile(symbols) as debug:
         identity = json.loads(sd.read("diagnostics/BUILD.json"))
         assert debug.read("BUILD.json") == sd.read("diagnostics/BUILD.json")
+        with zipfile.ZipFile(
+            ROOT / f"dist/3DS-Universal-Game-Guide-SOURCE-v{version}.zip"
+        ) as source:
+            assert source.read("BUILD.json") == debug.read("BUILD.json")
+        assert identity["classification"] == "CI-REBUILT"
+        assert identity["currentBinaryHardwareTested"] is False
+        assert identity["toolchain"]["compiler"]
+        assert identity["toolchain"]["packages"]
         assert identity["version"] == version and identity["status"] == "NEEDS HARDWARE RETEST"
         assert sd.read("luma/plugins/default.3gx") == sd.read(
             "diagnostics/default-minimal-boot.3gx"
@@ -210,7 +218,7 @@ def verify_retest():
             "sha256": hashlib.sha256(symbols.read_bytes()).hexdigest(),
         },
         "source": verify_source(ROOT / f"dist/3DS-Universal-Game-Guide-SOURCE-v{version}.zip"),
-        "previousHardwareResult": "TESTED ON REAL HARDWARE — CURRENT RESULT: FAIL in CTRPF::__system_allocateHeaps (0.2.1-alpha)",
+        "previousHardwareResult": b.hardware_status(ROOT),
         "currentStatus": "NEEDS HARDWARE RETEST",
     }
 

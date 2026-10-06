@@ -2,7 +2,50 @@
 
 **0.2.1-alpha: TESTED ON REAL HARDWARE — FAIL.** Old, Luma **13.1.1**, MINIMAL, Super Mario 3D Land, Title ID **0004000000053F00**. Dump #8: PC 07005B5C, LR 07005B50, CTRPF::__system_allocateHeaps; retorno D8E007F7 (handle inválido). O diagnóstico está na [auditoria](https://github.com/danipaises/3ds-Universal-Game-Guide/blob/main/docs/HEAP_INITIALIZATION_AUDIT_0.2.2.md).
 
-**0.2.2-alpha: NEEDS HARDWARE RETEST. Não testado em hardware real.** A chamada foi corrigida e a memória continua PRIVATE=false / 5 MiB. Não considere o crash resolvido por compilar.
+**0.2.2-alpha: REAL HARDWARE TESTED — FULL PARTIAL PASS.** A chamada foi corrigida e a memória continua PRIVATE=false / 5 MiB. Não considere o crash resolvido por compilar.
+
+## Resultado real recebido — teste #3
+
+**0.2.2-alpha REAL HARDWARE TESTED**, Old Nintendo 3DS + Luma 13.1.1, Super Mario 3D Land / 0004000000053F00. **MINIMAL-BOOT PASS; MINIMAL PASS; FULL PARTIAL PASS**. Boot, hotkey, Title ID, main UI, guia/navegação básica e retorno passaram. **Offline Search e Settings provocam ARM11 crash**. Mapas e outros fluxos ainda não têm aprovação física.
+
+A observação MINIMAL foi heap newlib 8.172.600 bytes / boot log result 00000000. Rótulos de tela e dos ZIPs históricos anteriores ao reteste permanecem preservados. Não assumir causa comum dos dois crashes. Para uso normal, evite essas duas opções até corrigir.
+
+## Coletar dumps A e B separadamente
+
+1. Preserve o plugin instalado, o ZIP original e `diagnostics/BUILD.json`. Anote SHA-256 de `luma/plugins/default.3gx`. O FULL histórico conhecido é ea96f45a5f870f1e9ba0b3916a177b88be6794ed82e9ba387bc28fb358b0d702.
+2. Para a tentativa de Pesquisa, guarde ação exata, foto, boot-stage e dump mais novo em luma/dumps/arm11; identifique-o como **A — Offline Search** no computador, preservando o nome original.
+3. Para Configurações, faça registro independente e identifique o dump como **B — Settings**. Não confunda com crash_dump_00000008.dmp da 0.2.1.
+4. Confirme Title ID, exception/access, PC/LR/SP e registradores. ELF FULL esperado: 5bd2c9d1c0c4a6c0b99c3fed5036bd40186f6b427366f5f8840de33675dec1b6; MAP: 288c46577ad93bfe95fc8497956fecab0fccf1767cdaac98f82096381f9a3c38.
+5. **Sem confirmação de identidade instalada + BUILD.json + ELF/MAP, parar antes da simbolização.** O arquivo recebido da stack só permite candidatos; não inventar backtrace. Os dumps brutos ficam privados/ignorados pelo Git.
+
+## Próximo reteste — 0.2.3 ainda não gerada
+
+Nenhuma caixa abaixo está aprovada antecipadamente. Somente aplicar à futura build corrigida, com hashes próprios, após analisar os dumps.
+
+- [ ] Plugin Loader
+- [ ] boot
+- [ ] MINIMAL-BOOT
+- [ ] MINIMAL
+- [ ] hotkey
+- [ ] FULL boot
+- [ ] game detection
+- [ ] main UI
+- [ ] guide
+- [ ] guide navigation
+- [ ] offline search
+- [ ] search without results
+- [ ] settings
+- [ ] settings save
+- [ ] maps
+- [ ] navigation
+- [ ] close guide
+- [ ] reopen guide
+- [ ] return to game
+- [ ] game remains playable
+
+FULL = PASS exige todas as funções relevantes aprovadas em hardware, incluindo abrir/fechar Search e Settings repetidamente. HOME/sono/swap devem ter registro separado. Expansão massiva de guias permanece pausada.
+
+## Procedimento original de instalação da 0.2.2
 
 ## 1. Backup e instalação
 
@@ -17,7 +60,7 @@
 
 Esta variante mantém o CRT, initLib/stack_adjust.s e alocador do CTRPF. Usa uma thread e logging SD; não inicializa OSD, GSP, fontes, som, HID, menu, core ou guias. Mantém o layout de heap do SDK para testar a mesma operação de mapeamento. Aplicativos do sistema passam pelo bypass sem heap/SD/UI.
 
-**Resultado esperado, ainda não comprovado:** o jogo inicia normalmente e permanece com imagem, som e input. **Nenhuma notificação ou overlay deve aparecer. START + SELECT + A não faz nada nesta variante.** Encerre/desligue normalmente e examine o arquivo de boot no computador.
+**Resultado esperado (confirmado no teste #3 para o console relatado):** o jogo inicia normalmente e permanece com imagem, som e input. **Nenhuma notificação ou overlay deve aparecer. START + SELECT + A não faz nada nesta variante.** Encerre/desligue normalmente e examine o arquivo de boot no computador.
 
 O marcador deve identificar `UGG 0.2.2-alpha / minimal-boot`, incluir `STAGE 0x03 CTRPF heap allocation and linked constructors returned` e `STAGE 0x10 MINIMAL-BOOT ready`, sem erros nos resultados de FS/loader. Deve listar Title ID, heapVA/heapSize recebidos do loader, heap newlib e versão codificada do Luma. O tamanho do newlib não é RAM livre total do console. O arquivo só existe se o FS/SD funcionar; ausência de marcador não identifica sozinha a causa.
 
@@ -43,13 +86,13 @@ Desligue conforme instruções da tela do Luma. No computador, mova `luma/plugin
 
 Envie: modelo exato, versão Luma, variante, jogo/Title ID/região quando conhecidos, ação anterior à falha, foto com PC/LR, SHA-256 de `luma/plugins/default.3gx`, `diagnostics/BUILD.json` e boot-stage daquela tentativa (se existir). O dump ARM11 costuma ficar em **SD:/luma/dumps/arm11/**; copie o arquivo mais novo daquela execução e preserve o nome. Se a tela apontar CTRNAND, informe o caminho e a foto; este teste não pede alteração na NAND. Não envie ROMs, CIAs comerciais, saves, firmware, chaves ou credenciais.
 
-Para análise no PC, extraia **UniversalGameGuide-Debug-Symbols-v0.2.2-alpha.zip**. Ele contém as três combinações .3gx/.elf/.map, BUILD.json, licenças e diagnostics.py. Use exatamente o trio correspondente ao plugin instalado. Exemplo, com devkitARM no PATH:
+Para análise no PC, extraia **UniversalGameGuide-Debug-Symbols-v0.2.2-alpha.zip**. O diagnostics.py histórico desse ZIP valida ELF/plugin; use a ferramenta atual da main para exigir também MAP e o hash instalado. Ele contém as três combinações .3gx/.elf/.map, BUILD.json, licenças e diagnostics.py. Use exatamente o trio correspondente ao plugin instalado. Exemplo, com devkitARM no PATH:
 
 ```sh
-python diagnostics.py crash_dump_00000009.dmp --variant minimal-boot --elf default-minimal-boot.elf --plugin default-minimal-boot.3gx --manifest BUILD.json
+python /caminho/do/repositorio/scripts/diagnostics.py DUMP_A_SEARCH.dmp --variant full --elf default-full.elf --map default-full.map --plugin default-full.3gx --manifest BUILD.json --installed-sha256 HASH_CONFIRMADO_NO_SD
 ```
 
-O nome acima é apenas exemplo; informe o nome real. A ferramenta recusa pares ELF/plugin de hashes diferentes. PC do Luma já está ajustado; não subtraia quatro novamente. Candidatos da stack não constituem backtrace confirmado. Dumps brutos ficam privados/ignorados pelo Git por conterem memória do processo.
+O nome acima é apenas exemplo; informe o nome real e o hash confirmado no SD. A ferramenta atual recusa ELF/plugin/MAP de hashes diferentes ou identidade instalada não correspondente. PC do Luma já está ajustado; não subtraia quatro novamente. Candidatos da stack não constituem backtrace confirmado. Dumps brutos ficam privados/ignorados pelo Git por conterem memória do processo.
 
 ## Limites
 

@@ -2,7 +2,7 @@
 
 ## Evidência física e identidade
 
-Hardware Test #2, relato direto do usuário: **Old** (subtipo não fornecido), **Luma 13.1.1**, **0.2.1-alpha MINIMAL**, Title ID **0004000000053F00**, ARM11 Data Abort / Write. **TESTED ON REAL HARDWARE — RESULT: FAIL**. Não há resultado físico 0.2.2; **NEEDS HARDWARE RETEST / Não testado em hardware real**.
+Hardware Test #2, relato direto do usuário: **Old** (subtipo não fornecido), **Luma 13.1.1**, **0.2.1-alpha MINIMAL**, Title ID **0004000000053F00**, ARM11 Data Abort / Write. **TESTED ON REAL HARDWARE — RESULT: FAIL**. A investigação abaixo foi concluída antes do reteste. Atualização #3: **0.2.2 REAL HARDWARE TESTED — MINIMAL-BOOT/MINIMAL PASS; FULL PARTIAL PASS**, Old Nintendo 3DS / Luma 13.1.1. Search e Settings crasham; seus dumps ainda não foram fornecidos.
 
 Dump `crash_dump_00000008.dmp`, SHA-256 `9c604ae8f9e9d835b78311c0520fec7163207de8d26c81fa077f6b4b0f623adb`. O dump bruto permanece privado, fora do source e ignorado pelo Git. Foram conferidos parser e addr2line ARM contra o par exato preservado:
 
@@ -69,4 +69,4 @@ Pausa da aplicação não é usada; entrada aguarda a inicialização e devolve 
 
 `verify_arm.py` lê símbolos e **instruções dos ELF produzidos**, verifica um allocator forte, ABI flags=0/1, registros callee-saved/SP/LR e ausência de símbolos de UI no probe. Usa modelos explícitos de resolução de handles old/current; **não é emulador completo do Luma/3DS e não comprova execução do SVC real**. Com o ELF 0.2.1 preservado, reproduz no modelo D8E007F7; com os ELF novos, flags zero passa em ambos. Flags não zero continua exigindo ABI nova, deliberadamente.
 
-Fontes/guias/IDs/assets não foram expandidos. [Relatório de testes](../TEST_REPORT.md), [instalação/reteste](../HARDWARE_RETEST.md). **Não declarar resolvido antes de MINIMAL-BOOT → MINIMAL → FULL em hardware.**
+Fontes/guias/IDs/assets não foram expandidos. [Relatório de testes](../TEST_REPORT.md), [instalação/reteste](../HARDWARE_RETEST.md). **O reteste confirmou a inicialização, mas Search e Settings continuam falhando; não declarar FULL aprovado.**

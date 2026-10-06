@@ -83,20 +83,27 @@ class DiagnosticsTests(unittest.TestCase):
 
     def test_symbols_must_match_same_binary(self):
         with tempfile.TemporaryDirectory() as temp:
-            p, e = Path(temp) / "test.3gx", Path(temp) / "test.elf"
+            p, e, m = (Path(temp) / name for name in ["test.3gx", "test.elf", "test.map"])
             p.write_bytes(b"binary")
             e.write_bytes(b"ELF")
+            m.write_bytes(b"MAP")
             manifest = {
                 "variants": {
                     "full": {
                         "plugin": {"sha256": hashlib.sha256(b"binary").hexdigest()},
                         "elf": {"sha256": hashlib.sha256(b"ELF").hexdigest()},
+                        "map": {"sha256": hashlib.sha256(b"MAP").hexdigest()},
                     }
                 }
             }
-            d.verify_identity(manifest, "full", e, p)
+            installed = hashlib.sha256(b"binary").hexdigest()
+            d.verify_identity(manifest, "full", e, p, m, installed)
+            self.assertRaises(ValueError, d.verify_identity, manifest, "full", e, p, m, "0" * 64)
+            m.write_bytes(b"wrong MAP")
+            self.assertRaises(ValueError, d.verify_identity, manifest, "full", e, p, m, installed)
+            m.write_bytes(b"MAP")
             e.write_bytes(b"another build")
-            self.assertRaises(ValueError, d.verify_identity, manifest, "full", e, p)
+            self.assertRaises(ValueError, d.verify_identity, manifest, "full", e, p, m, installed)
 
     def test_invalid_elf(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -105,9 +112,20 @@ class DiagnosticsTests(unittest.TestCase):
                 p.write_bytes(raw)
                 self.assertRaises(ValueError, d.elf_info, p)
 
-    def test_real_report_remains_failure_not_retest_success(self):
+    def test_hardware_outcomes_remain_separate_and_dumps_pending(self):
         report = json.loads((ROOT / "data/hardware-tests.json").read_text())
-        self.assertEqual(report["currentStatus"], "NEEDS HARDWARE RETEST")
+        self.assertEqual(report["currentStatus"], "REAL HARDWARE TESTED — FULL PARTIAL PASS")
+        latest = report["tests"][-1]
+        self.assertEqual(
+            latest["variants"], {"minimal-boot": "PASS", "minimal": "PASS", "full": "PARTIAL PASS"}
+        )
+        self.assertEqual([c["feature"] for c in latest["crashes"]], ["Offline Search", "Settings"])
+        for crash in latest["crashes"]:
+            self.assertIsNone(crash["dumpName"])
+            self.assertIsNone(crash["pc"])
+            self.assertIsNone(crash["lr"])
+        self.assertFalse(latest["installedBinaryIdentityConfirmed"])
+        self.assertEqual(report["tests"][1]["status"], "FAIL")
         self.assertFalse(report["tests"][0]["overlayOpened"])
         self.assertEqual(report["tests"][0]["version"], "0.2.0-alpha")
 

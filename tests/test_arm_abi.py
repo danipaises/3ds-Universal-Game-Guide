@@ -43,13 +43,14 @@ class ArmABITests(unittest.TestCase):
         for bad in [b"x", code([0xE1A00000]), code(NEW)]:
             self.assertRaises(AssertionError, arm.execute_wrapper, bad, 0, False)
 
-    def test_current_physical_report_is_failure_and_new_build_requires_retest(self):
+    def test_heap_failure_remains_historical_after_partial_hardware_pass(self):
         import json
 
         history = json.loads((ROOT / "data/hardware-tests.json").read_text())
-        latest = history["tests"][-1]
+        latest = history["tests"][1]
         self.assertEqual(latest["number"], 2)
         self.assertEqual(latest["status"], "FAIL")
         self.assertEqual(latest["lumaVersion"], "13.1.1")
         self.assertEqual(latest["pc"], "07005B5C")
-        self.assertEqual(history["currentStatus"], "NEEDS HARDWARE RETEST")
+        self.assertEqual(history["tests"][-1]["status"], "PARTIAL PASS")
+        self.assertEqual(history["currentStatus"], "REAL HARDWARE TESTED — FULL PARTIAL PASS")

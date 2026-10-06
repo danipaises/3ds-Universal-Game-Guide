@@ -1,0 +1,527 @@
+{
+  "schemaVersion": 1,
+  "version": "0.2.2-alpha",
+  "tag": "v0.2.2-alpha",
+  "commit": "e3b78dc3611530ee0a9d667bc7961c057a51ad9f",
+  "recovery": "Restored bytes from GitHub Actions run 37365978186; all archive hashes equal the previous local delivery. No regeneration.",
+  "runUrl": "https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37365978186",
+  "hardwareEvidence": "Direct user report: MINIMAL-BOOT PASS, MINIMAL PASS, FULL PARTIAL PASS; Search and Settings crash. Installed SD binary hashes still require confirmation.",
+  "classification": "HARDWARE-TESTED (user-reported version and variants; device hash confirmation pending)",
+  "assets": {
+    "3DS-Universal-Game-Guide-SOURCE-v0.2.2-alpha.zip": {
+      "sha256": "d60bc06ac6ff993584b030a745d593cb65ae28cd626aa1e1eb372c7a22b877ae",
+      "bytes": 6272217
+    },
+    "UniversalGameGuide-Debug-Symbols-v0.2.2-alpha.zip": {
+      "sha256": "f7a370c526f648a71a923a2341636b513d0dadeef55e97094b2283e677a5f9db",
+      "bytes": 6793430
+    },
+    "UniversalGameGuide-PTBR-Hardware-Test-v0.2.2-alpha.zip": {
+      "sha256": "6a90982412d9a18d6beecfe123a18385610ae55fc953f3fb4bd788fd9d9d603e",
+      "bytes": 649978
+    }
+  },
+  "originalBuildManifest": {
+    "version": "0.2.2-alpha",
+    "status": "NEEDS HARDWARE RETEST",
+    "variants": {
+      "minimal-boot": {
+        "plugin": {
+          "bytes": 12659,
+          "sha256": "7167f564c2ed90c08d09ee8b35654e3ddabf34801e2192590b3f5d82afe1405a",
+          "flags": 35,
+          "privateMemory": false,
+          "memoryMiB": 5,
+          "codeBytes": 7116,
+          "rodataBytes": 684,
+          "dataBytes": 528,
+          "bssBytes": 7832
+        },
+        "elf": {
+          "sha256": "f97278026c721e7deea449b70eb0fdae88571fa7dcf9f7dcfa8a376d4b849585",
+          "bytes": 569084,
+          "entry": 117440768,
+          "sections": [
+            {
+              "name": "",
+              "address": 0,
+              "bytes": 0
+            },
+            {
+              "name": ".text",
+              "address": 117440768,
+              "bytes": 7116
+            },
+            {
+              "name": ".rodata",
+              "address": 117447884,
+              "bytes": 684
+            },
+            {
+              "name": ".data",
+              "address": 117448568,
+              "bytes": 520
+            },
+            {
+              "name": ".tdata",
+              "address": 117449088,
+              "bytes": 0
+            },
+            {
+              "name": ".tbss",
+              "address": 117449088,
+              "bytes": 0
+            },
+            {
+              "name": ".init_array",
+              "address": 117449088,
+              "bytes": 4
+            },
+            {
+              "name": ".fini_array",
+              "address": 117449092,
+              "bytes": 4
+            },
+            {
+              "name": ".bss",
+              "address": 117449096,
+              "bytes": 7832
+            },
+            {
+              "name": ".debug_aranges",
+              "address": 0,
+              "bytes": 4640
+            },
+            {
+              "name": ".debug_info",
+              "address": 0,
+              "bytes": 140118
+            },
+            {
+              "name": ".debug_abbrev",
+              "address": 0,
+              "bytes": 16180
+            },
+            {
+              "name": ".debug_line",
+              "address": 0,
+              "bytes": 91502
+            },
+            {
+              "name": ".debug_frame",
+              "address": 0,
+              "bytes": 12784
+            },
+            {
+              "name": ".debug_str",
+              "address": 0,
+              "bytes": 166464
+            },
+            {
+              "name": ".ARM.attributes",
+              "address": 0,
+              "bytes": 44
+            },
+            {
+              "name": ".debug_loclists",
+              "address": 0,
+              "bytes": 44104
+            },
+            {
+              "name": ".debug_rnglists",
+              "address": 0,
+              "bytes": 12271
+            },
+            {
+              "name": ".debug_macro",
+              "address": 0,
+              "bytes": 62802
+            },
+            {
+              "name": ".debug_line_str",
+              "address": 0,
+              "bytes": 380
+            },
+            {
+              "name": ".symtab",
+              "address": 0,
+              "bytes": 5648
+            },
+            {
+              "name": ".strtab",
+              "address": 0,
+              "bytes": 2395
+            },
+            {
+              "name": ".shstrtab",
+              "address": 0,
+              "bytes": 243
+            }
+          ],
+          "executableRanges": [
+            [
+              117440768,
+              117447884
+            ]
+          ],
+          "debugInfo": true,
+          "debugLines": true
+        },
+        "map": {
+          "sha256": "a8578d33b1c367da1f97718e2751ed52e99643cc919d1308717f8ee5d76cf7ca",
+          "bytes": 215505
+        }
+      },
+      "minimal": {
+        "plugin": {
+          "bytes": 286082,
+          "sha256": "ec3ab2ad151710d08cbef4ae579e36c4dc7be560deb8a532a6170c2c156fc238",
+          "flags": 35,
+          "privateMemory": false,
+          "memoryMiB": 5,
+          "codeBytes": 170200,
+          "rodataBytes": 30180,
+          "dataBytes": 6916,
+          "bssBytes": 13716
+        },
+        "elf": {
+          "sha256": "d5409e1ce09df3307db2e2d3f51e979a1e80fd49ce539998088d15a1b0473e2b",
+          "bytes": 7272556,
+          "entry": 117440768,
+          "sections": [
+            {
+              "name": "",
+              "address": 0,
+              "bytes": 0
+            },
+            {
+              "name": ".text",
+              "address": 117440768,
+              "bytes": 170200
+            },
+            {
+              "name": ".rodata",
+              "address": 117610968,
+              "bytes": 29096
+            },
+            {
+              "name": ".ARM.extab",
+              "address": 117640064,
+              "bytes": 388
+            },
+            {
+              "name": "ARM.exidx",
+              "address": 117640452,
+              "bytes": 696
+            },
+            {
+              "name": ".data",
+              "address": 117641148,
+              "bytes": 6668
+            },
+            {
+              "name": ".got",
+              "address": 117647816,
+              "bytes": 20
+            },
+            {
+              "name": ".got.plt",
+              "address": 117647836,
+              "bytes": 12
+            },
+            {
+              "name": ".tdata",
+              "address": 117647848,
+              "bytes": 12
+            },
+            {
+              "name": ".tbss",
+              "address": 117647860,
+              "bytes": 32
+            },
+            {
+              "name": ".init_array",
+              "address": 117647860,
+              "bytes": 108
+            },
+            {
+              "name": ".fini_array",
+              "address": 117647968,
+              "bytes": 96
+            },
+            {
+              "name": ".bss",
+              "address": 117648064,
+              "bytes": 13716
+            },
+            {
+              "name": ".debug_aranges",
+              "address": 0,
+              "bytes": 18728
+            },
+            {
+              "name": ".debug_info",
+              "address": 0,
+              "bytes": 4207745
+            },
+            {
+              "name": ".debug_abbrev",
+              "address": 0,
+              "bytes": 250786
+            },
+            {
+              "name": ".debug_line",
+              "address": 0,
+              "bytes": 557742
+            },
+            {
+              "name": ".debug_frame",
+              "address": 0,
+              "bytes": 55160
+            },
+            {
+              "name": ".debug_str",
+              "address": 0,
+              "bytes": 1277695
+            },
+            {
+              "name": ".ARM.attributes",
+              "address": 0,
+              "bytes": 44
+            },
+            {
+              "name": ".debug_loclists",
+              "address": 0,
+              "bytes": 416721
+            },
+            {
+              "name": ".debug_rnglists",
+              "address": 0,
+              "bytes": 66722
+            },
+            {
+              "name": ".debug_macro",
+              "address": 0,
+              "bytes": 86101
+            },
+            {
+              "name": ".debug_line_str",
+              "address": 0,
+              "bytes": 623
+            },
+            {
+              "name": ".symtab",
+              "address": 0,
+              "bytes": 64864
+            },
+            {
+              "name": ".strtab",
+              "address": 0,
+              "bytes": 60710
+            },
+            {
+              "name": ".shstrtab",
+              "address": 0,
+              "bytes": 278
+            }
+          ],
+          "executableRanges": [
+            [
+              117440768,
+              117610968
+            ]
+          ],
+          "debugInfo": true,
+          "debugLines": true
+        },
+        "map": {
+          "sha256": "80c52bb03d9a1cc132eb116fb629d1a6d4134d8680344eebfe68745f7824bee6",
+          "bytes": 1983552
+        }
+      },
+      "full": {
+        "plugin": {
+          "bytes": 378572,
+          "sha256": "ea96f45a5f870f1e9ba0b3916a177b88be6794ed82e9ba387bc28fb358b0d702",
+          "flags": 35,
+          "privateMemory": false,
+          "memoryMiB": 5,
+          "codeBytes": 230704,
+          "rodataBytes": 40196,
+          "dataBytes": 7180,
+          "bssBytes": 14252
+        },
+        "elf": {
+          "sha256": "5bd2c9d1c0c4a6c0b99c3fed5036bd40186f6b427366f5f8840de33675dec1b6",
+          "bytes": 8018608,
+          "entry": 117440768,
+          "sections": [
+            {
+              "name": "",
+              "address": 0,
+              "bytes": 0
+            },
+            {
+              "name": ".text",
+              "address": 117440768,
+              "bytes": 230704
+            },
+            {
+              "name": ".rodata",
+              "address": 117671472,
+              "bytes": 39056
+            },
+            {
+              "name": ".ARM.extab",
+              "address": 117710528,
+              "bytes": 388
+            },
+            {
+              "name": "ARM.exidx",
+              "address": 117710916,
+              "bytes": 752
+            },
+            {
+              "name": ".data",
+              "address": 117711668,
+              "bytes": 6924
+            },
+            {
+              "name": ".got",
+              "address": 117718592,
+              "bytes": 20
+            },
+            {
+              "name": ".got.plt",
+              "address": 117718612,
+              "bytes": 12
+            },
+            {
+              "name": ".tdata",
+              "address": 117718624,
+              "bytes": 12
+            },
+            {
+              "name": ".tbss",
+              "address": 117718636,
+              "bytes": 32
+            },
+            {
+              "name": ".init_array",
+              "address": 117718636,
+              "bytes": 112
+            },
+            {
+              "name": ".fini_array",
+              "address": 117718748,
+              "bytes": 100
+            },
+            {
+              "name": ".bss",
+              "address": 117718848,
+              "bytes": 14252
+            },
+            {
+              "name": ".debug_aranges",
+              "address": 0,
+              "bytes": 20112
+            },
+            {
+              "name": ".debug_info",
+              "address": 0,
+              "bytes": 4619553
+            },
+            {
+              "name": ".debug_abbrev",
+              "address": 0,
+              "bytes": 266102
+            },
+            {
+              "name": ".debug_line",
+              "address": 0,
+              "bytes": 624348
+            },
+            {
+              "name": ".debug_frame",
+              "address": 0,
+              "bytes": 59744
+            },
+            {
+              "name": ".debug_str",
+              "address": 0,
+              "bytes": 1310039
+            },
+            {
+              "name": ".ARM.attributes",
+              "address": 0,
+              "bytes": 44
+            },
+            {
+              "name": ".debug_loclists",
+              "address": 0,
+              "bytes": 490392
+            },
+            {
+              "name": ".debug_rnglists",
+              "address": 0,
+              "bytes": 76274
+            },
+            {
+              "name": ".debug_macro",
+              "address": 0,
+              "bytes": 117276
+            },
+            {
+              "name": ".debug_line_str",
+              "address": 0,
+              "bytes": 623
+            },
+            {
+              "name": ".symtab",
+              "address": 0,
+              "bytes": 76160
+            },
+            {
+              "name": ".strtab",
+              "address": 0,
+              "bytes": 78246
+            },
+            {
+              "name": ".shstrtab",
+              "address": 0,
+              "bytes": 278
+            }
+          ],
+          "executableRanges": [
+            [
+              117440768,
+              117671472
+            ]
+          ],
+          "debugInfo": true,
+          "debugLines": true
+        },
+        "map": {
+          "sha256": "288c46577ad93bfe95fc8497956fecab0fccf1767cdaac98f82096381f9a3c38",
+          "bytes": 2038092
+        }
+      }
+    }
+  },
+  "sourceVerification": {
+    "trackedFiles": 2477,
+    "additionalFiles": [
+      "third-party-source.zip"
+    ],
+    "allTrackedFilesMatchCommit": true
+  },
+  "immutability": "Original BUILD.json and all ZIP bytes preserved, including old NEEDS HARDWARE RETEST labels. Updated physical outcomes belong in release notes and current main documentation.",
+  "publication": {
+    "status": "CREATED",
+    "url": "https://github.com/danipaises/3ds-Universal-Game-Guide/releases/tag/v0.2.2-alpha",
+    "preRelease": true,
+    "draft": false,
+    "tagCommitConfirmed": true,
+    "allPublishedAssetsDownloadedAndSha256Verified": true
+  }
+}

@@ -63,6 +63,10 @@ jobs:
             sha256sum "$ugg_candidate" > "${ugg_candidate}.sha256"
           done
           sha256sum --check SHA256SUMS.txt
+      - name: Exercise the publication verifier without publishing
+        run: |
+          python scripts/release_assets.py --tag "v$(cat VERSION)" --commit "$GITHUB_SHA" --input dist --output build/release-preview
+          (cd build/release-preview && sha256sum --check SHA256SUMS.txt)
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: UniversalGameGuide-PTBR-CI-${{ github.sha }}

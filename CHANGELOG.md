@@ -1,12 +1,14 @@
 # Changelog
 
-## 0.2.2-alpha — 2026-10-05 — NEEDS HARDWARE RETEST
+## 0.2.2-alpha — 2026-10-05 — REAL HARDWARE TESTED / FULL PARTIAL PASS
 
+- Teste físico #3: Old Nintendo 3DS, Luma 13.1.1, Super Mario 3D Land / 0004000000053F00. MINIMAL-BOOT PASS; MINIMAL PASS; FULL boot/hotkey/main UI/game detection/guide/retorno PASS. **Offline Search e Settings FAIL — ARM11 CRASH; FULL PARTIAL PASS**. Dumps separados pendentes; sem diagnóstico presumido.
+- Pacotes 0.2.2 preservados byte a byte para pre-release histórica; seus rótulos antigos de reteste não são alterados. Nova automação deverá identificar commit/tag e marcar recompilações CI-REBUILT. Nenhuma alteração de VERSION ou runtime nesta etapa.
 - Teste físico #2 documentado: 0.2.1 MINIMAL, Old/Luma 13.1.1, FAIL em CTRPF::__system_allocateHeaps. Dump real simbolizado com ELF exato.
 - Corrige svcMapProcessMemoryEx do SDK: flags zero usa ABI legada aceita em Luma 13.1.1 e atual; flags não zero conserva magic/R6. Memória/layout permanecem PRIVATE=false/5MiB.
 - MINIMAL-BOOT sem inicialização gráfica, com allocator/CRT do SDK e logging limitado; teste antes de MINIMAL/FULL.
 - Três ELF/MAP/binários vinculados por BUILD.json, verificação da ABI nas instruções ARM reais e check de único allocator. Pacotes/source/símbolos separados; dumps privados ignorados.
-- Nenhuma expansão de guia/ID/asset, nenhuma release estável. 0.2.2 Não testado em hardware real. Os status “aguarda reteste” da 0.2.1 abaixo são históricos; o teste #2 agora é FAIL.
+- Nenhuma expansão de guia/ID/asset, nenhuma release estável. 0.2.2 testada no ambiente acima, com duas falhas conhecidas. Os status “aguarda reteste” da 0.2.1 abaixo são históricos; o teste #2 agora é FAIL.
 
 ## 0.2.1-alpha — 2026-10-05 — NEEDS HARDWARE RETEST
 

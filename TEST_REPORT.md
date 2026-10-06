@@ -1,6 +1,20 @@
 # Validação — 0.2.2-alpha — 2026-10-05
 
-**0.2.1-alpha MINIMAL: TESTED ON REAL HARDWARE — RESULT: FAIL**, Old/Luma 13.1.1, Title ID 0004000000053F00. **0.2.2-alpha: NEEDS HARDWARE RETEST / Não testado em hardware real.**
+**REAL HARDWARE TESTED — FULL PARTIAL PASS**, relato direto do usuário: Old Nintendo 3DS / Luma3DS 13.1.1 / Super Mario 3D Land / `0004000000053F00`.
+
+| Função física | Resultado |
+|---|---|
+| MINIMAL-BOOT | PASS |
+| MINIMAL | PASS — boot, hotkey, UI, Title ID, B/retorno |
+| FULL boot / hotkey / game detection / main UI / guide / navegação básica / retorno | PASS |
+| Offline Search | **FAIL — ARM11 CRASH**; dump A pendente |
+| Settings | **FAIL — ARM11 CRASH**; dump B pendente |
+| FULL overall | **PARTIAL PASS** |
+| Mapas / settings save / reabertura repetida / HOME / sono / swap | NOT TESTED ou não informado |
+
+MINIMAL exibiu newlib heap **8.172.600 bytes** e boot log result **00000000**, conforme relato. A etiqueta de tela “NEEDS HARDWARE RETEST” é anterior ao teste. Não inferir RAM livre/configuração recebida pelo loader a partir desse valor; confirmar boot-stage/BUILD.json e hash instalado. Arquivos originais preservados: [procedência](docs/RELEASE_PROVENANCE_0.2.2.json). Nenhum dump dos dois novos crashes foi recebido; exception/access/PC/LR/SP e causas permanecem pendentes, sem stack trace inventado.
+
+## Evidência automatizada anterior ao reteste
 
 | Verificação | Resultado observado |
 |---|---|
@@ -32,7 +46,7 @@ A baseline original 0.2.1 continua em build/021-baseline; ZIPs antigos dist não
 
 Tentativas iniciais desta revisão encontraram: argumento nullptr em SVC u32, dependência indireta UI causando entrypoint duplicado no probe, fixture de pacote sem os documentos recém-linkados e tamanho zero de símbolos assembly sem .size. Todos foram corrigidos e os checks acima reexecutados; essas tentativas falhas não contam como sucesso. Não se removeu -Werror nem a validação de links para fazê-los passar.
 
-Sem teste de overlay em emulador e sem acesso físico local. A causa do erro #2 foi demonstrada na ABI e a chamada candidata foi corrigida, mas **não marcar crash como resolvido** antes do reteste [MINIMAL-BOOT → MINIMAL → FULL](HARDWARE_RETEST.md). [Histórico 0.2.1](docs/history/TEST_REPORT-0.2.1.md).
+Sem teste de overlay em emulador e sem acesso físico local. O teste #3 confirmou a inicialização das variantes, mas expôs crashes em Search e Settings. A correção da ABI não representa aprovação integral do FULL. [Coleta separada e checklist](HARDWARE_RETEST.md). [Histórico 0.2.1](docs/history/TEST_REPORT-0.2.1.md).
 
 ## Evidência do GitHub e reprodução
 
@@ -40,4 +54,17 @@ Logs reais e artifacts foram consultados/baixados. GCC 14: 44 passed/4 subtests,
 
 As três combinações **3GX + ELF + MAP do CI são idênticas às locais por SHA-256**. Checksums externos dos artifacts também conferidos. Isso comprova reprodução nesses dois ambientes desta build, não funcionamento físico. [Registro da execução e comparação](docs/GITHUB_CI_0.2.2.json). Metadata do pacote no contêiner confirma libctru **2.7.0-1** e GCC ARM **16.1.0**; o header version.h não existe nessa instalação.
 
-Antes do commit foram examinados 2.476 candidatos ao Git, sem arquivos gerados/raw dumps/chaves privadas ou padrões conhecidos de tokens. Apenas data/hardware-tests.json mudou entre guias/assets/dados. O push para main não usou force e não criou tag/release. Atualização posterior de documentação registra este run; seus commits não mudam binários e não substituem a evidência física ainda pendente.
+Antes do commit foram examinados 2.476 candidatos ao Git, sem arquivos gerados/raw dumps/chaves privadas ou padrões conhecidos de tokens. Apenas data/hardware-tests.json mudou entre guias/assets/dados. O push para main não usou force e não criou tag/release. Atualização posterior de documentação registra este run; seus commits não mudam binários e não substituem a evidência física. O reteste #3 foi posteriormente relatado acima.
+
+
+## Fase A — Release histórica e infraestrutura — 2026-10-05
+
+- **Python PASS: 50 passed, 8 subtests passed, 0 failed**, 18,90 s; build/phase-a-pytest.log. Inclui rejeição de símbolos misturados/MAP incorreto/hash instalado diferente, tag incompatível, SOURCE divergente, árvore suja e checksum/path inválido.
+- **Native core/boot ASan/UBSan PASS**, GCC local 15.2.0, -Werror, UGG_LSAN=0. Core 67 packs/2.151 páginas; boot normal/fs-fail/io-fail 40/0/1 writes. build/phase-a-native.log.
+- **Builder/lint PASS**: catálogo 68/211 IDs/279 associações/67 guias/2.151 páginas/9 mapas; Ruff check/format (24 arquivos), Bash syntax, actionlint 1.7.12 (SHA do archive oficial conferido).
+- **ARM clean build PASS**: três variantes; compiler 16.1.0, pacotes devkitARM r68-1 / libctru 2.7.0-1 consultados com dkp-pacman. Todos os 3GX/ELF/MAP iguais por SHA-256 à baseline 0.2.2. verify_arm.py PASS; build/phase-a-arm.log / build/phase-a-verify-arm.log.
+- **Pacotes CI-REBUILT PASS**: 81 arquivos/80 hashes, 6 packs/78 páginas/22 IDs/45 tiles; 13 arquivos de símbolos; SOURCE 2.484 arquivos incluindo BUILD.json schema 2. Local dirty=true registrado honestamente; esse pacote local não pode ser publicado pelo guard de tag. Verificação em build/phase-a-verify-release.log.
+- **Release histórica CREATED**: [v0.2.2-alpha](https://github.com/danipaises/3ds-Universal-Game-Guide/releases/tag/v0.2.2-alpha), pre-release YES/draft NO/tag e3b78dc. Os quatro assets foram baixados após upload; todos os ZIPs passaram sha256sum --check. Originais não foram regenerados nem atualizados.
+- Guias/assets/runtime C++/VERSION inalterados. Política de pesquisa criada e expansão pausada. Nenhum dump Search/Settings recebido; nenhuma causa/fix/0.2.3 alegada.
+
+Primeira execução desta fase: um teste ainda exigia #2 como último resultado e foi atualizado para manter o FAIL histórico junto do PARTIAL PASS atual; coleta de toolchain inicialmente usou pacman ausente e foi corrigida para dkp-pacman constatado na imagem. Os checks afetados foram reexecutados com os resultados acima. CI desta alteração deve ser consultado após push; os checks locais não são declarados CI remoto.

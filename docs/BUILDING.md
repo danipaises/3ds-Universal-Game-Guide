@@ -36,10 +36,21 @@ Depois de compilar, rode `python scripts/verify_arm.py`. A ferramenta lê símbo
 
 Gere `bundle_sources.py`, `builder.py hardware-retest --lang pt-BR` e `verify_release.py --hardware-retest`. O ZIP SD instala MINIMAL-BOOT e mantém MINIMAL/FULL em diagnostics. Debug-Symbols-v0.2.2-alpha.zip contém três pares ELF/MAP/3GX associados por BUILD.json. SOURCE contém fontes e archives upstream separados; não contém binários, raw dumps, objetos ou toolchain. Config/progresso não são sobrescritos.
 
-No CI, ZIPs ganham sufixo `-ci-<commit>` e SHA-256 externos novos, enquanto BUILD.json identifica os bytes internos. Não há promoção automática para release/tag. Sempre use os símbolos da build realmente instalada; versão igual não garante mesmo hash. A baseline 0.2.1 é histórica e falhou no teste físico #2, não é recomendada para instalação.
+No CI, ZIPs ganham sufixo `-ci-<commit>` e SHA-256 externos novos, enquanto BUILD.json identifica os bytes internos. Pushes/PRs só produzem artifacts CI-REBUILT. Tags v* passam pelo workflow release.yml e publicam GitHub Releases depois dos mesmos checks, com pre-release para versões alpha/beta/rc. Sempre use os símbolos da build realmente instalada; versão igual não garante mesmo hash. A baseline 0.2.1 é histórica e falhou no teste físico #2, não é recomendada para instalação.
 
 prepare_framework.py extrai fontes pristine verificadas e reaplica inclusive csvc.s, com diff versionado em CTRPF_FILESYSTEM.patch. Flags zero usam ABI legada, flags não zero continuam no protocolo novo; fonte kernel Luma 13.1.1/v13.4 foi consultada antes da mudança. Layout/memória/fluxos de MINIMAL/FULL não foram aumentados ou reorganizados. O probe trata eventos do loader conforme plgldr.c fixado, mas HOME/sono/swap/exit ainda precisam de hardware. Nada escreve no SD antes de FS e não se fazem writes por frame.
 
-**0.2.1: TESTED ON REAL HARDWARE — FAIL em CTRPF::__system_allocateHeaps. 0.2.2: NEEDS HARDWARE RETEST; Não testado em hardware real.**
+**0.2.1: TESTED ON REAL HARDWARE — FAIL em CTRPF::__system_allocateHeaps. 0.2.2: REAL HARDWARE TESTED — MINIMAL-BOOT/MINIMAL PASS, FULL PARTIAL PASS; Search e Settings FAIL/ARM11.**
 
 O CI instala g++-13 e g++-14 no mesmo runner Ubuntu 24.04 e executa os testes nativos/ASan/UBSan sequencialmente em ambos, com CXX explícito. Pytest/Ruff/Builder não dependem do compilador e rodam antes. Essa organização reduz alocações de runners sem eliminar checks. Foi adotada após o GitHub cancelar um job de matriz sem runner: “The job was not acquired by Runner of type hosted even after multiple attempts”.
+
+
+## Proveniência e publicação futura
+
+`build/toolchain.json` registra a versão real do compilador ARM, pacotes devkitARM/libctru e digest Docker. `hardware_release.py` gera BUILD.json schema 2 com commit, dirty, versão, classificação CI-REBUILT, dependências e SHA-256 do lock/patch/trios 3GX/ELF/MAP. O mesmo BUILD.json aparece no instalador (diagnostics), ZIP de símbolos e SOURCE. Extrações de SOURCE sem Git compilam, mas não podem publicar uma tag automaticamente sem identidade de commit verificada.
+
+`release_assets.py` recusa tag/VERSION incompatíveis, árvore suja, símbolos de builds misturadas, checksums errados e SOURCE divergente de qualquer arquivo versionado no commit. O CI exercita esse preparo em cada push sem publicar. O job publish recebe apenas contents: write; usa actions oficiais fixadas e GitHub CLI, cria draft, baixa/confere assets publicados e só então publica. Tags prévias não são sobrescritas. `workflow_dispatch` valida/constrói sem publicar fora de uma tag.
+
+A pre-release histórica 0.2.2 foi recuperada dos artifacts originais: não reexecutar a publicação para substituir seus assets. Seu BUILD.json schema 1 e rótulos antigos são intencionais; [RELEASE_PROVENANCE_0.2.2.json](RELEASE_PROVENANCE_0.2.2.json) vincula os arquivos preservados ao commit e3b78dc. Builds futuras usam schema 2. Uma nova build de versão igual não herda aprovação física.
+
+Referências oficiais consultadas em 2026-10-05: [gh release create](https://cli.github.com/manual/gh_release_create), [gh release upload](https://cli.github.com/manual/gh_release_upload), [reusable workflows](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows). A release.yml da tag histórica permanece a versão daquele commit; a automação nova vale para tags criadas em commits posteriores.

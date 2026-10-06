@@ -48,6 +48,7 @@
 - Builder agora rejeita guias órfãos do catálogo e aceita -rc, corrigindo duas lacunas demonstradas por testes negativos antes da mudança. Validação de Title IDs/regiões/evidências/cobertura continua ativa. Workflows preservados; pre-release histórica consultada e já correta.
 - 52 pytest/8 subtests, Ruff/Builder, regressões core de Search/config (32 sessões cada) e três cenários de boot ASan/UBSan GCC 14 passaram localmente. ARM --clean e verify_arm passaram: nove hashes 3GX/ELF/MAP idênticos à baseline histórica. Detalhes e limites em TEST_REPORT.md.
 - Checklist futura inclui busca vazia/sem resultados/reabertura, Settings save/reopen e HOME/sono/transição separados. **Não testado em hardware real nesta preparação.** FULL permanece PARTIAL PASS, dumps A/B e identidade instalada pendentes. Não gerar 0.2.3 nem declarar estabilidade.
+- Bundle/Hardware Test ZIP/Debug Symbols/SOURCE e preparo local de assets passaram, com BUILD.json schema 2/dirty=false/CI-REBUILT e SOURCE verificado contra commit. Pacotes anteriores da auditoria preservados localmente; nenhuma publicação remota ou substituição dos assets históricos.
 
 ## TODO / NEEDS HARDWARE TEST
 

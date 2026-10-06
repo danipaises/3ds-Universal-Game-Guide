@@ -1,0 +1,70 @@
+{
+  "version": "0.2.2-alpha",
+  "implementationCommit": "ff8f423eb3b32b8c24e4dd195210cb5dc73c58ac",
+  "pushCI": {
+    "id": 37394477811,
+    "url": "https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37394477811",
+    "conclusion": "success"
+  },
+  "releaseWorkflowSmoke": {
+    "id": 37394510567,
+    "url": "https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37394510567",
+    "conclusion": "success",
+    "publication": "SKIPPED as designed: workflow_dispatch on main, not a tag"
+  },
+  "checks": {
+    "pythonTests": 50,
+    "pythonSubtests": 8,
+    "failures": 0,
+    "nativeCompilers": [
+      "GCC 13.3.0",
+      "GCC 14.2.0"
+    ],
+    "asan": "PASS",
+    "ubsan": "PASS",
+    "core": "PASS",
+    "bootScenarios": [
+      "normal",
+      "fs-fail",
+      "io-fail"
+    ],
+    "builder": "PASS",
+    "ruff": "PASS",
+    "armCleanBuild": "PASS",
+    "armVerification": "PASS",
+    "releaseVerification": "PASS",
+    "sameCommitPublicationPreparation": "PASS"
+  },
+  "toolchain": {
+    "dockerImage": "devkitpro/devkitarm@sha256:116afba8df8453961de2936ffab20dd441edf4d682856c1ec8b0e53d7ed0bbf5",
+    "compiler": "arm-none-eabi-g++ (devkitARM) 16.1.0",
+    "packages": [
+      "devkitARM r68-1",
+      "libctru 2.7.0-1"
+    ]
+  },
+  "artifactChecksums": {
+    "3DS-Universal-Game-Guide-SOURCE-v0.2.2-alpha-ci-ff8f423eb3b3.zip": "8440f3ae5ffc8854f0c695a89d34c9b6ded4e65c23e8a995a261cec57aa61258",
+    "UniversalGameGuide-Debug-Symbols-v0.2.2-alpha-ci-ff8f423eb3b3.zip": "c0d35db8c57eeffb9ca5b0690e8cb30ca5a7c28a89669478763a26510bedea58",
+    "UniversalGameGuide-PTBR-Hardware-Test-v0.2.2-alpha-ci-ff8f423eb3b3.zip": "66fcf2116f02e65b2aff907a15a3f1cc2184957a46db64abd4f67798e9092e38"
+  },
+  "archiveHashesVerifiedAfterDownload": true,
+  "allNineBinaryElfMapHashesMatchHistoricalBaseline": true,
+  "cleanBuildMetadata": true,
+  "historicalReleaseUnchanged": "v0.2.2-alpha assets remain original, tag e3b78dc3611530ee0a9d667bc7961c057a51ad9f",
+  "priorCIFailures": [
+    {
+      "run": 37393949227,
+      "commit": "2a7f392f693ac885ec075a621ebb8cb8fa441155",
+      "reason": "build/ missing before writing ARM toolchain metadata",
+      "fixedIn": "ff8f423eb3b32b8c24e4dd195210cb5dc73c58ac"
+    },
+    {
+      "run": 37393981406,
+      "commit": "2a7f392f693ac885ec075a621ebb8cb8fa441155",
+      "reason": "same fresh checkout metadata directory error",
+      "fixedIn": "ff8f423eb3b32b8c24e4dd195210cb5dc73c58ac"
+    }
+  ],
+  "hardware": "User-reported MINIMAL-BOOT/MINIMAL PASS; FULL PARTIAL PASS. Search/Settings dumps and installed SD hash confirmation pending. No runtime fix or 0.2.3 in this phase."
+}

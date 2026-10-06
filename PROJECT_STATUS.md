@@ -28,9 +28,12 @@
 - BUILD.json schema 2 identifica commit/versão/variante/toolchain/dependências/patch/hashes e CI-REBUILT. Publicação verifica SOURCE inteiro contra commit e proíbe árvore suja ou símbolos misturados.
 - Ferramenta atual de simbolização exige também MAP e SHA do plugin instalado; pacote histórico mantém ferramenta original intacta.
 
-## IN PROGRESS
+## DONE — validação da infraestrutura
 
-- Checks locais concluídos: 50 pytest/8 subtests, Builder/Ruff/actionlint, core/boot ASan/UBSan, build limpo ARM, verificação ARM/pacotes PASS. CI 2a7f392: PC PASS; coleta de metadata ARM FAIL por build/ ausente no checkout limpo. Corrigida criação do diretório; novo run pendente.
+- GitHub Actions real PASS no commit ff8f423: push run 37394477811 e smoke release 37394510567. Logs/artifacts consultados e baixados; 50 pytest/8 subtests, GCC 13/14 core/boot ASan/UBSan, Builder/Ruff, ARM e preparo de publicação PASS.
+- Os primeiros runs 2a7f392 falharam só na coleta de metadata por build/ ausente. Criação do diretório corrigida e verificada no novo checkout limpo.
+- BUILD.json CI clean/mesmo commit; SOURCE verificado integralmente; todos os 3GX/ELF/MAP iguais à baseline histórica. As novas embalagens CI-REBUILT não substituem os quatro assets publicados. Evidência em docs/GITHUB_CI_PHASE_A_0.2.2.json.
+- Smoke manual não publicou: job publish SKIPPED por ref main, conforme previsto. A pre-release histórica foi publicada via GitHub CLI e todos os downloads conferidos.
 
 ## BLOCKED — diagnóstico dos crashes
 

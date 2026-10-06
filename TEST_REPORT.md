@@ -71,3 +71,12 @@ Primeira execução desta fase: um teste ainda exigia #2 como último resultado 
 
 
 CI do commit 2a7f392: PC PASS (50 pytest/8 subtests e core/boot ASan/UBSan em GCC 13/14, logs consultados), mas ARM job 112045802672 no run 37393949227 e job 112045846748 no smoke release 37393981406 falharam após linkar os três ELF: `build/arm-compiler-version.txt: No such file or directory`. O checkout limpo ARM ainda não tinha build/. Correção incremental: criar build/ antes da coleta de toolchain, sem mudar código/opções/binários. Novo CI é necessário; estes dois runs falhos não contam como aprovação.
+
+
+## CI real da Fase A — PASS
+
+Após corrigir a pasta ausente, commit **ff8f423eb3b32b8c24e4dd195210cb5dc73c58ac**: [push run 37394477811](https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37394477811) e [release smoke 37394510567](https://github.com/danipaises/3ds-Universal-Game-Guide/actions/runs/37394510567), ambos **success**, consultados após conclusão. Logs PC: 50 pytest/8 subtests, zero falhas; core e três cenários de boot ASan/UBSan em GCC 13.3.0/14.2.0. ARM: build limpo, ABI/ELF, packages, checksums, SOURCE contra commit e preparo de publicação passaram. Artifacts baixados e conferidos independentemente; todos os nove hashes de 3GX/ELF/MAP iguais aos históricos.
+
+BUILD.json schema 2 registra commit correto, dirty=false, compiler/pacotes reais e CI-REBUILT. Instalador/símbolos/SOURCE compartilham a identidade. O job publish do smoke foi SKIPPED por não ser tag; não se declara publicação automática futura exercitada integralmente. A publicação histórica via GitHub CLI já foi concluída e verificada. [Evidência resumida](docs/GITHUB_CI_PHASE_A_0.2.2.json).
+
+Esta atualização final só registra evidências; não muda runtime, VERSION, guias ou assets. O CI do commit final deve ser consultado no GitHub; resultados físicos continuam PARTIAL PASS e não são promovidos por estes checks.

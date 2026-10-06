@@ -68,3 +68,6 @@ Antes do commit foram examinados 2.476 candidatos ao Git, sem arquivos gerados/r
 - Guias/assets/runtime C++/VERSION inalterados. Política de pesquisa criada e expansão pausada. Nenhum dump Search/Settings recebido; nenhuma causa/fix/0.2.3 alegada.
 
 Primeira execução desta fase: um teste ainda exigia #2 como último resultado e foi atualizado para manter o FAIL histórico junto do PARTIAL PASS atual; coleta de toolchain inicialmente usou pacman ausente e foi corrigida para dkp-pacman constatado na imagem. Os checks afetados foram reexecutados com os resultados acima. CI desta alteração deve ser consultado após push; os checks locais não são declarados CI remoto.
+
+
+CI do commit 2a7f392: PC PASS (50 pytest/8 subtests e core/boot ASan/UBSan em GCC 13/14, logs consultados), mas ARM job 112045802672 no run 37393949227 e job 112045846748 no smoke release 37393981406 falharam após linkar os três ELF: `build/arm-compiler-version.txt: No such file or directory`. O checkout limpo ARM ainda não tinha build/. Correção incremental: criar build/ antes da coleta de toolchain, sem mudar código/opções/binários. Novo CI é necessário; estes dois runs falhos não contam como aprovação.

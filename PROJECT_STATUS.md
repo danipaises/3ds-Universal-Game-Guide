@@ -30,7 +30,7 @@
 
 ## IN PROGRESS
 
-- Checks locais concluídos: 50 pytest/8 subtests, Builder/Ruff/actionlint, core/boot ASan/UBSan, build limpo ARM, verificação ARM/pacotes PASS. CI da alteração será consultado após push.
+- Checks locais concluídos: 50 pytest/8 subtests, Builder/Ruff/actionlint, core/boot ASan/UBSan, build limpo ARM, verificação ARM/pacotes PASS. CI 2a7f392: PC PASS; coleta de metadata ARM FAIL por build/ ausente no checkout limpo. Corrigida criação do diretório; novo run pendente.
 
 ## BLOCKED — diagnóstico dos crashes
 

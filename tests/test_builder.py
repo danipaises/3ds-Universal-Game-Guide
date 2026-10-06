@@ -50,6 +50,10 @@ class BuilderTests(unittest.TestCase):
         p.write_text('{"id":1,"id":2}')
         self.assertRaises(b.Invalid, b.read_json, p)
 
+    def test_builder_version_accepts_release_candidate(self):
+        (self.root / "VERSION").write_text("0.3.0-rc.1\n")
+        self.assertEqual(b.version(self.root), "0.3.0-rc.1")
+
     def test_path_traversal_and_symlink(self):
         self.assertRaises(b.Invalid, b.inside, self.root, "../etc/passwd")
         self.assertRaises(b.Invalid, b.inside, self.root, "/etc/passwd")
@@ -97,6 +101,16 @@ class BuilderTests(unittest.TestCase):
         root = self.project()
         (root / "guides/pt-BR/super-mario-3d-land/guide.json").unlink()
         self.assertRaises(b.Invalid, b.validate, root)
+
+    def test_orphan_guide_id_is_rejected(self):
+        root = self.project()
+        orphan = root / "guides/pt-BR/not-in-catalog"
+        shutil.copytree(root / "guides/pt-BR/super-mario-3d-land", orphan)
+        self.edit(
+            "guides/pt-BR/not-in-catalog/guide.json", lambda o: o.update(gameId="not-in-catalog")
+        )
+        with self.assertRaisesRegex(b.Invalid, "guia sem jogo no catálogo"):
+            b.validate(root)
 
     def test_oversize_and_controls(self):
         self.assertRaises(b.Invalid, b.plain, "á" * 4097)

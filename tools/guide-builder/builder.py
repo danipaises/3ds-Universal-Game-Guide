@@ -42,7 +42,7 @@ PILOTS = {
 
 def version(root=ROOT):
     value = (root / "VERSION").read_text().strip()
-    require(re.fullmatch(r"\d+\.\d+\.\d+-(?:alpha|beta)(?:\.\d+)?", value), "versão inválida")
+    require(re.fullmatch(r"\d+\.\d+\.\d+-(?:alpha|beta|rc)(?:\.\d+)?", value), "versão inválida")
     return value
 
 
@@ -300,6 +300,15 @@ def validate(root: Path = ROOT, lang="pt-BR") -> dict:
                 g["guides"].get(lang, "missing") == "missing", f"{gid}: guia declarado mas ausente"
             )
             missing.append(gid)
+    for index in root.glob("guides/*/*/guide.json"):
+        require(index.parent.name in seen, f"{index}: guia sem jogo no catálogo")
+        require(index.parent.parent.name in LANGUAGES, f"{index}: idioma inválido")
+        obj = read_json(index)
+        require(
+            obj.get("gameId") == index.parent.name
+            and obj.get("language") == index.parent.parent.name,
+            f"{index}: associação de guia inválida",
+        )
     for f in root.glob("data/franchises/*.json"):
         refs = read_json(f)["gameIds"]
         require(len(refs) == len(set(refs)), "franquia duplicada")

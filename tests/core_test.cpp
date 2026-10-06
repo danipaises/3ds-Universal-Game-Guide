@@ -38,6 +38,85 @@ std::string readFile(const std::filesystem::path &p) {
     s << f.rdbuf();
     return s.str();
 }
+// These sessions exercise the portable core, not CTRPF Keyboard or console SD.
+void searchSessions(Memory &io, const std::string &pack) {
+    const auto index = pack.substr(0, pack.size() - 4) + ".ugs";
+    const auto pristine = io.files.at(index);
+    std::vector<uint32_t> expected;
+    Guide guide(io);
+    assert(guide.open(pack));
+    assert(guide.search("route", true, expected) && expected.size() > 1);
+    for (unsigned session = 0; session < 32; ++session) {
+        Guide reopened(io);
+        assert(reopened.open(pack));
+        std::vector<uint32_t> hits{MaxPages};
+        assert(!reopened.search("", true, hits) && hits.empty());
+        assert(reopened.search("route", true, hits) && hits == expected);
+        assert(reopened.search("zzznothingzzz", true, hits) && hits.empty());
+        assert(reopened.search("route", true, hits) && hits == expected);
+    } // Destruction is the core equivalent of closing; UI Back is not simulated.
+    std::vector<uint32_t> hits = expected;
+    io.files.erase(index);
+    assert(!guide.search("route", true, hits) && hits.empty());
+    io.files[index] = pristine;
+    const std::string firstTerm(pristine.data() + 12);
+    for (unsigned damage = 0; damage < 5; ++damage) {
+        auto malformed = pristine;
+        if (damage == 0)
+            malformed[0] = 'X';
+        if (damage == 1)
+            malformed.pop_back();
+        if (damage == 2)
+            malformed.replace(4, 4, std::string(4, '\xff'));
+        if (damage == 3)
+            malformed.replace(12, 64, std::string(64, 'a')); // Missing NUL.
+        if (damage == 4) {
+            std::string invalidPage;
+            put32(invalidPage, MaxPages);
+            malformed.replace(12 + 64, 4, invalidPage);
+        }
+        io.files[index] = malformed;
+        hits = expected;
+        assert(!guide.search(firstTerm, true, hits));
+        io.files[index] = pristine;
+        assert(guide.search("route", true, hits) && hits == expected);
+    }
+    std::cout << "Search core sessions: 32 reopen cycles, empty/multiple/no results, "
+                 "missing index and five malformed-index cases passed.\n";
+}
+void configSessions() {
+    Memory io;
+    const std::string path = "config.bin";
+    Config defaults;
+    assert(defaults.hotkey == 13 && defaults.language == "pt-BR" && !defaults.spoilers &&
+           defaults.touch && !defaults.logging && defaults.remember);
+    std::string raw;
+    assert(!io.read(path, 0, 32, raw));
+    Config missing;
+    assert(!missing.decode(raw) && missing.encode() == defaults.encode());
+    for (unsigned session = 0; session < 32; ++session) {
+        Config changed;
+        changed.hotkey = 512 | 256 | 2048; // L + R + Y.
+        changed.spoilers = session % 2;
+        changed.touch = !(session % 2);
+        changed.logging = session % 2;
+        changed.remember = !(session % 2);
+        assert(io.write(path, changed.encode()));
+        assert(io.read(path, 0, 32, raw));
+        Config reopened;
+        assert(reopened.decode(raw) && reopened.encode() == changed.encode());
+        const auto unchanged = reopened.encode();
+        auto malformed = raw;
+        malformed.back() ^= 1;
+        assert(!reopened.decode(malformed) && reopened.encode() == unchanged);
+        assert(!reopened.decode(raw.substr(0, 31)) && reopened.encode() == unchanged);
+        io.failWrites = true;
+        assert(!io.write(path, defaults.encode()) && io.files.at(path) == raw);
+        io.failWrites = false;
+    }
+    std::cout << "Settings core sessions: defaults/missing config, 32 save/reopen cycles, "
+                 "malformed config and failed writes passed (Memory storage only).\n";
+}
 int main(int argc, char **argv) {
     assert(argc == 2);
     std::filesystem::path root = argv[1];
@@ -93,6 +172,8 @@ int main(int argc, char **argv) {
     Guide g(io);
     auto pokemon = path("guides/pt-BR/pokemon-x.ugg");
     assert(g.open(pokemon));
+    searchSessions(io, pokemon);
+    configSessions();
     assert(g.pages.size() > 732 && g.pages.size() <= MaxPages);
     std::string actual;
     assert(g.openLanguage(path("guides"), "pokemon-x", "en-US", actual) && actual == "pt-BR");

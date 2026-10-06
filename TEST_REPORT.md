@@ -80,3 +80,21 @@ Após corrigir a pasta ausente, commit **ff8f423eb3b32b8c24e4dd195210cb5dc73c58a
 BUILD.json schema 2 registra commit correto, dirty=false, compiler/pacotes reais e CI-REBUILT. Instalador/símbolos/SOURCE compartilham a identidade. O job publish do smoke foi SKIPPED por não ser tag; não se declara publicação automática futura exercitada integralmente. A publicação histórica via GitHub CLI já foi concluída e verificada. [Evidência resumida](docs/GITHUB_CI_PHASE_A_0.2.2.json).
 
 Esta atualização final só registra evidências; não muda runtime, VERSION, guias ou assets. O CI do commit final deve ser consultado no GitHub; resultados físicos continuam PARTIAL PASS e não são promovidos por estes checks.
+
+## Preparação Codex Cloud — 2026-10-06
+
+Base remota reconfirmada: **809dc8b2a8b61f62c46714c2c2615aa745393bc5**. CI dessa base consultado: run 37395188465 completed/success. As alterações desta preparação são locais; nenhum CI remoto novo foi disparado e nenhum publish foi executado. Release v0.2.2-alpha consultada: prerelease=true/draft=false, tag e3b78dc e quatro assets históricos preservados.
+
+| Verificação local nesta preparação | Evidência |
+|---|---|
+| Python final | **52 passed, 8 subtests passed**, zero falhas, 35,55 s; build/ugg-master-pytest-final.log. Ambiente virtual com requirements-dev.txt fixado. |
+| Builder regressions | Guia fora do catálogo era aceito; VERSION rc era recusado. Cada teste falhou antes da correção e passou na suíte final. Nenhum ID/guia foi inventado para corrigir os testes. |
+| C++ core / ASan / UBSan | **PASS**, GCC 14.2.0, -Wall/-Wextra/-Werror, UGG_LSAN=0. Search: 32 ciclos de novos objetos/consulta vazia/múltiplos resultados/sem resultados/voltar à consulta; índice ausente e cinco corrupções com recuperação. Config: defaults/ausência, 32 gravações/reaberturas, CRC/tamanho inválidos e escrita falha preservando bytes. Storage em memória, não UI/SD físicos. build/ugg-master-native.log. |
+| Boot | **PASS**, normal/fs-fail/io-fail, 40/0/1 writes, ASan/UBSan. Stubs de libctru; não exercício do kernel nem hardware. |
+| Ruff / Builder | **PASS** check e format check; catálogo inalterado 68 jogos/211 IDs únicos/279 associações/67 guides/2.151 páginas/9 mapas. Nenhum guia completo. |
+| ARM | **PASS** build oficial --clean + verify_arm.py, três variantes. devkitARM GCC 16.1.0, devkitARM r68-1/libctru 2.7.0-1, imagem por digest fixado. build/ugg-master-arm.log e build/ugg-master-verify-arm.log. |
+| Reprodutibilidade | **Todos os nove SHA-256 3GX/ELF/MAP** coincidem com originalBuildManifest de docs/RELEASE_PROVENANCE_0.2.2.json. Isso preserva os binários, não altera a procedência do pacote histórico ou prova execução física nova. |
+
+Os primeiros testes completos após a regressão de guia órfão tinham 51 pytest/8 subtests. O teste rc foi adicionado depois e reexecutado na suíte final acima; as duas falhas intencionais de reprodução não contam como aprovação. LeakSanitizer não executado (UGG_LSAN=0 conforme docs); GCC 13 não disponível localmente. Não houve execução de emulador ou console. Os testes nativos não vinculam Keyboard/renderer/callbacks do CTRPF; não demonstram correção de lifetime desse SDK.
+
+Não foram adicionados checkpoints ao executável; [plano diagnóstico](docs/SEARCH_SETTINGS_DIAGNOSTIC_PLAN.md) descreve o logger atual, seus limites e posições futuras. Search/Settings continuam FAIL — ARM11 CRASH conforme relato físico, com dumps/causa UNKNOWN. **Não testado em hardware real nesta preparação.** Nenhuma correção de crash/0.2.3/estabilidade declarada.

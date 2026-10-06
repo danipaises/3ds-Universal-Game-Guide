@@ -33,17 +33,31 @@ Nenhuma caixa abaixo está aprovada antecipadamente. Somente aplicar à futura b
 - [ ] guide
 - [ ] guide navigation
 - [ ] offline search
+- [ ] empty search (confirmar rejeição/retorno sem crash)
 - [ ] search without results
+- [ ] search → back → search, repetidamente
 - [ ] settings
 - [ ] settings save
+- [ ] settings reopen, conferindo preferências persistidas
+- [ ] settings → back → settings, repetidamente
 - [ ] maps
 - [ ] navigation
 - [ ] close guide
 - [ ] reopen guide
+- [ ] close plugin (fechar overlay)
+- [ ] reopen plugin (reabrir overlay sem reiniciar o jogo)
 - [ ] return to game
 - [ ] game remains playable
 
 FULL = PASS exige todas as funções relevantes aprovadas em hardware, incluindo abrir/fechar Search e Settings repetidamente. HOME/sono/swap devem ter registro separado. Expansão massiva de guias permanece pausada.
+
+Testes adicionais, separados da checklist principal:
+
+- [ ] HOME behavior
+- [ ] sleep/wake
+- [ ] game/app transition
+
+Nenhum desses testes adicionais foi aprovado antecipadamente. Análise de lifetimes, limites do core e plano de checkpoints em [SEARCH_SETTINGS_DIAGNOSTIC_PLAN.md](docs/SEARCH_SETTINGS_DIAGNOSTIC_PLAN.md). Instrumentação futura e recompilações precisam de identidade própria; não substituem a build histórica instalada.
 
 ## Procedimento original de instalação da 0.2.2
 

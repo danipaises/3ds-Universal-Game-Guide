@@ -20,10 +20,10 @@ A regra é **usar fontes confiáveis**, não limitar a pesquisa a fontes oficiai
 
 | Franquia | Fontes especializadas | Uso prioritário |
 |---|---|---|
-| Mario | Super Mario Wiki; StrategyWiki; GameFAQs | Mundos/fases, Star Coins/Star Medals, inimigos, power-ups, saídas, desbloqueáveis, Kart/Party/RPG/Luigi/Yoshi |
-| Pokémon | Bulbapedia; Serebii; StrategyWiki; GameFAQs | Bulbapedia: progressão, rotas/cidades, dungeons, ginásios/trials, história e itens. Serebii: encounters, níveis, Pokédex, evolução, moves/abilities, Megas, Z-Moves, lendários e pós-game |
-| Zelda | Zelda Dungeon; Zelda Wiki; StrategyWiki; GameFAQs | Zelda Dungeon: dungeons, puzzles, bosses, colecionáveis, side quests, 100%. Zelda Wiki: itens/locais/mecânicas e diferenças entre versões |
-| Kirby | WiKirby; StrategyWiki; GameFAQs | Fases, Copy Abilities, Sun Stones, Rare Keychains, Code Cubes, stickers, bosses, extras e desbloqueáveis |
+| Mario | Super Mario Wiki; StrategyWiki | Mundos/fases, Star Coins/Star Medals, inimigos, power-ups, saídas, desbloqueáveis, Kart/Party/RPG/Luigi/Yoshi |
+| Pokémon | Bulbapedia; Serebii; StrategyWiki | Bulbapedia: progressão, rotas/cidades, dungeons, ginásios/trials, história e itens. Serebii: encounters, níveis, Pokédex, evolução, moves/abilities, Megas, Z-Moves, lendários e pós-game |
+| Zelda | Zelda Dungeon; Zelda Wiki; StrategyWiki | Zelda Dungeon: dungeons, puzzles, bosses, colecionáveis, side quests, 100%. Zelda Wiki: itens/locais/mecânicas e diferenças entre versões |
+| Kirby | WiKirby; StrategyWiki | Fases, Copy Abilities, Sun Stones, Rare Keychains, Code Cubes, stickers, bosses, extras e desbloqueáveis |
 
 Essa lista orienta a pesquisa; não concede licença de reprodução. Abrir a página relevante e verificar sua situação atual quando a pesquisa for retomada. Tentar confirmar fatos importantes em pelo menos duas fontes independentes quando razoável: colecionáveis, desbloqueios, segredos, encontros Pokémon, itens, bosses, 100%, pós-game e diferenças regionais/entre versões. Dois sites reproduzindo a mesma fonte não são confirmações independentes. Quando só houver uma evidência, declarar SECONDARY ou UNCERTAIN conforme o caso. Preservar nomes originais quando não houver tradução oficial adequada. Não inventar traduções oficiais.
 

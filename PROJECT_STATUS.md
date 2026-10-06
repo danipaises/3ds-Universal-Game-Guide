@@ -40,6 +40,15 @@
 - Dump A de Offline Search e dump B de Settings ainda não fornecidos. A identidade do FULL instalado precisa de confirmação antes de simbolizar. Não assumir causas comuns nem alterar runtime ao acaso.
 - Sem console físico conectado nesta estação; resultados reais acima são do usuário. LSAN sob ptrace continua indisponível; ASan/UBSan permanecem ativos.
 
+## DONE — preparação Codex Cloud — 2026-10-06
+
+- Main reconfirmada em 809dc8b2a8b61f62c46714c2c2615aa745393bc5 antes das alterações; trabalho local em codex/master-update-preparation, sem push/tag/release. VERSION permanece 0.2.2-alpha.
+- [Análise direcionada Search/Settings](docs/SEARCH_SETTINGS_DIAGNOSTIC_PLAN.md): entradas, Keyboard/ownership/lifetimes, caminhos SD, erro/alocação, componente compartilhado e limites dos testes PC documentados. Nenhuma causa comum/raiz declarada. Plano de checkpoints no boot logger existente, sem alterar runtime ou criar outro logger.
+- Política de fontes confiáveis tiers A/B/C, cross-check independente, rastreabilidade e licença de assets atualizada; [modelo SOURCES](docs/SOURCES_TEMPLATE.md) pronto. Nenhuma pesquisa/scraping/expansão nem alteração em guides/assets/data.
+- Builder agora rejeita guias órfãos do catálogo e aceita -rc, corrigindo duas lacunas demonstradas por testes negativos antes da mudança. Validação de Title IDs/regiões/evidências/cobertura continua ativa. Workflows preservados; pre-release histórica consultada e já correta.
+- 52 pytest/8 subtests, Ruff/Builder, regressões core de Search/config (32 sessões cada) e três cenários de boot ASan/UBSan GCC 14 passaram localmente. ARM --clean e verify_arm passaram: nove hashes 3GX/ELF/MAP idênticos à baseline histórica. Detalhes e limites em TEST_REPORT.md.
+- Checklist futura inclui busca vazia/sem resultados/reabertura, Settings save/reopen e HOME/sono/transição separados. **Não testado em hardware real nesta preparação.** FULL permanece PARTIAL PASS, dumps A/B e identidade instalada pendentes. Não gerar 0.2.3 nem declarar estabilidade.
+
 ## TODO / NEEDS HARDWARE TEST
 
 - Receber dumps/BUILD.json/hash instalado; confirmar trio FULL, analisar cada exception/PC/LR/SP/stack separadamente, depois corrigir e adicionar regressões.
